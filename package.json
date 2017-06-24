@@ -23,9 +23,11 @@
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "passport-restify": "^1.0.1",
+    "qs": "^6.4.0",
     "restify": "^4.3.0",
     "restify-errors": "^4.3.0",
     "restify-jwt": "^0.4.0",
+    "restify-plugins": "^1.6.0",
     "update-mongo": "0.0.4",
     "winston": "^2.3.1"
   }

@@ -9,7 +9,8 @@ const _      = require('lodash'),
 	  multer = require('multer'),
 	  mongoose = require('mongoose'),
 	  config = require('../config'),
-	  nJwt = require('njwt')
+	  nJwt = require('njwt'),
+	  qs=require('qs')
 		
 const Article = require('../models/article')
 const Word= require('../models/word')
@@ -73,7 +74,11 @@ var uploadArticle = multer({ storage : storageArticle}).single('file')
 server.post('/register',function(req,res,next){
 	  var user = new User();
 	
-	
+	console.log("registering:")
+	req.body=qs.parse(req.body)
+	console.log(qs.parse(req.body))
+	//var body=JSON.parse(req.params)
+	//console.log(body)
 	user.emailId=req.body.emailId
 
 		if(req.body.mobile!=null){
@@ -100,6 +105,7 @@ server.post('/register',function(req,res,next){
 	    token = user.generateJwt();
 		var state = user.setLoggedIn(token);
 		if(state==true){
+			console.log("sending token:",token)
 			res.status(200);
 			res.json({
 			  "message" : token,
