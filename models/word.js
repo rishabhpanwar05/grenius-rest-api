@@ -5,27 +5,26 @@ const mongoose = require('mongoose'),
       createdModified = require('mongoose-createdmodified').createdModifiedPlugin
 
 const WordSchema = new mongoose.Schema({
-	word: {
-		type: String,
-		required: true
+	sno: {
+		type: String
 	},
-	partofspeech: {
+	word: {
 		type: String
 	},
 	meaning: {
-		type: String,
-		required: true
-	},
-	example: {
-		type: String,
-		required: true
+		type: String
 	},
 	synonym: {
 		type: String
 	},
 	pzn: {
-		type: String,
-		required: true
+		type: String
+	},
+	pos: {
+		type: String
+	},
+	example: {
+		type: String
 	}
 });
 

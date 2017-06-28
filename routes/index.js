@@ -10,7 +10,9 @@ const _      = require('lodash'),
 	  mongoose = require('mongoose'),
 	  config = require('../config'),
 	  nJwt = require('njwt'),
-	  qs=require('qs')
+	  qs=require('qs'),
+	  csv = require("fast-csv"),
+	  fs=require("fs")
 		
 const Article = require('../models/article')
 const Word= require('../models/word')
@@ -417,7 +419,51 @@ server.post('/removeUser',function(req, res, next) {
 
 /*----------------------------------------------------------------------------------------------*/
 
+server.post('/addWord',function(req, res, next) {
+	
+	var stream = fs.createReadStream("test.csv");
+		var docs=[];
+		csv
+		 .fromPath('./convertcsv.csv', {headers : ["sno", "word", "meaning", "synonym", "pzn", "pos", "example" ]})
+		 .on("data", function(data){
+			 console.log(data);
+			 docs.push(data)
+			 //console.log("here",docs)
+		 })
+		 .on("end", function(){
+			 console.log("done-------------------------------------------------------------------------------------------",docs);
+			 var count = 0;
+			docs.forEach(function(doc){
+				var word = new Word();
+				word.sno=doc.sno
+				word.word=doc.word
+				word.meaning=doc.meaning
+				word.synonym=doc.synonym
+				word.pzn=doc.pzn
+				word.pos=doc.pos
+				console.log("here",word)
+				word.save(function(err){
+					if (err!=null) {
+						log.error(err)
+						return next(new errors.InternalError(err.message))
+						next()
+					}
+					count++;
+					if( count == docs.length ){
+						sendResponse();
+					}
+				});
+			});
+			function 	sendResponse(){
+					res.send(200,"ADDED")
+			}
+			 
+		 });
 
+})
+
+
+/*
 server.post('/addWord',function(req, res, next) {
 	//console.log(req.headers.authorization.split(" ")[1])
 	let data = req.body || {}
@@ -447,7 +493,7 @@ server.post('/addWord',function(req, res, next) {
 	})
 
 })
-
+*/
 server.post('/words', function(req, res, next) {
 	console.log("Sending words");
 	let data = req.body || {}
@@ -472,6 +518,7 @@ server.post('/words', function(req, res, next) {
 	        }
 		
 	        res.send(doc)
+			console.log("done")
 	        next()
 
 	    })
