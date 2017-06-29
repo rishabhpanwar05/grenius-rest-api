@@ -12,7 +12,7 @@
   "dependencies": {
     "bunyan-winston-adapter": "^0.2.0",
     "crypto": "0.0.3",
-    "google-translate": "^2.0.5",
+    "fast-csv": "^2.4.0",
     "jsonwebtoken": "^7.4.1",
     "lodash": "^4.17.4",
     "mongoose": "^4.9.2",

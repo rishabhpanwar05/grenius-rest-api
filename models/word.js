@@ -6,7 +6,7 @@ const mongoose = require('mongoose'),
 
 const WordSchema = new mongoose.Schema({
 	sno: {
-		type: Number
+		type: String
 	},
 	word: {
 		type: String

@@ -10,6 +10,9 @@ const WordHiSchema = new mongoose.Schema({
 	},
 	word: {
 		type: String
+	},
+	translated:{
+		type:String
 	}
 });
 

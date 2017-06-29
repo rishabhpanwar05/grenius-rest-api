@@ -11,7 +11,9 @@ const _      = require('lodash'),
 	  config = require('../config'),
 	  nJwt = require('njwt'),
 	  qs=require('qs'),
-	  googleTranslate = require('google-translate')(config.MY_GOOGLE_API_KEY)
+	  googleTranslate = require('google-translate')(config.MY_GOOGLE_API_KEY),
+	  csv = require("fast-csv"),
+	  fs=require("fs")
 		
 const Article = require('../models/article')
 const Word= require('../models/word')
@@ -419,8 +421,54 @@ server.post('/removeUser',function(req, res, next) {
 
 /*----------------------------------------------------------------------------------------------*/
 
-
+server.post('/addWord',function(req, res, next) {
+	
+	var stream = fs.createReadStream("test.csv");
+		var docs=[];
+		csv
+		 .fromPath('./convertcsv.csv', {headers : ["sno", "word", "meaning", "synonym", "pzn", "pos", "example" ]})
+		 .on("data", function(data){
+			 console.log(data);
+			 docs.push(data)
+			 //console.log("here",docs)
+		 })
+		 .on("end", function(){
+			 console.log("done-------------------------------------------------------------------------------------------",docs);
+			 var count = 0;
+			docs.forEach(function(doc){
+				var word = new Word();
+				word.sno=doc.sno
+				word.word=doc.word
+				word.meaning=doc.meaning
+				word.synonym=doc.synonym
+				word.pzn=doc.pzn
+				word.pos=doc.pos
+				console.log("here",word)
+				word.save(function(err){
+					if (err!=null) {
+						log.error(err)
+						return next(new errors.InternalError(err.message))
+						next()
+					}
+					count++;
+					if( count == docs.length ){
+						sendResponse();
+					}
+				});
+			});
+			function 	sendResponse(){
+					res.send(200,"ADDED")
+			}
+			 
+		 });
+})
 /*server.post('/addWord',function(req, res, next) {
+
+})
+
+
+/*
+server.post('/addWord',function(req, res, next) {
 	//console.log(req.headers.authorization.split(" ")[1])
 	let data = req.body || {}
 	console.log("adding word",data)
@@ -468,37 +516,44 @@ server.post('/translate', function(req,res,next){
 				//date: -1 //Sort by Date Added DESC
 			//}
 		},
-		function(err, doc) {
+		function(err, docs) {
 
 	        if (err) {
 	            log.error(err)
 	            return next(new errors.InvalidContentError(err.errors.name.message))
 	        }
-		let wordhi=[]
-		for (Word word:doc) {
+		docs.forEach(function(doc){
+			
 			let word_tr=new WordHi()
-			word_tr.sno=word.sno
-			googleTranslate.translate(word, 'hi', function(err, translation) {
-				word_tr.word=translation.translatedText
-				wordhi.push(word_tr)
+			word_tr.sno=doc.sno
+			word_tr.word=doc.word
+			googleTranslate.translate(doc.word, 'hi', function(err, translation) {
+				word_tr.translated=translation.translatedText
+				word_tr.save(function (err) {
+					if (err!=null) {
+						log.error(err)
+						return next(new errors.InternalError(err.message))
+						next()
+					}
+					
+				})
 				console.log(translation);
 				// =>  { translatedText: 'Hallo', originalText: 'Hello', detectedSourceLanguage: 'en' }
 			    })
-		
-		}
-		
+				
+		})
+		res.send(200,"CONVERTED")
 	    
 		next()
-	});
+	})
 })
-
-server.post('/words', function(req, res, next) {
-	console.log("Sending words");
+server.post('/wordshi', function(req, res, next) {
+	console.log("Sending words hi");
 	let data = req.body || {}
 		let index = 0
 		if(data!=null)
 			index=data.index
-		Word.find(
+		WordHi.find(
 		{},
 		[],
 		{
@@ -516,6 +571,37 @@ server.post('/words', function(req, res, next) {
 	        }
 		
 	        res.send(doc)
+			console.log("done")
+	        next()
+
+	    })
+
+})
+server.post('/words', function(req, res, next) {
+	console.log("Sending words");
+	let data = req.body || {}
+		let index = 0
+		if(data!=null)
+			index=data.index
+		Word.find(
+		{},
+		[],
+		{
+			skip:index // Starting Row
+			//limit:10 // Ending Row
+			//sort:{
+				//date: -1 //Sort by Date Added DESC
+			//}
+		},
+		function(err, doc) {
+
+	        if (err) {
+	            log.error(err)
+	            return next(new errors.InvalidContentError(err.errors.name.message))
+	        }
+		
+	        res.send(doc)
+			console.log("done")
 	        next()
 
 	    })
