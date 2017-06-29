@@ -9,5 +9,6 @@ module.exports={
     db: {
         uri: 'mongodb://127.0.0.1:27017/grenius',
     },
-	MY_SECRET:"thisismysecretcodekjkbku2441gvbjnjsnf1412321jnwjenvajdbgdh2fjwbghbfkj62ngiu"
+	MY_SECRET:"thisismysecretcodekjkbku2441gvbjnjsnf1412321jnwjenvajdbgdh2fjwbghbfkj62ngiu",
+    MY_GOOGLE_API_KEY:"AIzaSyDlDHuANynM95U0K2IKnsqF3o7pTFrzP3A"
 }

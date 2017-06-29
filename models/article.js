@@ -6,15 +6,13 @@ const mongoose = require('mongoose'),
 
 const ArticleSchema = new mongoose.Schema({
 	title: {
-		type: String,
-		required: true
+		type: String
 	},
 	imagePath:{
 		type: String
 	},
 	desc:{
-		type: String,
-		required: true
+		type: String
 	}
 });
 

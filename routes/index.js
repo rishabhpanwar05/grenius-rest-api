@@ -10,10 +10,12 @@ const _      = require('lodash'),
 	  mongoose = require('mongoose'),
 	  config = require('../config'),
 	  nJwt = require('njwt'),
-	  qs=require('qs')
+	  qs=require('qs'),
+	  googleTranslate = require('google-translate')(config.MY_GOOGLE_API_KEY)
 		
 const Article = require('../models/article')
 const Word= require('../models/word')
+const WordHi= require('../models/word_hi')
 const User= require('../models/user')
 
 
@@ -138,7 +140,7 @@ server.post('/addArticle',function(req, res, next){
 			else{
 				data={
 					'title':req.body.title,
-					'imagePath':'',
+					'imagePath':req.body.imagePath,
 					'desc':req.body.desc
 				}
 			}
@@ -418,11 +420,12 @@ server.post('/removeUser',function(req, res, next) {
 /*----------------------------------------------------------------------------------------------*/
 
 
-server.post('/addWord',function(req, res, next) {
+/*server.post('/addWord',function(req, res, next) {
 	//console.log(req.headers.authorization.split(" ")[1])
 	let data = req.body || {}
 	console.log("adding word",data)
 	data={
+		"sno":req.body.sno,
 		"word":req.body.word,
 		"partofspeech":req.body.partofspeech,
 		"meaning":req.body.meaning,
@@ -446,6 +449,47 @@ server.post('/addWord',function(req, res, next) {
 
 	})
 
+})*/
+
+
+server.post('/translate', function(req,res,next){
+	
+	let data = req.body || {}
+		let index = 0
+		if(data!=null)
+			index=data.index
+		Word.find(
+		{},
+		[],
+		{
+			skip:index, // Starting Row
+			limit:10 // Ending Row
+			//sort:{
+				//date: -1 //Sort by Date Added DESC
+			//}
+		},
+		function(err, doc) {
+
+	        if (err) {
+	            log.error(err)
+	            return next(new errors.InvalidContentError(err.errors.name.message))
+	        }
+		let wordhi=[]
+		for (Word word:doc) {
+			let word_tr=new WordHi()
+			word_tr.sno=word.sno
+			googleTranslate.translate(word, 'hi', function(err, translation) {
+				word_tr.word=translation.translatedText
+				wordhi.push(word_tr)
+				console.log(translation);
+				// =>  { translatedText: 'Hallo', originalText: 'Hello', detectedSourceLanguage: 'en' }
+			    })
+		
+		}
+		
+	    
+		next()
+	});
 })
 
 server.post('/words', function(req, res, next) {
@@ -497,7 +541,7 @@ server.post('/getWordDetails', function(req, res, next) {
 
 })
 
-server.post('/updateWord',function(req, res, next){
+/*server.post('/updateWord',function(req, res, next){
 	console.log("updating word" + req.body.id)
 	Word.findById(mongoose.mongo.ObjectId(req.body.id),
 	function(err,word){
@@ -526,7 +570,7 @@ server.post('/updateWord',function(req, res, next){
 		}
 			
 	})
-})
+})*/
 
 server.post('/removeWord',function(req, res, next) {
 	console.log("removing word");
