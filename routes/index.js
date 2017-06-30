@@ -19,6 +19,7 @@ const Article = require('../models/article')
 const Word= require('../models/word')
 const WordHi= require('../models/word_hi')
 const User= require('../models/user')
+const Quiz= require('../models/quiz')
 
 
 var authnjwt = function(req,res,next){
@@ -674,4 +675,73 @@ server.post('/removeWord',function(req, res, next) {
     })
 
 })
+
+/*----------------------------------------------------------------------------------------------*/
+
+server.post('/addQuiz',function(req, res, next){
+	console.log("adding quiz")
+			console.log(req.body);
+			let data={}
+				data={
+					'sno':req.body.sno,
+					'question':req.body.question,
+					'answer':req.body.answer,
+					'incorrect_1':req.body.incorrect_1,
+					'incorrect_2':req.body.incorrect_2,
+					'incorrect_3':req.body.incorrect_3,
+					'example':req.body.example
+				}
+			let quiz = new Quiz(data)
+			console.log(quiz)
+			
+			quiz.save(function(err){
+
+				if (err!=null) {
+					log.error(err)
+					return next(new errors.InternalError(err.message))
+					next()
+				}
+
+				res.send(201,"ADDED")
+				next()
+
+			})
+
+})
+
+	
+server.post('/quizzes', function(req, res, next) {
+	
+	console.log("Sending quizzes");
+	let data = req.body || {}
+		let index = 0
+		if(data!=null)
+			index=data.index
+		Quiz.find(
+		{},
+		[],
+		{
+			skip:index // Starting Row
+			//limit:10 // Ending Row
+			//sort:{
+				//date: -1 //Sort by Date Added DESC
+			//}
+		},
+	function(err, doc) {
+
+        if (err) {
+            log.error(err)
+            return next(new errors.InvalidContentError(err.errors.name.message))
+        }
+	
+        res.send(doc)
+        next()
+
+    })
+
+})
+
+
+
+
 
