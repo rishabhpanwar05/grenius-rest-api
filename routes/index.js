@@ -16,6 +16,7 @@ const _      = require('lodash'),
 	  fs=require("fs")
 		
 const Article = require('../models/article')
+const ArticleDash = require('../models/articledash')
 const Word= require('../models/word')
 const WordHi= require('../models/word_hi')
 const User= require('../models/user')
@@ -290,6 +291,98 @@ server.post('/updateArticle',function(req, res, next){
 			
 	})
 })
+
+
+/*----------------------------------------------------------------------------------------------*/
+
+
+
+server.post('/addArticleDashboard',function(req, res, next){
+	console.log("adding article for dashboard")
+	uploadArticle(req,res,function(err) {
+		if(err) {
+			return res.end(err+" Error uploading file.");
+		}
+		else {
+			console.log(req.file);	
+			console.log(req.body);
+			let data={}
+			if(req.file!=null){ 
+				data={
+					'title':req.body.title,
+					'imagePath':req.file.path || {},
+					'desc':req.body.desc
+				}
+			}
+			else{
+				data={
+					'title':req.body.title,
+					'imagePath':req.body.imagePath,
+					'desc':req.body.desc
+				}
+			}
+			
+			let articledash = new ArticleDash(data)
+			console.log(articledash)
+			
+			articledash.save(function(err) {
+
+				if (err!=null) {
+					log.error(err)
+					return next(new errors.InternalError(err.message))
+					next()
+				}
+
+				res.send(201,"ADDED")
+				next()
+
+			})
+		}	
+	});
+
+})
+
+server.post('/dashboardArticles', function(req, res, next) {
+	console.log("Sending articles for dashboard");
+	ArticleDash.find(
+	{},
+	[],
+	{
+		skip:0 // Starting Row
+		//limit:10, // Ending Row
+		
+	},
+	function(err, doc) {
+
+        if (err) {
+            log.error(err)
+            return next(new errors.InvalidContentError(err.errors.name.message))
+        }
+	
+        res.send(doc)
+        next()
+
+    })
+
+})
+
+server.post('/removeArticleDashboard',function(req, res, next) {
+	console.log("removing articles from dashboard");
+	ArticleDash.findByIdAndRemove(mongoose.mongo.ObjectId(req.body.id),
+	function(err) {
+
+		if (err!=null) {
+			log.error(err)
+			return next(new errors.InvalidContentError(err.errors.name.message))
+		}
+		else
+			res.send(200,"DELETED")
+		next()
+
+	})
+
+})
+
 
 /*----------------------------------------------------------------------------------------------*/
 
