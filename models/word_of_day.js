@@ -4,9 +4,9 @@ const mongoose = require('mongoose'),
 	  mongooseApiQuery = require('mongoose-api-query'),
       createdModified = require('mongoose-createdmodified').createdModifiedPlugin
 
-const WordSchema = new mongoose.Schema({
-	sno: {
-		type: String
+const WordOfDaySchema = new mongoose.Schema({
+	date: {
+		type: Date
 	},
 	word: {
 		type: String
@@ -27,12 +27,12 @@ const WordSchema = new mongoose.Schema({
 		type: String
 	},
 	imagePath:{
-		type: String
+		type:String
 	}
 });
 
-WordSchema.plugin(mongooseApiQuery)
-WordSchema.plugin(createdModified, { index: true })
+WordOfDaySchema.plugin(mongooseApiQuery)
+WordOfDaySchema.plugin(createdModified, { index: true })
 
-const Word = mongoose.model('Word', WordSchema)
-module.exports = Word
+const WordOfDay = mongoose.model('WordOfDay', WordOfDaySchema)
+module.exports = WordOfDay

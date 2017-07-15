@@ -21,6 +21,7 @@ const Word= require('../models/word')
 const WordHi= require('../models/word_hi')
 const User= require('../models/user')
 const Quiz= require('../models/quiz')
+const WordOfDay=require('../models/word_of_day')
 
 
 var authnjwt = function(req,res,next){
@@ -75,7 +76,7 @@ var storageArticle	=	multer.diskStorage({
 
 var uploadArticle = multer({ storage : storageArticle}).single('file')
 
-/*----------------------------------------------------------------------------------------------*/
+/*----------------------------------Registering User------------------------------------------------------------*/
 
 server.post('/register',function(req,res,next){
 	  var user = new User();
@@ -122,7 +123,7 @@ server.post('/register',function(req,res,next){
 	})
 
 
-/*----------------------------------------------------------------------------------------------*/
+/*------------------------------------Articles----------------------------------------------------------*/
 
 server.post('/addArticle',function(req, res, next){
 	console.log("adding article")
@@ -293,7 +294,7 @@ server.post('/updateArticle',function(req, res, next){
 })
 
 
-/*----------------------------------------------------------------------------------------------*/
+/*-------------------------------------Dashboard Articles---------------------------------------------------------*/
 
 
 
@@ -513,14 +514,14 @@ server.post('/removeUser',function(req, res, next) {
 
 
 
-/*----------------------------------------------------------------------------------------------*/
+/*-----------------------------------------Word-----------------------------------------------------*/
 
 server.post('/addWord',function(req, res, next) {
 	
 	var stream = fs.createReadStream("test.csv");
 		var docs=[];
 		csv
-		 .fromPath('./convertcsv.csv', {headers : ["sno", "word", "meaning", "synonym", "pzn", "pos", "example" ]})
+		 .fromPath('./convertcsv.csv', {headers : ["sno", "word", "meaning", "synonym", "pzn", "pos", "example","imagePath" ]})
 		 .on("data", function(data){
 			 console.log(data);
 			 docs.push(data)
@@ -537,6 +538,7 @@ server.post('/addWord',function(req, res, next) {
 				word.synonym=doc.synonym
 				word.pzn=doc.pzn
 				word.pos=doc.pos
+				word.imagePath=doc.imagePath
 				console.log("here",word)
 				word.save(function(err){
 					if (err!=null) {
@@ -550,7 +552,7 @@ server.post('/addWord',function(req, res, next) {
 					}
 				});
 			});
-			function 	sendResponse(){
+			function sendResponse(){
 					res.send(200,"ADDED")
 			}
 			 
@@ -663,11 +665,10 @@ server.post('/wordshi', function(req, res, next) {
 	            log.error(err)
 	            return next(new errors.InvalidContentError(err.errors.name.message))
 	        }
-		
+	
 	        res.send(doc)
 			console.log("done")
 	        next()
-
 	    })
 
 })
@@ -832,6 +833,77 @@ server.post('/quizzes', function(req, res, next) {
 
     })
 
+})
+
+
+/*----------------------------------------------------------------------------------------------*/
+
+server.post('/addWordOfDay',function(req, res, next) {
+	//console.log(req.headers.authorization.split(" ")[1])
+	let data = {}
+	console.log("adding word of day",data)
+	data={
+		"date":req.body.date,
+		"word":req.body.word,
+		"meaning":req.body.meaning,
+		"synonym":req.body.synonym,
+		"pzn":req.body.pzn,
+		"pos":req.body.partofspeech,
+		"example":req.body.example,
+		"imagePath":req.body.imagePath
+	}
+	let word= new WordOfDay(data)
+	console.log(word)
+	
+	 word.save(function(err) {
+
+		if (err!=null) {
+			log.error(err)
+			return next(new errors.InternalError(err.message))
+			next()
+		}
+
+		res.send(201,"ADDED")
+		next()
+
+	})
+})
+
+server.post('/wordOfDay', function(req, res, next) {
+	console.log("Sending words");
+	
+	var datetime = new Date();
+	console.log(datetime);
+
+	let data = req.body || {}
+		WordOfDay.find(
+		{
+			date:{$lte:datetime} 
+		},
+		[],
+		{
+			//skip:0, // Starting Row
+			limit:0, // Ending Row
+			sort:{
+				date: -1 //Sort by Date Added DESC
+			}
+		},
+		function(err, docs) {
+
+	        if (err) {
+	            log.error(err)
+	            return next(new errors.InvalidContentError(err.errors.name.message))
+	        }
+	
+	//docs.forEach(function(doc){
+		
+//	})
+
+	        res.send(docs[0])
+			console.log("done")
+	        next()
+
+	    })
 })
 
 
