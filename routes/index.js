@@ -1,5 +1,4 @@
 'use strict'
-
 /**
  * Module Dependencies
  */
@@ -22,6 +21,7 @@ const WordHi= require('../models/word_hi')
 const User= require('../models/user')
 const Quiz= require('../models/quiz')
 const WordOfDay=require('../models/word_of_day')
+const Category=require('../models/category')
 
 
 var authnjwt = function(req,res,next){
@@ -385,7 +385,7 @@ server.post('/removeArticleDashboard',function(req, res, next) {
 })
 
 
-/*----------------------------------------------------------------------------------------------*/
+/*------------------------------------------Commented----------------------------------------------------*/
 
 
 /*server.post('/addUser',function(req, res, next) {
@@ -638,7 +638,7 @@ server.post('/translate', function(req,res,next){
 			    })
 				
 		})
-		res.send(200,"CONVERTED")
+		res.send(200,"TRANSLATED")
 	    
 		next()
 	})
@@ -770,7 +770,7 @@ server.post('/removeWord',function(req, res, next) {
 
 })
 
-/*----------------------------------------------------------------------------------------------*/
+/*-----------------------------------------Quiz-----------------------------------------------------*/
 
 server.post('/addQuiz',function(req, res, next){
 	console.log("adding quiz")
@@ -836,10 +836,10 @@ server.post('/quizzes', function(req, res, next) {
 })
 
 
-/*----------------------------------------------------------------------------------------------*/
+/*----------------------------------------Word Of The Day------------------------------------------------------*/
 
 server.post('/addWordOfDay',function(req, res, next) {
-	//console.log(req.headers.authorization.split(" ")[1])
+	
 	let data = {}
 	console.log("adding word of day",data)
 	data={
@@ -895,14 +895,83 @@ server.post('/wordOfDay', function(req, res, next) {
 	            return next(new errors.InvalidContentError(err.errors.name.message))
 	        }
 	
-	//docs.forEach(function(doc){
-		
-//	})
-
 	        res.send(docs[0])
 			console.log("done")
 	        next()
 
+	    })
+})
+
+
+/*----------------------------------------Category------------------------------------------------------*/
+
+server.post('/addCategory',function(req, res, next) {
+	
+		var docs=[];
+		csv
+		 .fromPath('./category.csv', {headers : ["sno", "category", "synonym", "meaning"]})
+		 .on("data", function(data){
+			 console.log(data);
+			 docs.push(data)
+			 //console.log("here",docs)
+		 })
+		 .on("end", function(){
+			 console.log("done-------------------------------------------------------------------------------------------",docs);
+			 var count = 0;
+			
+			docs.forEach(function(doc){
+				var category = new Category();
+				
+				category.sno=doc.sno
+				category.category=doc.category
+				category.synonym=doc.synonym
+				category.meaning=doc.meaning
+				
+				console.log("here",category)
+				category.save(function(err){
+					if (err!=null) {
+						log.error(err)
+						return next(new errors.InternalError(err.message))
+						next()
+					}
+					count++;
+					if( count == docs.length ){
+						sendResponse();
+					}
+				});
+			});
+			function sendResponse(){
+					res.send(200,"ADDED")
+			}
+			 
+		 });
+})
+
+server.post('/category', function(req, res, next) {
+	console.log("Sending Categories");
+	let data = req.body || {}
+		let index = 0
+		if(data!=null)
+			index=data.index
+		Category.find(
+		{},
+		[],
+		{
+			skip:index // Starting Row
+			//limit:10 // Ending Row
+			//sort:{
+				//date: -1 //Sort by Date Added DESC
+			//}
+		},
+		function(err, doc) {
+
+	        if (err) {
+	            log.error(err)
+	            return next(new errors.InvalidContentError(err.errors.name.message))
+	        }
+	        res.send(doc)
+			console.log("DONE!")
+	        next()
 	    })
 })
 
