@@ -521,7 +521,7 @@ server.post('/addWord',function(req, res, next) {
 	var stream = fs.createReadStream("test.csv");
 		var docs=[];
 		csv
-		 .fromPath('./convertcsv.csv', {headers : ["sno", "word", "meaning", "synonym", "pzn", "pos", "example","imagePath","hf"]})
+		 .fromPath('./word', {headers : ["sno", "word", "meaning", "synonym", "pzn", "pos", "example","imagePath","hf"]})
 		 .on("data", function(data){
 			 console.log(data);
 			 docs.push(data)
