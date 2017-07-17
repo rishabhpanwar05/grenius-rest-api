@@ -28,6 +28,9 @@ const WordSchema = new mongoose.Schema({
 	},
 	imagePath:{
 		type: String
+	},
+	hf:{
+		type:String
 	}
 });
 
