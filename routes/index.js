@@ -538,6 +538,7 @@ server.post('/addWord',function(req, res, next) {
 				word.synonym=doc.synonym
 				word.pzn=doc.pzn
 				word.pos=doc.pos
+				word.example=doc.example
 				word.imagePath=doc.imagePath
 				word.hf=doc.hf
 				console.log("here",word)
