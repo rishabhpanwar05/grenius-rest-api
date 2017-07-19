@@ -31,6 +31,9 @@ const WordSchema = new mongoose.Schema({
 	},
 	hf:{
 		type:String
+	},
+	translated:{
+		type:String
 	}
 });
 

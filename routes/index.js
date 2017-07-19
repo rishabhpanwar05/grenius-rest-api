@@ -635,6 +635,36 @@ server.post('/translate', function(req,res,next){
 					}
 					
 				})
+				
+				
+				
+				Word.findOne(
+					{sno:doc.sno},
+					[],
+					{},
+					function(err, word) {
+
+				        if (err!=null) {
+				            log.error(err)
+				            return next(new errors.InvalidContentError(err.errors.name.message))
+				        }
+						console.log("word is"+word);
+						if(word!=null){
+							word.translated=word_tr.translated
+							word.save(function(err) {
+
+								if (err!=null) {
+									log.error(err)
+									return next(new errors.InternalError(err.message))
+									next()
+								}
+							})
+						}
+				     	next()  
+				    })
+				
+				
+				
 				console.log(translation);
 				// =>  { translatedText: 'Hallo', originalText: 'Hello', detectedSourceLanguage: 'en' }
 			    })
