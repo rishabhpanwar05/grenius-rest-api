@@ -609,7 +609,7 @@ server.post('/translate', function(req,res,next){
 		[],
 		{
 			skip:index, // Starting Row
-			limit:10 // Ending Row
+			//limit:10 // Ending Row
 			//sort:{
 				//date: -1 //Sort by Date Added DESC
 			//}
