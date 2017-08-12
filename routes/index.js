@@ -92,7 +92,6 @@ server.post('/register',function(req,res,next){
 			user.name=req.body.name
 			user.setPassword(req.body.password);
 			user.mobile=req.body.mobile
-			user.country=req.body.country
 			user.city=req.body.city
 			
 		}
