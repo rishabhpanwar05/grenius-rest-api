@@ -707,8 +707,8 @@ server.post('/words', function(req, res, next) {
 	console.log("Sending words");
 	let data = req.body || {}
 		let index = 0
-		if(data!=null)
-			index=data.index
+		//if(data!=null)
+		//	index=data.index
 		Word.find(
 		{},
 		[],
