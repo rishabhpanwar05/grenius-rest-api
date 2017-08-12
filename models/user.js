@@ -26,9 +26,6 @@ const UserSchema = new mongoose.Schema({
 	fbId: {
 		type: String
 	},
-	country: {
-		type: String
-	},
 	city: {
 		type: String
 	},
