@@ -70,6 +70,9 @@ server.get(/\/admin\/?.*/, restify.serveStatic({
 server.get(/\/uploads\/?.*/, restify.serveStatic({
      directory: __dirname
  }));
+server.get(/\/res\/?.*/, restify.serveStatic({
+   directory: __dirname
+ }));
  require('./routes')
 server.listen(config.port, function() {
 
