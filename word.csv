@@ -1,163 +1,165 @@
-1,abate,"to lessen, to subside        ","diminish, dwindle, recede, ebb",z,Verb,The mayor tried hard to abate the protests in the city.,,
-2,abdication,an act of giving up control or authority        ,-NA-,z,Noun,Edward VIII did not marry until after his abdication.,,
-3,abet,help/encourage somebody (in doing wrong)     ,"condone, incite, instigate",n,Verb,"Although Wilson didn’t kill his wife, he was equally punished for abetting the murderer.",,
-4,abeyance,"in state of suspended action, temporarily inactive","dormancy, latency, quiescence",z,Noun,Jane’s cancer has returned after being in abeyance for nearly two years.,,
-5,abidance,the state of abiding; compliance (with),-NA-,p,Noun,"Dixon was legally bound to not report the assaults at the victims' requests, in abidance with physician-patient privilege.",,
-6,abject,"hopeless, most unfortunate or miserable",-NA-,n,Adjective,"Now most of its residents, living in abject poverty, have been stripped of the very few material things that they possessed.",,
-7,abjure,promise or swear to give up      ,forswear,p,Verb,The soldier abjured allegiance to his king and left the state.,,
-8,abraded,rubbed off worn away by friction      ,"erode, chafe, scuff",n,Verb,Continuous shaving abraded his skin.,,
-9,abrogate,"Put an end to, by authority       ","annul, repeal, torpedo, nix",z,Verb,The treaty was abrogated due to war like situations.,,
-10,absonant,"out of harmony,extreme","inharmonious, incongruous, discordant, dissonant",n,Adjective,"The queen’s decision to befriend Abdul, was absonant to her stature.",,
-11,abstruse,difficult to comprehend,"enigmatic, obscure, esoteric, recondite",n,Adjective,"Sometimes, even the simplest things seem abstruse to us.",,
-12,abut,to be adjacent; on border,-NA-,z,Verb,The mansion’s boundary abuts the highway.,,
-13,acarpous,"worn out, no longer fertile",effete,n,Adjective,"After the storm, the soil was rendered acarpous. ",,
-14,accolade,"praise, award  ","encomium, kudos, laurels",p,Noun,The boy won many accolades for his outstanding game.,,
-15,accretion,the growing of separate things into one ;  increase by natural growth,"increment, augmentation",z,Noun,There was an accretion of mud and snow on my porch.,,
-16,admonish,"warn strongly, take to task / containing warning          ","berate, chide, vituperate, upbraid ",n,Verb,His mother admonished him for misbehaving.,,
-17,adulation,"excessive praise, flattery","sycophancy, boot licking, fawning, blandishment",z,Noun,"With his excellent work, Phil inspired adulation in his colleagues.",,
-18,affable,Pleasant and friendly       ,"amiable, amicable, congenial, clubby",p,Adjective,People enjoyed going to her parties as she was such an affable host.,,
-19,affiance,give to (in marriage) ; assure by promise,-NA-,z,Verb,"At the age of 18, Bella was affianced to Prince Eduardo.",,
-20,afterwise,"Wise after the event, wise or knowing when it is too late",-NA-,n,Adjective,"In retrospect, we should have insisted on checking his calculations, but it's easy to be afterwise.",,
-21,agglutination,clumping of bacteria/red cells when held together by antibodies; glueing/ uniting,"amalgamation, concatenation",z,Noun,"By means of agglutination, that is, by adding to the bases form-words as prefixes, suffixes or infixes, the Tibetan language has developed a considerable grammatical system.",,
-22,agog,eager/excited         ,enthralled,p,Adjective,"The news of election of Donald Trump as the president of U.S.Adjective. , had the world agog.",,
-23,ail,trouble; be ill         ,-NA-,n,Verb,The company is ailing financially.,,
-24,alacrity,eager and cheerful readiness        ,"avidity, sprightliness, nimbleness, celerity",p,Noun,"She offered to help the old uncle Sam, with alacrity.",,
-25,allegiance,"duty, support, loyalty         ",-NA-,p,Noun,You will always have my allegiance.,,
-26,altruism,"quality of unselfish concern for the welfare of others, selflessness","benevolence, humanitarianism",p,Noun,"Motivated purely by altruism, she donated all her money to the charity.",,
-27,amalgamate,to combine several elements into a whole,"unite, meld, fuse",z,Verb,This is in advance of the LEA 's proposal to formally amalgamate the two schools.,,
-28,ambidextrous,able to use the left hand or the right equally well ,-NA-,p,Adjective,"In order to save time, he trained his left arm to write neatly and thus, became ambidextrous ",,
-29,ambiguous,"having two contrary meanings, vague","equivocal, dubious, inconclusive",n,Adjective,We were confused by his ambiguous statements.,,
-30,ambivalent ,characterized by opposite feelings or emotions,contradictory ,n,Adjective,Susan and Toby have an ambivalent relationship.,,
-31,ambulatory,"(pertaining to legs) able to walk about, ambulant",-NA-,z,Adjective,We will be opening two new ambulatory care facilities for private patients,,
-32,ambuscade,"act of concealing yourself and lying in wait to attack by surprise, ambush","waylay, ensnare",n,Verb,The ambuscade by Shivaji is a classic.,,
-33,ameliorate,"improve, make better         ",-NA-,p,Verb,This medicine should help ameliorate the wound.,,
-34,amenable,agreeable; responsive to suggestion; changeable,-NA-,p,Adjective,Nobody prefers a company which is not amenable to its surroundings. ,,
+1,abate,"to lessen, to subside, recede ","dwindle, ebb",z,Verb,The mayor tried hard to abate the protests in the city.,,Y
+2,abdication,an act of giving up control or authority        ,"abjure, abnegate, relinquish",z,Noun,Edward VIII did not marry until after his abdication.,,Y
+3,abet,help or encourage somebody (in doing wrong)     ,"incite, instigate",n,Verb,"Although Wilson didn’t kill his wife, he was equally punished for abetting the murderer.",,Y
+4,abeyance,"in state of suspended action, temporarily inactive","dormancy, latency, quiescence",z,Noun,Jane’s cancer has returned after being in abeyance for nearly two years.,,Y
+5,abidance,the state of abiding; compliance (with),"acquiescence, concurrence",p,Noun,"In abidance with the subpoena, he duly appeared before the judge.",,
+6,abject,"hopeless, most unfortunate or miserable","woeful, wretched",n,Adjective,Many families in that part of the city are living in abject poverty.,,
+7,abjure,promise or swear to give up      ,"abdicate, forswear",p,Verb,The soldier abjured allegiance to his king and left the state.,,
+8,abrade,rubbed off or worn away by friction      ,"chafe, erode",n,Verb,Continuous shaving abraded his skin.,,
+9,abrogate,"put an end to, by authority       ","annul, repeal",z,Verb,The treaty was abrogated due to war like situations.,,Y
+10,absonant,discordant or unreasonable,"dissonant, inharmonious",n,Adjective,"The queen’s decision to befriend Abdul, was absonant to her stature.",,
+11,abstruse,"difficult to understand, obscure","enigmatic, esoteric, recondite",n,Adjective,"Sometimes, even the simplest things seem abstruse to us.",,
+12,abut,to be adjacent; on border,"adjoin, contiguous",z,Verb,The mansion’s boundary abuts the highway.,,
+13,acarpous,"worn out, no longer fertile","effete, sterile",n,Adjective,"After the storm, the soil was rendered acarpous. ",,
+14,accolade,praise or award as an acknowledgement,"encomium, kudos",p,Noun,The boy won many accolades for his outstanding game.,,
+15,accretion,"the growing of separate things into one, increase by natural growth","augmentation, increment",z,Noun,There was an accretion of mud and snow on my porch.,,
+16,admonish,warn or reprimand strongly       ,"berate, censure",n,Verb,His mother admonished him for misbehaving.,,Y
+17,adulation,"excessive praise, flattery, blandishment","fawning, sycophancy",z,Noun,"With his excellent work, Phil inspired adulation in his colleagues.",,
+18,affable,"pleasant, friendly and easy to talk to    ","amiable, amicable, congenial",p,Adjective,People enjoyed going to her parties as she was such an affable host.,,
+19,affiance,be engaged to marry,-NA-,z,Verb,"At the age of 18, Bella was affianced to Prince Eduardo.",,
+20,afterwise,"wise after the event, wise or knowing when it is too late",-NA-,n,Adjective,"In retrospect, we should have insisted on checking his calculations, but it's easy to be afterwise.",,
+21,agglutination,combining or uniting,"amalgamation, concatenation",z,Noun,The state government was formed after agglutination of separate political entities.,,
+22,agog,eager or excited         ,"anxious, enthralled",p,Adjective,"The news of election of Donald Trump as the president of U.S.A. , had the world agog.",,
+23,ail,"be troubled, be ill         ","afflict, blight",n,Verb,The company is ailing financially.,,
+24,alacrity,eager and cheerful readiness        ,"celerity, nimbleness",p,Noun,"She offered to help the old uncle Sam, with alacrity.",,Y
+25,allegiance,"loyalty and support to a group or cause, adherence and obedience","fidelity, staunchness",p,Noun,You will always have my allegiance.,,
+26,altruism,"quality of unselfish concern for the welfare of others, selflessness","benevolence, munificent",p,Noun,"Motivated purely by altruism, she donated all her money to the charity.",,
+27,amalgamate,to combine several elements into a whole,"coalesce, meld",z,Verb,This is in advance of the LEA 's proposal to formally amalgamate the two schools.,,Y
+28,ambidextrous,able to use both hands equally well ,-NA-,p,Adjective,"In order to save time, he trained his left arm to write neatly and thus, became ambidextrous. ",,
+29,ambiguous,open to more than one interpretation,"dubious, equivocal",n,Adjective,We were confused by his ambiguous statements.,,Y
+30,ambivalent ,characterized by opposite feelings or emotions,"contradictory, irresolute",n,Adjective,Susan and Toby have an ambivalent relationship.,,Y
+31,ambulatory,able to walk about,-NA-,z,Adjective,We will be opening two new ambulatory care facilities for private patients,,
+32,ambuscade,"act of concealing oneself and waiting to attack by surprise, ambush","ensnare, waylay",n,Verb,The ambuscade by Shivaji is a classic.,,
+33,ameliorate,"improve, make better         ","convalesce, recuperate",p,Verb,This medicine should help ameliorate the wound.,,Y
+34,amenable,agreeable; responsive to suggestion; changeable,"compliant, docile",p,Adjective,Nobody prefers a company which is not amenable to its surroundings. ,,
 35,amortize,end (a debt) by setting aside money     ,-NA-,z,Verb,"After years of hardwork, I was able to amortize my educational loan.",,
-36,anachronism,something out of place with respect to its historical or chronological context,prolepsis ,z,Noun,Billy is too old-fashioned who is seen by many as an anachronism.,,
-37,annals,"chronological record of events in successive years,",chronicles,z,Noun,"In her speech, she frequently quoted the Annals of Medicine.",,
+36,anachronism,something out of place with respect to its chronological context,prolepsis ,z,Noun,Billy is too old-fashioned who is seen by many as an anachronism.,,Y
+37,annals,"chronological record of events in successive years,","archives, chronicles",z,Noun,"In her speech, she frequently quoted the Annals of Medicine.",,
 38,antithetical,direct opposing          ,"contradicting, polarised ",n,Adjective,His speeches were antithetical to his campaigns.,,
-39,aplomb,self confidence; assurance        ,"nonchalance, tact, equanimity",p,Noun,"Even after being embarrassed in front of the class, Miley handled the situation with aplomb.",,
-40,apochryphal,"false, made up","fictitious, unsubstantiated, sham, spurious, fallacious",n,Adjective,"In school, you tend to hear many apocryphal things about yourself.",,
-41,apostate,one who abandons longnheld religious or political convictions    ,"traitor, defector, dissenter, heretic, renegade ",n,Noun,Julian is called an apostate because he abandoned Christianity and labored to restore the pagan faith.,,
-42,apotheosis, glorification to godliness; an ideal example        ,"deification, epitome, paragon, quintessence, archetype",z,Noun,Your poem is the apotheosis of lyric expression.,,
-43,appellation,"identifying  words by which something is classified,","moniker, sobriquet, designation",z,Noun,Mahatma was an honorary appellation given to M.K. Gandhi due to his good deeds in South Africa.,,
-44,apprise,"make aware of, give information or notice to ; Gain in value (of currency)",-NA-,p,Verb,Please apprise me of any changes in the design of the software.,,
-45,approbation,approval; praise,"commendation, endorsement",p,Noun,The restaurant has even received the approbation of its former critics.,,
-46,appropriate,"confiscate, invade","sieze, annex, hijack",n,Verb,The mobile phones brought by the students in school were appropriated by the principle.,,
-47,apropos,"appropriate to the situation, relevant","apt, felicitous, germane, pertinent",p,Adjective,"The comment which followed my statement, though unexpected, was apropos.",,
-48,apt,"well-suited, quick witted        ",-NA-,p,Adjective,"She is witty and every time, comes up with an apt response.",,
+39,aplomb,self confidence; assurance        ,"equanimity, nonchalance",p,Noun,Diana handled the crisis with surprising aplomb.,,
+40,apocryphal,"false, made up","fallacious, sham, spurious",n,Adjective,"In school, you tend to hear many apocryphal things about yourself.",,
+41,apostate,one who abandons longnheld religious or political convictions    ,"defector, dissenter, renegade ",n,Noun,"After 50 years as an apostate, he returned to the faith.",,Y
+42,apotheosis,glorification to godliness; (Secondary Meaning) An ideal example        ,"apogee, zenith",z,Noun,Your poem is the apotheosis of lyric expression.,,
+43,appellation,a name or title,"moniker, sobriquet",z,Noun,Mumbai justifies its appellation ‘The City of Dreams’,,
+44,apprise,"make aware of, give information or notice to","enlighten, intimate",p,Verb,Please apprise me of any changes in the design of the software.,,Y
+45,approbation,approval; praise,"adulation, commendation",p,Noun,The restaurant has even received the approbation of its former critics.,,Y
+46,appropriate,"(Secondary Meaning) Take something without the owner’s permission, confiscate","annex, expropriate",n,Verb,The mobile phones brought by the students to school were appropriated by the principle.,,Y
+47,apropos,"appropriate to the situation, apt","germane, pertinent",p,Adjective,"The comment which followed my statement, though unexpected, was apropos.",,
+48,apt,"appropriate to the situation, apropos","apposite, germane",p,Adjective,"She is witty and every time, comes up with an apt response.",,
 49,arabesque,a complex ornate design        ,-NA-,n,Adjective,Her paintings were famous for their arabesque patterns.,,
-50,arboreal,related to trees        ,-NA-,z,Adjective,The forest’s arboreal beauty was breathtaking.,,
-51,ardor,enthusiasm,"fervour, zeal, oomph, gusto, verve, zest, zing",p,Noun,The younger generation works with ardor.,,
-52,argot,slang          ,"lingo, jargon, vernacular",n,Noun,The gangsters communicated in criminal argot.,,
-53,arrant,"in the highest degree, thorough; notorious      ",-NA-,n,Adjective,You are an arrant fool.,,
-54,arrogate,"demand as being one's property, seize and take control without authority; to assign or attribute to another","appropriate, expropriate, commandeer, preempt, usurp",n,Verb,He arrogated the lead role to himself.,,
-55,ascetic,practicing religious self denial,"austere, spartan, abstemious, puritanical",n,Adjective,The saint lived an ascetic life in the Himalayas.,,
-56,ascribe,to credit or assign; consider to be belonging to   ,"attribute, impute, accredit",Z,Noun,The actor ascribed his success to his family.,,
+50,arboreal,relating to trees        ,-NA-,z,Adjective,The forest’s arboreal beauty was breathtaking.,,
+51,ardor,great enthusiasm or passion,"fervour, zeal",p,Noun,The younger generation works with ardor.,,Y
+52,argot,"slang of a particular group or class, jargon","lingo, parlance, vernacular",n,Noun,The gangsters communicated in criminal argot.,,
+53,arrant,"complete, utter","absolute, sheer",n,Adjective,You are an arrant fool!,,
+54,arrogate,take or claim (something) without justification,"expropriate, commandeer, usurp",n,Verb,He arrogated the lead role to himself.,,
+55,ascetic,"practicing religious self denial, spartan","abstemious, austere, puritanical",n,Adjective,The saint lived an ascetic life in the Himalayas.,,Y
+56,ascribe,to credit or assign; consider to be belonging to   ,"accredit, impute",Z,Noun,The actor ascribed his success to his family.,,
 57,aseptic,surgically clean        ,-NA-,p,Adjective,"Luckily, the wound was aseptic thus, any chance of infection was precluded.",,
-58,asperity,"harshness, bad temper; something hard to endure","acerbity, acrimony, crabbiness, irascibility, churlishness",n,Noun,He spoke about his boss with asperity.,,
-59,aspersion, abuse; Adjective false accusation of an offence ,"calumny, detraction, invective, libel, obloquy, rap, slander, vituperation",n,Noun,"In the parliament, one should to debate peacefully with the opponents, without casting aspersions",,
-60,asservate,"state categorically, make a positive statement or solemn declaration","aver, avow",p,Verb,The teacher could not believe the class mischief-maker had the nerve to asseverate a zombie stole his homework.,,
-61,assiduous,hard working        ,"diligent, indefatigable, scrupulous, industrious, sedulous",p,Adjective,The project required some assiduous planning.,,
-62,assuage,"make something (pain, desire) less, soothe    ","allay, alleviate, appease, mitigate, pacify, placate",p,Verb,The company tried to assuage the investor’s fears.,,
-63,astringent,caustic; substance that shrinks         ,"sharp, acetic, acrid",n,Adjective,He is considered an astringent critic of commercial movies.,,
-64,atonement,compensation,"penance, reparation, expiation, indemnification, propitiation, restitution    ",,Noun,For him charity was an atonement for his sins.,,
-65,attenuate,make thin. Weaken ,"constrict, debilitate, enervate, vitiate, extenuate",n,Verb,Earplugs will attenuate the loud sounds of machinery.,,
-66,attune,bring into harmony       ,-NA-,p,Verb,It is important to attune the employees of the company to its values.,,
-67,augury,"omen, prediction","auspice, boding, portent, precursor, prognostication",n,Noun,They considered the thunderstorm as an augury of death.,,
-68,august,"majestic, lordly, dignified","eminent, lofty, venerable, revered          ",p,Adjective,The family claims an august lineage.,,
-69,austere,"severely moral and strict, simple and plain"," ascetic, chaste, puritanical, stark",z,Adjective,She chose austere furnishings for her office.,,
-70,avarice,"greed, esp for wealth","avidity, covetousness, cupidity, ravenous, voracious",n,Noun,The corporate world is plagued by avarice for money and power.,,
-71,avatar,incarnation ; new personification of a familiar idea,-NA-,z,Noun,Ram is an avatar of God Vishnu.,,
-72,aver,"Maintain, state with confidence","affirm, assert, avow, avouch, predicate",p,Verb,"He averred that he was innocent.
+58,asperity,"harshness, bad temper; something hard to endure","acrimony, virulence",n,Noun,He spoke about his boss with asperity.,,
+59,aspersion,abuse; a false accusation of an offence ,"calumny, invective",n,Noun,"No one is casting aspersions on you, so don’t freak out.",,
+60,asseverate,"state categorically, make a positive statement or solemn declaration","aver, avow",p,Verb,"The suspect asseverates he was not in town on the night of the murder.
 ",,
-73,aversion,strong dislike          ,"animosity, antagonism, antipathy, revulsion, abhorrence, odium, repugnance",n,Noun,He seems to have an aversion to exercise.,,
-74,avid,"eager, enthusiastic for something     ","ardent, fervent, zealous",p,Adjective,I am an avid reader.,,
-75,avow,"admit, declare openly         ",-NA-,p,Verb,She avowed her vengeance against her father’s murderer.,,
-76,awry,"twisted toward one side, off course ; not functioning properly or faulty","askew, astray, askance",n,Adjective,Their plans went awry.,,
-77,axiom,"a universally accepted principle; self evident truth, taken as given","aphorism, dictum, maxim, precept, tenet",z,Noun,Survival of the fittest is one of the key axioms of the theory of evolution.,,
-78,bacchanalian,one who drinks too much,-NA-,n,Noun,"By the time the bacchanalian party ended, everyone was vomiting up their alcohol.",,
-79,baleful,"harmful, causing evil","menacing, calamitous",n,Adjective,"With baleful eyes, the vulture stared at the injured rabbit.",,
-80,barrage,"Weapon fire; an overwhelming quantity or explosion, as of words, blows, or criticisms; artificial obstacle built across a river      ","bombardment, volley",n,Noun,It looks as though the sky will open up and barrage us with rain and hailstones at any minute.,,
-81,barren," infertile, unproductive or unfruitful; unattractive, dull","fallow, infecund",n,Adjective,"After the bomb blast, the land around the area was completely barren.",,
-82,bedizen,"to adorn, especially in a cheap and showy manner    ",-NA-,n,Verb,The elderly actress bedizened herself with cheap make-up and jewellery.,,
-83,belabor,"to explain, worry about something repeatedly; to beat continuously   ",-NA-,n,Verb,Her habit of belaboring the obvious is getting on my nerves.,,
-84,belie,"be in contradiction with, represent falsely","repudiate, confute",n,Verb,Her gentleness belies her strength.,,
+61,assiduous,hard working        ,"diligent, sedulous",p,Adjective,The project required some assiduous planning.,,Y
+62,assuage,"make (an unpleasant feeling)less intense, placate","allay, alleviate",p,Verb,The company tried to assuage the investor’s fears.,,Y
+63,astringent,sharp or severe in manner or style,"caustic, trenchant",n,Adjective,He is considered an astringent critic of commercial movies.,,
+64,atonement,making amends for something wrong,"expiation, penance  ",p,Noun,For him charity was an atonement for his sins.,,
+65,attenuate,"make thin, weaken ","debilitate, enervate",n,Verb,Earplugs will attenuate the loud sounds of machinery.,,Y
+66,attune,accustom or used to something,"acclimatize, accustom",p,Verb,It is important to attune the employees of the company to its work ethics.,,
+67,augury,sign of what will happen in the future,"portent, prognostication",n,Noun,They considered the thunderstorm as an augury of death.,,
+68,august,"majestic, lordly, dignified","eminent, revered, venerable        ",p,Adjective,The family claims an august lineage.,,
+69,austere,"severely moral and strict, simple and plain","ascetic, puritanical",z,Adjective,She chose austere furnishings for her office.,,Y
+70,avarice,"greed, esp for wealth","ravenous, voracious",n,Noun,The corporate world is plagued by avarice for money and power.,,
+71,avatar,incarnation ; new personification of a familiar idea,-NA-,z,Noun,Ram is an avatar of God Vishnu.,,
+72,aver,"maintain, state with confidence","avouch, avow",p,Verb,"He averred that he was innocent.
+",,Y
+73,aversion,strong dislike          ,"abhorrence, repugnance",n,Noun,He seems to have an aversion to exercise.,,
+74,avid,"eager, enthusiastic for something     ","ardent, fervent, zealous",p,Adjective,I am an avid reader.,,Y
+75,avow,"admit, declare openly         ","assert, avow",p,Verb,She avowed her vengeance against her father’s murderer.,,
+76,awry,"twisted toward one side, off course ; not functioning properly or faulty","askance, askew, astray",n,Adjective,Their plans went awry.,,
+77,axiom,"a universally accepted principle; self evident truth, taken as given","precept, tenet",z,Noun,Survival of the fittest is one of the key axioms of the theory of evolution.,,
+78,bacchanalian,one who drinks too much,-NA-,n,Noun,"By the time the bacchanalian party ended, everyone was vomiting.",,
+79,baleful,"harmful, causing evil","malevolent, menacing",n,Adjective,"With baleful eyes, the vulture stared at the injured rabbit.",,
+80,barrage,"heavy weapon fire; an overwhelming quantity of words, blows, or criticisms
+","bombardment, volley",n,Noun,His forces launched an artillery barrage on the city.,,
+81,barren,"infertile, unproductive or unfruitful; unattractive, dull","fallow, infecund",n,Adjective,"After the bomb blast, the land around the area was completely barren.",,
+82,bedizen,"to adorn, especially in a cheap and showy manner    ","gaudy, tawdry",n,Verb,The elderly actress bedizened herself with cheap make-up and jewellery.,,
+83,belabour,"argue about something in excessive detail, attack verbally or physically","invective, lambaste",n,Verb,Her habit of belaboring the obvious is getting on my nerves.,,
+84,belie,"be in contradiction with, represent falsely","confute, repudiate",n,Verb,Her gentleness belies her strength.,,Y
 85,bellicose,"warlike, quarrelsome","contentious, pugnacious",n,Adjective,The Vikings in the western Europe were bellicose by nature.,,
-86,belligerent,(person nation) waging war        ,"cantankerous, truculent",n,Adjective,"Coots are belligerent, territorial and quick-tempered birds.",,
-87,benediction,"act of praying for divine protection, blessing","invocation, beatitude",p,Noun,The priest dismissed the congregation with a benediction.,,
-88,benevolence,Act of kindness,"charity, altruism",p,Noun,Cinderella’s benevolence moved even her stone-hearted step-mother.,,
-89,bequest,"arrangement to give something at death, legacy","endowment, bestowal",Z,Noun,The famous painter made a bequest of his paintings to the museum.,,
+86,belligerent,hostile and aggressive,"cantankerous, truculent",n,Adjective,"Coots are belligerent, territorial and quick-tempered birds.",,Y
+87,benediction,"act of praying for divine protection, blessing","beatitude, invocation",p,Noun,The priest dismissed the congregation with a benediction.,,
+88,benevolence,act of kindness,"altruism, munificence",p,Noun,Cinderella’s benevolence moved even her stone-hearted step-mother.,,
+89,bequest,"arrangement to give something at death, legacy","bestowal, endowment",z,Noun,The famous painter made a bequest of his paintings to the museum.,,
 90,berate,scold sharply,"castigate, censure",n,Verb,She was berated by her parents when came home late.,,
-91,bereft,rob or dispossess of something (material)      ,-NA-,n,Verb,"When my mother died, I felt bereft of love and hope.",,
-92,beset,surrounded; to be attacked by all sides; to set or place upon; ,"beleaguer, besiege",z,Verb,"The drought had been going on for three years, and the whole state was beset with a serious shortage of water.",,
-93,bilge,bulge; sides of the vessel that curve in to form the bottom (ship),-NA-,z,Noun,The bilge filled with water as the ship sinking.,,
-94,binge,Overeat or eat immodestly;,"spree, orgy",n,Verb,"If you continue to binge on junk food, you will become obese.",,
-95,blandishment,Flattery,"enticement, sycophancy",n,Noun,"Despite his nervousness at meeting his in-laws, Dylan was able to offer just the right blandishment to get their approval.",,
-96,blithe,"cheerful, merry; casual, carefree"," jaunty, insouciant",p,Adjective,The rebellious teenager was blithe about his failing grades.,,
-97,boorish,"crude, offensive, rude         ","churlish, barbaric",n,Adjective,Phillip’s boorish behaviour in front of the judge earned him a night in jail for contempt of court.,,
+91,bereft,rob or dispossess of something (material)      ,"deficient, devoid",n,Verb,"When my mother died, I felt bereft of love and hope.",,
+92,beset,surrounded; to be attacked by all sides; to set or place upon; ,"beleaguer, besiege",z,Verb,The social problems continue to beset the state of Bihar.,,
+93,bilge,(Secondary Meaning) Utter nonsense and rubbish,"balderdash, gibberish",n,Noun,What you are saying is complete bilge!,,
+94,binge,excessive indulgence in an activity,"orgy, spree",n,Verb,"If you continue to binge on junk food, you will become obese.",,
+95,blandishment,flattering or pleasing statements,"enticement, sycophancy",n,Noun,The politician offered some blandishment with each handshake.,,
+96,blithe,"cheerful, merry; casual, carefree","insouciant, jaunty",p,Adjective,The rebellious teenager was blithe about his failing grades.,,
+97,boorish,"crude, offensive, rude         ","barbaric, churlish",n,Adjective,Phillip’s boorish behaviour in front of the judge earned him a night in jail for contempt of court.,,Y
 98,brazen,bold or shameless; made of brass         ,"audacious, impudent",n,Adjective,He is a filmmaker willing to brazen the criticism that such a violent film was sure to provoke.,,
 99,broach,"bring up, announce, begin to talk about, initiate","moot, ventilate",z,Verb,Leah found it difficult to broach the idea of a second marriage to her parents.,,
-100,brook,"to tolerate, endure ; a stream of fresh water        ",countenance,p,Verb,She would brook no interference with her plans.,,
-101,bucolic,characteristic of rural areas/people (like a villager),"rustic, pastoral",n,Adjective,The house looks lovely with its bucolic settings.,,
-102,burgeon,"to expand, grow and flourish",-NA-,p,Verb,The town burgeoned into a sprawling city.,,
-103,burnish,"to polish, rub to a shine      ","buff, furbish",p,Verb,I intend to burnish my silver candlesticks for the party tonight.,,
-104,cabal,a scheme or plot of a group of plotters    ,"mob, syndicate",n,Noun,"During the past few months, independent rebels have formed a united cabal in order to displace the dictator.",,
-105,cacophony,a loud harsh or strident noise,"discord, dissonance",n,Noun,The cacophony in the crowded classroom drowned out the principal’s announcement.,,
-106,cadence,"recurrent rhythmical series, a 'beat'","intonation, tempo",p,Noun,"As Jill listened to the rain’s cadence on her roof, she lost herself in romantic daydreams.",,
+100,brook,"(Secondary Meaning) To tolerate, endure; A stream of fresh water        ",countenance,p,Verb,She would brook no interference with her plans.,,
+101,bucolic,characteristic of rural environment,"pastoral, rustic",n,Adjective,The house looks lovely with its bucolic settings.,,
+102,burgeon,"to expand, grow and flourish","abound, proliferate",p,Verb,The town burgeoned into a sprawling city.,,Y
+103,burnish,"to polish, rub to a shine      ","buff, furbish",p,Verb,I intend to burnish my silver candlesticks for the party tonight.,,Y
+104,cabal,a scheme or plot of a group of plotters    ,"coterie, syndicate",n,Noun,The robbers formed a cabal to steal the bank.,,Y
+105,cacophony,a loud harsh or strident noise,"discord, dissonance",n,Noun,"Despite the cacophony, Arya slept on.",,
+106,cadence,"recurrent rhythmical series, a 'beat'","intonation, tempo",p,Noun,All the drummers in the parade maintained cadence.,,
 107,cadge,"to beg, to get by begging      ","scrounge, mooch",n,Verb,The homeless man was constantly trying to cadge cigarettes from pedestrians.,,
-108,cajole,use flattery or deceit to persuade    ,"dupe, wheedle",n,Verb,Why did I ever let my friends cajole me into eating sushi?,,
+108,cajole,use flattery or deceit to persuade    ,"dupe, wheedle",n,Verb,Why did I ever let my friends cajole me into eating sushi?,,Y
 109,calcify,"to change into a hard, stony condition","ossify, petrify",z,Verb,These nodules have a tendency to calcify as the patient ages.,,
-110,calipers,metal supports attached to the legs measuring instrument    ,-NA-,z,Noun,"Last year in school, we used vernier calipers for measuring thickness and height of small objects.",,
+110,calipers,metal supports attached to the legs measuring instrument    ,-NA-,z,Noun,We used vernier calipers to measure thickness and height of small objects.,,
 111,callow,"immature, inexperienced, unsophisticated","jejune, naïve",n,Adjective,Alice is a callow secretary who needs to take a few more computer classes.,,
-112,calumny,a false statement made to damage someone’s reputation,"slander, aspersion",n,Noun,The editor refused to publish the calumny that could possibly destroy the politician’s career.,,
+112,calumny,a false statement made to damage someone’s reputation,"aspersion, slander",n,Noun,The editor refused to publish the calumny that could possibly destroy the politician’s career.,,
 113,canon,code of laws or set of principles (usually religious in nature),"precept, tenet",p,Noun,The Church's canon law forbids remarriage of divorced persons.,,
-114,cant,Hypocritical talk; speak in dialect pertaining to a group       ,"sanctimony, jargon ",n,Noun,He knows thieves' cant.,,
+114,cant,(Secondary Meaning) Hypocritical talk; speak in dialect pertaining to a group       ,sanctimony,n,Noun,"After being in jail for 5 months, he started understanding the thieves’ cant.",,
 115,capitulate,"to surrender, give up","concede, succumb",n,Verb,I never thought my brother would capitulate and allow me to drive his car for a week.,,
-116,capricious,"unpredictable, changing one's mind impulsively","erratic, whimsical",n,Adjective,"Because of his capricious nature, Jeremy found it hard to keep a steady job.",,
+116,capricious,"unpredictable, changing one's mind impulsively","erratic, whimsical",n,Adjective,"Because of his capricious nature, Jeremy found it hard to keep a steady job.",,Y
 117,captious,faultfinding,"carping, petulant",n,Adjective,My captious father is never satisfied with anything I do.,,
-118,caret,mark used by an author to indicate where something is to be inserted,-NA-,n,Noun,If you get real close to the screen you will find a tiny caret pointing down at the end of the word.,,
-119,carousal,"drunken revel, a merry drinking party",-NA-,n,Noun,He always enjoyed attending the great feast and carousal.,,
-120,castigate,"correct by punishing, to chastise       ","berate, lambaste, reprimand",n,Verb,The mother castigated her son for failing in the test.,,
-121,cathartic,"cleansing, stimulates evacuation of the bowels (shitting)",purgative,z,Adjective,The spa promises a cathartic experience for even the most stressed out individual.,,
-122,caucus,a closed political meeting,-NA-,z,Noun,The student union’s planned a caucus to discuss alternatives to the school’s strict rules ,,
-123,caustic,"biting, sarcastic (in speech)  ","acerbic, abrasive",n,Adjective,The professor’s caustic comments offended quite a few students.,,
+118,caret,mark used by an author to indicate where something is to be inserted,-NA-,n,Noun,You will find a tiny caret pointing down at the end of the word.,,
+119,carousal,"drunken revelry, a merry drinking party",-NA-,n,Noun,He always enjoyed attending the great feast and carousal.,,
+120,castigate,"correct by punishing, to chastise       ","berate, lambaste, reprimand",n,Verb,The mother castigated her son for failing in the test.,,Y
+121,cathartic,psychological relief through open expression of emotions,"cleansing, purgative",z,Adjective,Writing her first book was a cathartic experience for her.,,
+122,caucus,a closed political meeting,"bloc, clique, junta",z,Noun,The student union’s planned a caucus to discuss alternatives to the school’s strict rules ,,
+123,caustic,"biting, sarcastic (in speech)  ","acerbic, mordant",n,Adjective,The professor’s caustic comments offended quite a few students.,,Y
 124,censure,"expression of blame or disapproval, a rebuke     ","rebuke, reprimand",n,Noun,"If Ruby receives another censure from her, most likely her grades will be affected.",,
-125,centurion,leader of a unit of 100 soldiers in ancient Roman Army,-NA-,z,Noun,The Roman centurion lead his group of one hundred soldiers into battle.,,
+125,centurion,leader of a unit of 100 soldiers in Ancient Roman Army,-NA-,z,Noun,The Roman centurion lead his group of one hundred soldiers into battle.,,
 126,chagrin,"strong feelings of embarrassment, irritation","annoyance, vexation",n,Noun,"To his chagrin, the politician was defeated in the election.",,
-127,chary,"careful, cautious  ","leery, wary",n,Adjective,"Since my car accident, I have been chary about getting behind the wheel.",,
-128,chasten,make someone realise their fault and correct them,-NA-,z,Verb,"As a parent, I don’t feel spanking is a good way to chasten your kids.",,
+127,chary,very careful and cautious  ,"leery, wary",n,Adjective,"Since my car accident, I have been chary about getting behind the wheel.",,
+128,chasten,make someone realise their fault and correct them,"restrain, subdue",z,Verb,"As a parent, I don’t feel spanking is a good way to chasten one’s kids.",,
 129,chastise,to criticize someone severely           ,"berate, censure, upbraid",n,Verb,I grew very angry as I saw the woman chastise her young child for breaking the glass.,,
-130,chicanery,Dishonest talk or behaviour to deceive ,"duplicity, machination, stratagem",n,Noun,Let us expose that business for its financial chicanery and reveal how they waste our tax money.,,
+130,chicanery,Dishonest talk or behaviour to deceive ,"machination, stratagem",n,Noun,All sorts of political chicanery began as the elections approached.,,Y
 131,choleric,"quickly aroused to anger, irritable","irascible, peevish",n,Adjective,"Whenever I don’t sleep well, I tend to become choleric.",,
-132,chronicle,chronological record of events in successive years,annal,z,Noun,"The auto-biography is a full chronicle of author’s life, right from his childhood to his retirement. ",,
-133,churlish ,"Rude, unfriendly and unpleasant ","crude, boorish, ornery",n,Adjective,"Maria is a very efficient nurse, but her patients find her bedside manner to be churlish.",,
-134,clamor,shout or complain with a lot of noise     ,"hubbub, outcry, tumult",n,Noun,"During the annual meeting, the president’s sudden resignation caused a lot of clamor  among the disappointed shareholders.",,
-135,cloying,Excessively sweet or sentimental (to someone’s disgust),saccharine,n,Verb,The anniversary card was cloying so I knew my unsentimental husband had not purchased it himself.,,
-136,coagulate ,change to a thick and solid state   ,clot,z,Verb,"As it cooled, the gelatine coagulated to form a lump of mass.",,
-137,coalesce ,To come together and unite into one substance     ,"consolidate, fuse",p,Verb,"Because of the dwindling participation in both choirs, all the members agreed to coalesce their groups into one large chorus.",,
-138,coda,a concluding part of a literary or dramatic work,"epilogue, postscript",z,Noun,"The novel’s coda describes the protagonist’s life as an adult, ten years later.",,
-139,coddle,treat with extreme care and tenderness       ,"cosset, mollycoddle",p,Verb,"Because he had recently lost a parent, friends and family would often coddle the young boy.",,
-140,fervid,"showing earnest feeling, zealous    ","enthusiastic, vehement",p,Adjective,India has fervid cricket fans.,ip,hf
-141,fervor,"warmth of feelings, earnestness        ","passion, vigour",p,Noun,The novel captures the revolutionary fervor of the period.,,
+132,chronicle,chronological record of events in successive years,"annal, archive",z,Noun,"The auto-biography is a full chronicle of author’s life, right from his childhood to his retirement. ",,
+133,churlish ,"Rude, unfriendly and unpleasant ","boorish, crude, ornery",n,Adjective,"Maria is a very efficient nurse, but her patients find her bedside manner to be churlish.",,
+134,clamour,shout or complain with a lot of noise     ,"babel, bedlam, din, pandemonium",n,Noun,Ishita’s crisp and calm voice rose above the clamour.,,
+135,cloying,Excessively sweet or sentimental (to someone’s disgust),"mawkish, saccharine",n,Verb,The anniversary card was cloying so I knew my unsentimental husband had not purchased it himself.,,
+136,coagulate ,change to a thick and solid state   ,"clot, congeal",z,Verb,"As it cooled, the gelatine coagulated to form a lump of mass.",,Y
+137,coalesce ,To come together and unite into one substance     ,"consolidate, fuse",p,Verb,Some puddles coalesced into shallow streams.,,
+138,coda,a concluding part of a literary or dramatic work,"epilogue, postscript",z,Noun,"The novel’s coda describes the protagonist’s life as an adult, ten years later.",,Y
+139,coddle,treat with extreme care and tenderness      ,"cosset, mollycoddle",p,Verb,"Because he had recently lost a parent, friends and family would often coddle the young boy.",,
+140,fervid,"showing earnest feeling, zealous    ","enthusiastic, vehement",p,Adjective,India has fervid cricket fans.,,Y
+141,fervor,"warmth of feelings, earnestness        ","passion, vigour",p,Noun,The novel captures the revolutionary fervor of the period.,,Y
 142,fetid,"unpleasant smell, stinking, malodorous, noxious","pungent, putrid",n,Adjective,The fetid odour of rotting vegetables.,,
 143,fetter,"to shackle, put in chains, to restrain","confine, encumber",n,Verb,He found himself fettered by responsibilities.,,
 144,fidelity,loyalty and faithfulness; accuracy of sound reproduction,"allegiance, obedience",p,Noun,No one doubts his fidelity to his country.,,
 145,figurehead,a nominal leader with no real power,"puppet, titular head",z,Noun,The king is just a figurehead; the government is really run by the PM.,,
 146,filibuster,intentional obstruction and blocking (esp. to delay legislative action),"procrastination, stonewall",n,Noun,They engaged in a filibuster that lasted for over a month.,,
-147,flag,"(Secondary Meaning) Become tired or weaken, falter, wilt","droop, languish",n,Verb,Our interest flagged as the speaker droned on.,,
+147,flag,"(Secondary Meaning) Become tired or weaken, falter, wilt","droop, languish",n,Verb,Our interest flagged as the speaker droned on.,,Y
 148,flak,"anti-aircraft guns; strong criticism, disapproval        ","censure, obloquy",n,Noun,He took a lot of flak from the other kids for his unusual appearance.,,
-149,fledgling,"young, inexperienced and immature(from a bird that has just fledged)","budding, neophyte",z,Adjective,Rashid is a fledgling cricketer.,,
+149,fledgling,"young, inexperienced and immature(from a bird that has just fledged)","budding, neophyte",z,Adjective,Rashid is a fledgling cricketer.,,Y
 150,fleeting,"lasting for a very short time, brief, transient","ephemeral, evanescent",n,Adjective,I caught a fleeting glimpse of the spaceship.,,
 151,flinch,"instinctive reaction to fear or pain, shiver, hesitate","cower, wince",n,Verb,He flinched when I caught him off guard.,,
-152,flout,"reject, mock, to go against (tradition)","disdain, scoff",n,Verb,"Despite warnings, he has continued to flout school rules.",,
+152,flout,"reject, mock, to go against (tradition)","disdain, scoff",n,Verb,"Despite warnings, he has continued to flout school rules.",,Y
 153,foible,minor defect in someone   ,"blemish, imperfection",n,Adjective,His foibles included gambling occasionally. ,,
-154,foment,"to stir up public opinion, instigate","arouse, incite",n,Verb,He was accused of fomenting violence.,,
+154,foment,"to stir up public opinion, instigate","arouse, incite",n,Verb,He was accused of fomenting violence.,,Y
 155,foppish,like a man who pays too much attention to his clothes ,"dandyish, dapper",n,Adjective,His foppish attitude started annoying me.,,
 156,forage,food for horses and cattle; to search for something,"explore, rummage",z,Noun,He had to forage for daily groceries amidst the protests.,,
 157,forbear,"refrain from, be patient; related to ancestor       ","abstain, desist",p,Verb ,We decided to forbear provoking him any further.,,
 158,ford,shallow place in a river (to cross)     ,-NA-,z,Noun,It was easy to cross the ford that came in the way.,,
-159,forestall,"prevent by taking action in advance, preempt     ","avert, obviate",z,Verb,He forestalled critics by offering a defence of the project.,,
+159,forestall,"prevent by taking action in advance, preempt     ","avert, obviate",z,Verb,He forestalled critics by offering a defence of the project.,,Y
 160,forswear,"agree to quit, renounce, disallow, repudiate         ","eschew, relinquish",n,Verb,He foreswore cheese to lose weight.,,
 161,fortuitous,happening by fortunate accident or chance,"adventitious, serendipitous",p,Adjective,His meeting with the CEO was entirely fortuitous.,,
 162,fractious,"stubbornly resistant to authority, easily irritable","grumpy, peevish",n,Adjective,The fractious crowd grew violent.,,
@@ -168,12 +170,12 @@
 167,fulsome,"disgusting, offensive due to excessiveness       ","ingratiating, unctuous",n,Adjective,They were fulsome in their praise of her efforts.,,
 168,furtive,"secretive, marked by stealth and covertness","clandestine, surreptitious",n,Adjective,He cast a furtive glance towards us.,,
 169,gaffe,socially awkward or tactless act,"blunder, gaucherie",n,Adjective,He committed an embarrassing gaffe when he mispronounced her name.,,
-170,gainsay,deny or contradict(a fact or statement),"belie, controvert",n,Verb,There is no gainsaying/denying such evidence.,,
+170,gainsay,deny or contradict(a fact or statement),"belie, controvert",n,Verb,There is no gainsaying/denying such evidence.,,Y
 171,gamut,complete range or scope of something,"extent, spectrum",z,Noun,He experienced the full gamut of human emotions on becoming a father.,,
 172,garble,"to confuse unintentionally, jumble","distort, misstate",n,Verb,His nervousness garbled his diction.,,
 173,garish,tastelessly bright and showy,"gaudy, tawdry",n,Adjective,Our new neighbours are outstandingly garish in taste of fashion.,,
 174,garner,to gather or collect(esp. information),"cache, hoard",z,Verb,She garnered more evidence to support her theory.,,
-175,garrulous,"too talkative, esp. on trivial matters","loquacious, verbose, voluble",n,Adjective ,He became more garrulous after drinking a beer.,,
+175,garrulous,"too talkative, esp. on trivial matters","loquacious, verbose, voluble",n,Adjective ,He became more garrulous after drinking a beer.,,Y
 176,gaucherie,awkward and unsophisticated ways,"blunder, gaffe",n,Noun,"His incredible gaucheries apart, I had no reason for hating him.",,
 177,germane,relevant or pertinent to a subject under consideration  ,"apposite, apropos",p,Adjective,The facts germane to the case.,,
 178,gesticulate,using gestures instead of speech,"gesture, signal",p,Verb,He was gesticulating wildly during his extempore.,,
@@ -183,12 +185,12 @@
 182,gloat,over look something with selfish delight      ,"boast, vaunt",n,Verb,Never gloat after winning. Your win itself is a reflection.,,
 183,glut,excessively abundant supply,"deluge, surfeit",n,Noun,The market is glutted with startups.,,
 184,gnaw,"waste away, bite steadily        ","crunch, nibble",z,Verb,The dog was gnawing a bone.,,
-185,goad,provoke (someone) to stimulate a reaction,"prod, stimulus",p,Verb,He was goaded (on) by a sense of duty for his nation.,,
+185,goad,provoke (someone) to stimulate a reaction,"prod, stimulus",p,Verb,He was goaded (on) by a sense of duty for his nation.,,Y
 186,gossamer,"soft, light and delicate material","diaphanous, fibrous",z,Noun,Shawls from Kashmir are all made of native gossamer fabrics.,,
-187,gouge,to cut a deep hole in something,"burrow, excavate",z,Noun,The lamp fell and gouged the bedsheet.,,
-188,grandiloquent,"extravagant in style, esp. to impress","bombastic, pompous",n,Adjective,He's fond of making grandiloquent speeches about music.,,
+187,gouge,to cut a deep hole in something,"burrow, excavate",z,Noun,The lamp fell and gouged the bedsheet.,,Y
+188,grandiloquent,"extravagant in style, esp. to impress","bombastic, pompous",n,Adjective,He's fond of making grandiloquent speeches about music.,,Y
 189,gratuitous,"given or done free of charge, esp. not required","gratis, voluntary",p,Adjective,The film was criticised for its gratuitous violence.,,
-190,gregarious,"someone who is fond of company, friendly ","outgoing, sociable",p,Adjective,She is outgoing and gregarious.,,
+190,gregarious,"someone who is fond of company, friendly ","outgoing, sociable",p,Adjective,She is outgoing and gregarious.,,Y
 191,gristle,tough elastic tissue; mostly converted to bone in adults,-NA-,z,Noun,"A cheap piece of meat, full of gristle and fat.",,
 192,grouse,"to complain about something trivial, grumble about","carp, whine",n,Verb,Fans have groused that the higher prices are unfair.,,
 193,grovel,"to flatter someone, as in fear or utter sycophancy","obsequious, servile",z,Verb,The peasants grovelled before the king.,,
@@ -197,7 +199,7 @@
 196,halcyon,calm and peaceful       ,"placid, serene",p,Adjective,She looks back fondly recalling the halcyon days of her carefree youth.,,
 197,hallow,honour as holy and sacred,"consecrate, sanctify",p,Verb,The church stands on hallowed ground.,,
 198,hapless,"unlucky, unfortunate(a person)","forlorn, jinxed",n,Adjective,She plays the hapless heroine who is unlucky in love.,,
-199,harangue,a lengthy and aggressive speech,"invective, polemic",p,Noun,He delivered a long harangue about the evils of current administration.,,
+199,harangue,a lengthy and aggressive speech,"invective, polemic",p,Noun,He delivered a long harangue about the evils of current administration.,,Y
 200,harbinger,"something or someone that foretells the coming of, warning signs","augury, portent",z,Noun,The cool weather is a harbinger of winter.,,
 201,harrow,"to distress, create stress or torture      ","crucify, torment",n,Verb,Survivors claim it to be a harrowing ordeal.,,
 202,hedonistic,"engaged in the pursuit of pleasure, sensually self-indulgent","decadent, sybaritic",z,Adjective,Ashoka The Great gave up his hedonistic lifestyle for a more ascetic one.,,
@@ -214,21 +216,21 @@
 213,hoodwink,"dupe or trick, mislead         ","deceive, swindle",n,Verb,Glib salesmen hoodwink naive customers into buying trivial products.,,
 214,hubris,excessive arrogance or pride          ,"conceit, pomposity",n,Noun,His failure was a result of his hubris.,,
 215,husk,remove worthless outside part of anything       ,-NA-,n,Noun,"You husk the onion, I will cut it.",,
-216,hyperbole,exaggerated statements or claims not meant to be taken literally,"embellishment, exaggeration",z,Noun,I suppose using such hyperbole makes him feel good about himself.,,
-217,iconoclast,"person who attacks popular beliefs, nonconformist","dissident, heretic",z,Noun,The iconoclasm of his views made him unpopular.,,
+216,hyperbole,exaggerated statements or claims not meant to be taken literally,"embellishment, exaggeration",z,Noun,I suppose using such hyperbole makes him feel good about himself.,,Y
+217,iconoclast,"person who attacks popular beliefs, nonconformist","dissident, heretic",z,Noun,The iconoclasm of his views made him unpopular.,,Y
 218,idiosyncrasy,distinctive or peculiar feature of someone,"eccentricity, mannerism",z,Noun,Her habit of using “like” in every sentence was one of her idiosyncrasies.,,
 219,idyll,"a short-lived, serene episode of pastoral or romantic charm","bucolic, rustic",z,Noun,He prefers pastoral idylls instead of metropolises.,,
 220,ignoble,dishonourable in character or purpose         ,"contemptible, despicable",n,Adjective,The new neighbour had an ignoble past.,,
 221,ignominious,deserving public disgrace and shame,"disgraceful, embarrassing",n,Adjective,They suffered an ignominious defeat.,,
 222,imbroglio,"complicated and embarrassing situation, dilemma      ","predicament, quandary",n,Noun,"While debating, he often got into verbal imbroglios with other participants.",,
-223,immutable,unchanging overtime,"enduring, sacrosanct",n,Adjective,These are the immutable laws of nature.,,
+223,immutable,unchanging overtime,"enduring, sacrosanct",n,Adjective,These are the immutable laws of nature.,,Y
 224,impecunious,having little or no money       ,"indigent, penurious",n,Adjective,Students in this hostel are mostly impecunious.,,
-225,impede,delay or prevent by obstruction,"hamper, hinder",n,Verb,The soldiers could not impede the enemy's advance.,,
+225,impede,delay or prevent by obstruction,"hamper, hinder",n,Verb,The soldiers could not impede the enemy's advance.,,Y
 226,impediment,hindrance or obstruction in doing something,"deterrent, obstacle",n,Noun,There were no legal impediments to the deal.,,
 227,imperious,arrogant and commanding,"domineering, peremptory",n,Adjective,The government office is full of imperious bureaucrats.,,
 228,impetuous,done hastily without care,"impulsive, precipitous",n,Adjective,He's always been an impetuous young man.,,
 229,impious,lack of respect for god or religion     ,"profane, sacrilegious",n,Adjective,The people of the clan were accused of impiety.,,
-230,implicate,show that somebody is involved in a crime     ,"incriminate, inculpate",z,Verb,His business partner was implicated in the theft.,,
+230,implicate,show that somebody is involved in a crime     ,"incriminate, inculpate",z,Verb,His business partner was implicated in the theft.,,Y
 231,importune,"beg urgently or continuously, plead","entreat, implore",n,Verb,He importuned them to give him money.,,
 232,imprecate,"to invoke or conjure a curse (as an insult), malediction","anathema, execrate",n,Verb,He muttered imprecations under his breath.,,
 233,impromptu,"without preparation, extempore    ","spontaneous, unrehearsed",z,Adjective,He made an impromptu speech about honour.,,
@@ -236,19 +238,19 @@
 235,impugn,call into question the validity of a statement,"contravene, gainsay",n,Verb,He impugned his rival's intent.,,
 236,impunity,exemption from punishment or penalty,"absolve, acquit",z,Noun,The prisoner was granted complete impunity on being proven innocent.,,
 237,impute,to credit something to a person or a cause,"accredit, ascribe",z,Verb,They're trying to impute selfish motives to my actions. ,,
-238,inadvertent,"accidental, unintentional","unplanned, unpremeditated",n,Adjective,The file had some inadvertent omissions.,,
+238,inadvertent,"accidental, unintentional","unplanned, unpremeditated",n,Adjective,The file had some inadvertent omissions.,,Y
 239,inane,"lacking sense, silly         ","fatuous, imbecile",n,Adjective,The film's plot is inane and full of clichés.,,
 240,inasmuch,explains or limits information in the sentence        ,-NA-,z,Adverb,They were lucky inasmuch as no one was hurt in the fire.,,
 241,incarcerate,to imprison or confine,"immure, imprison",n,Verb,They were both incarcerated for murder.,,
-242,inchoate,"not yet fully formed, elementary, amorphous","incipient, rudimentary",z,Adjective,The group of friends were discussing inchoate ideas for their new startup.,,
+242,inchoate,"not yet fully formed, elementary, amorphous","incipient, rudimentary",z,Adjective,The group of friends were discussing inchoate ideas for their new startup.,,Y
 243,incipient,"beginning to develop, emerging","embryonic, inchoate",z,Adjective,The project is still in its incipient stages.,,
 244,incise,make a cut in       ,"engrave, gash",z,Verb,The clay was incised to create a design.,,
 245,incumbent ,official who holds an office/official duties,"existing, reigning",z,Noun,Incumbents often have an advantage in elections.,,
 246,incursion,an invasion or a sudden attack       ,"blitz, foray",n,Noun,The cordoned off area has always been subject to militant incursions.,,
 247,indefatigable,going on tirelessly       ,"relentless, unflagging",p,Adjective,My mother is a person of indefatigable patience.,,
 248,indelible,that cannot be erased      ,"enduring, ineffaceable",z,Adjective,His achievements left an indelible mark on the youngsters.,,
-249,indigent,poor or needy           ,"destitute, impecunious",n,Noun,The hospital provides free care for indigent patients.,,
-250,indolent,lazy and inactive          ,"languid, torpid",n,Noun,She is indolent and irresponsible.,,
+249,indigent,poor or needy           ,"destitute, impecunious",n,Noun,The hospital provides free care for indigent patients.,,Y
+250,indolent,lazy and inactive          ,"languid, torpid",n,Noun,She is indolent and irresponsible.,,Y
 251,indomitable,impossible to subdue or defeat       ,"invincible, unassailable",p,Adjective,Her will to do the impossible was indomitable.,,
 252,inebriated,habitually drunk,"intoxicated, tipsy",n,Adjective,He was clearly inebriated when he left the bar.,,
 253,ineffable,too great to be described in words     ,"astounding, inexpressible",p,Adjective,The soldier felt ineffable joy at the sight of his children.,,
@@ -259,10 +261,10 @@
 258,infuse,pour or fill completely       ,"inundate, pervade",z,Verb,She infused her followers with confidence.,,
 259,inimical,tending to obstruct or harm,"deleterious, pernicious",n,Adjective,Smoking is inimical to human life.,,
 260,inimitable,"impossible to copy, unmatchable         ","nonpareil, peerless",p,Adjective,Steve Jobs was simple yet his dressing style was inimitable.,,
-261,innocuous,not harmful or offensive,"anodyne, insipid",p,Adjective,He told a few innocuous jokes.,,
+261,innocuous,not harmful or offensive,"anodyne, insipid",p,Adjective,He told a few innocuous jokes.,,Y
 262,insalubrious,"unhealthy, unwholesomeness","seedy, unsavoury",n,Adjective ,The pollution in New Delhi is completely insalubrious for everyone.,,
 263,insignia,badge worn by soldier to show official position,"crest, emblem",z,Noun,Their jackets have the school's insignia on the front.,,
-264,insipid,"without taste or flavour, vapid","bland, unpalatable",n,Adjective,The starter was rather insipid.,,
+264,insipid,"without taste or flavour, vapid","bland, unpalatable",n,Adjective,The starter was rather insipid.,,Y
 265,insolvent,"unable to pay dept, bankrupt","defaulting, penurious",n,Adjective,His gambling habits left him insolvent.,,
 266,insouciant,showing a casual lack of concern,"carefree, nonchalant",p,Adjective,The chairman had a rather insouciant charm.,,
 267,instantiate,represent by an instance or a concrete example,-NA-,z,Verb,The prof’s instantiated anecdotes made his pupils love him.,,
@@ -271,22 +273,22 @@
 270,interdict,prohibit or forbid         ,"embargo, proscribe",n,Noun,Efforts of the army have been to interdict enemy supply shipments.,,
 271,intermittent,"occurring at irregular intervals, not continuous or steady","spasmodic, sporadic",z,Adjective,The patient was having intermittent pains in his stomach.,,
 272,intersperse,scatter among or between other things ,"disperse, strew",z,Verb,Some seagulls were interspersed among the ducks.,,
-273,intractable,hard to control or deal with,"obdurate, obstinate",n,Adjective,Chain smoking has been an intractable problem.,,
-274,intransigent,"refusing to change one’s views, stubborn","perverse, refractory",n,Adjective ,He has remained intransigent in his opposition to the proposal.,,
+273,intractable,hard to control or deal with,"obdurate, obstinate",n,Adjective,Chain smoking has been an intractable problem.,,Y
+274,intransigent,"refusing to change one’s views, stubborn","perverse, refractory",n,Adjective ,He has remained intransigent in his opposition to the proposal.,,Y
 275,intrepid,"brave and fearless, undaunted, valiant        ","audacious, plucky",p,Adjective,Vikram Batra was an intrepid soldier who laid down his life for his nation.,,
-276,inundate,"cover by overflowing, submerge","deluge, glut",z,Verb,Hundreds of letters inundated the politicians office.,,
-277,inure,accustom or adapt to something      ,"acclimatize, habituate",p,Verb,We quickly became inured to his sarcasm.,,
-278,invective,"insulting, abusive or highly critical language","censure, vituperation",n,Noun,A barrage of racist invective were chanted by the opponent supporters.,,
+276,inundate,"cover by overflowing, submerge","deluge, glut",z,Verb,Hundreds of letters inundated the politicians office.,,Y
+277,inure,accustom or adapt to something      ,"acclimatize, habituate",p,Verb,We quickly became inured to his sarcasm.,,Y
+278,invective,"insulting, abusive or highly critical language","censure, vituperation",n,Noun,A barrage of racist invective were chanted by the opponent supporters.,,Y
 279,inveigh,"to attack verbally, denounce      ","decry, vilify",n,Verb,Employees inveighed against mandatory overtime.,,
 280,inveigle,to obtain by deception or flattery,"coax, cajole, wheedle",n,Verb,They tried to inveigle her into taking the job.,,
 281,inveterate,long established habit which is unlikely to change,"chronic, compulsive",z,Adjective,He has been an inveterate smoker all his adult life.,,
 282,involute,"complex and intricate, circuitous","byzantine, labyrinth",n,Adjective,The art novel has grown increasingly involute.,,
-283,irascible,"irritable, easily angered, choleric","cantankerous, querulous",n,Adjective,The boss has an irascible disposition/temper.,,
+283,irascible,"irritable, easily angered, choleric","cantankerous, querulous",n,Adjective,The boss has an irascible disposition/temper.,,Y
 284,ire,anger           ,"chagrin, indignation",n,Noun,He directed his ire at the coworkers who reported the incident.,,
 285,irksome,"irritating, annoying","exasperating, vexing",n,Adjective,"Strangely, she started enjoying the irksome task of cleaning up.",,
-286,irresolute,"hesitating, undecided          ","equivocating, vacillating",n,Adjective,He has been criticised to be an irresolute leader.,,
+286,irresolute,"hesitating, undecided          ","equivocating, vacillating",n,Adjective,He has been criticised to be an irresolute leader.,,Y
 287,irrevocable,final and unalterable         ,"immutable, irreversible",z,Adjective,She has made an irrevocable decision.,,
-288,itinerate,to travel from place to place for professional duty  ,"ambulatory, peripatetic",z,Verb,"He itinerated, preaching the great doctrines of his faith.",,
+288,itinerate,to travel from place to place for professional duty  ,"ambulatory, peripatetic",z,Verb,"He itinerated, preaching the great doctrines of his faith.",,Y
 289,jaded,"tired, fatigued, debilitated","sapped, weary",n,Adjective,He became jaded from years of work as a minister’s peon.,,
 290,jeremiad,a long and mournful complaint,"diatribe, tirade",n,Noun,A jeremiad against the political apathy shown by so many young people.,,
 291,jingoism,"extreme patriotism, esp. aggressive and warlike","fanaticism, chauvinism",n,Noun,During the war many people were caught up in a wave of jingoism.,,
@@ -294,15 +296,15 @@
 293,juxtapose,to place side by side for comparison,"colligate, collocate",z,Verb,A display that juxtaposes modern art with classical art.,,
 294,labyrinth,complex system of pathways where it is easy to get lost ,"convolution, tangle",z,Noun ,The metro system is a complex labyrinth of tunnels and chambers.,,
 295,lachrymose,"causing tears, tearful         ","sobbing, weeping",n,Adjective,The act that we saw yesterday was a lachrymose drama.,,
-296,laconic,"using few words, terse","pithy, succinct",p,Adjective,He had a reputation for being laconic and on point.,,
+296,laconic,"using few words, terse","pithy, succinct",p,Adjective,He had a reputation for being laconic and on point.,,Y
 297,lament,passionate expression of grief or sorrow,"mourn, wail",n,Verb,She lamented over the loss of her best friend.,,
 298,languish,"lose vitality, grow weak","droop, wither",n,Verb,The bill languished in the House for months.,,
-299,lassitude,"lack of energy, weariness         ","enervation, lethargy",n,Verb,Symptoms of the disease include paleness and lassitude.,,
-300,latent,potentially existing but not presently evident,"dormant, quiescent",p,Adjective,The used car they bought had latent defects.,,
+299,lassitude,"lack of energy, weariness         ","enervation, lethargy",n,Verb,Symptoms of the disease include paleness and lassitude.,,Y
+300,latent,potentially existing but not presently evident,"dormant, quiescent",p,Adjective,The used car they bought had latent defects.,,Y
 301,lechery,"unrestrained indulgence in sexual activity, lustfulness","lasciviousness, promiscuous",n,Noun,The serial killer was a dirty lecher.,,
-302,lethargic,"lack of energy, weariness         ","languid, torpid",n,Adjective,The disease left him weak and lethargic.,,
-303,levee,"embankment, dam    ",-NA-,z,Noun,A levee has been built to prevent overflow of water.,,
-304,levity,lack of seriousness       ,"conviviality, vivacity",n,Noun,The teacher would not tolerate any levity in the classroom.,,
+302,lethargic,"lack of energy, weariness         ","languid, torpid",n,Adjective,The disease left him weak and lethargic.,,Y
+303,levee,"embankment, dam    ",-NA-,z,Noun,A levee has been built to prevent overflow of water.,,Y
+304,levity,lack of seriousness       ,"conviviality, vivacity",n,Noun,The teacher would not tolerate any levity in the classroom.,,Y
 305,libel,statement that damages reputation        ,"defamation, denigration",n,Noun,The newspaper was found guilty of libel.,,
 306,libertine,immoral person          ,"hedonist, profligate",n,Noun,There were many libertines in the ancient court of that emperor.,,
 307,lien,legal claim until a debt on something is repaid   ,-NA-,z,Noun,The bank had a lien on their house.,,
@@ -312,7 +314,7 @@
 311,lithe,"thin, supple, and graceful body","nimble, lissom",n,Adjective,"Usain Bolt is a lithe, muscular athlete.",,
 312,loll,"rest to sit or stand in a lazy, relaxed way","repose, slump",z,Verb,Her head was lolling to one side.,,
 313,lope,run along with long strides     ,"gallop, trot",z,Verb,The horses loped easily across the brooks.,,
-314,loquacious,"tending to talk a lot, verbose, voluble, wordy","garrulous, prolix",n,Adjective,Radio talk shows look out for loquacious individuals.,,
+314,loquacious,"tending to talk a lot, verbose, voluble, wordy","garrulous, prolix",n,Adjective,Radio talk shows look out for loquacious individuals.,,Y
 315,lucubrate,"write or study, esp. at night","cram, peruse",p,Verb,I have often lucubrated for your newspaper.,,
 316,luculent,easily understood or clearly expressed   ,"lucid, pellucid",p,Adjective,Her writings were very luculent and easily conveyed even to laymen.,,
 317,lugubrious,looking or sounding sad and dismal,"doleful, mournful",n,Adjective,The comedy actor was known for his lugubrious manners.,,
@@ -320,13 +322,13 @@
 319,macabre,"horrifying, suggesting death         ","grotesque, lurid",n,Adjective,Police discovered a macabre scene at the crime scene.,,
 320,macerate,make or become soft by soaking in water  ,"pulp, squash",z,Verb,Macerate the sprouts in water.,,
 321,machination,a plot or a scheme (esp. evil)        ,"ruse, stratagem",n,Noun,He was cheated by the political machinations of the legislature.,,
-322,magnanimity,"generosity, esp. towards a less powerful person or rival","benevolence, munificence",p,Noun,"Both sides will have to show magnanimity, if they intend to end their fray.",,
+322,magnanimity,"generosity, esp. towards a less powerful person or rival","benevolence, munificence",p,Noun,"Both sides will have to show magnanimity, if they intend to end their fray.",,Y
 323,magnate,a very wealthy or powerful businessman,"mogul, tycoon",z,Noun,Rupert Murdoch is a media mogul.,,
 324,maladroit,"tactless, clumsy       ","bungling, inept",n,Adjective,The socially maladroit teenager had few friends.,,
 325,malaise,"unease, physical discomfort","enervation, lethargy",n,Noun,"The symptoms include headache, malaise, and paleness.",,
 326,malapropism,misuse of a word (for one that resembles it)   ,"blunder, solecism",n,Noun,The comedian used many malapropisms to make the audience laugh.,,
 327,malevolence,"wishing to do evil, hostility   ","malice, spite",n,Noun,Her reputation has been hurt by malevolent gossip.,,
-328,malinger,to fake illness or injury in order to escape a duty ,"feign, shirk",n,Verb,He was suspected of malingering and warned against it.,,
+328,malinger,to fake illness or injury in order to escape a duty ,"feign, shirk",n,Verb,He was suspected of malingering and warned against it.,,Y
 329,manacle,chains for the hands or feet      ,"fetter, shackle",z,Noun,The prisoner was led into the courtroom in manacles.,,
 330,mandate,order or assign authority to,"endorsement, sanction",p,Noun,Royal mandates must be obeyed.,,
 331,manumit,"free from slavery or servitude, liberate","emancipate, enfranchise",p,Verb,Many slaves were never manumitted in their lives.,,
@@ -334,10 +336,10 @@
 333,matriculate,be enrolled at a college or university,"enrol, register",z,Verb,She matriculated at the college and began classes in the fall.,,
 334,maudlin,sentimental in a tearful way     ,"lachrymose, mawkish",n,Adjective,He became maudlin and started crying like a child.,,
 335,maul,hurt by rough handling      ,"assault, molest",n,Verb,A bear killed one hiker and badly mauled his companion.,,
-336,maverick,"rebel, nonconformist          ","bohemian, eccentric",n,Noun,He's always been a maverick in the world of literature.,,
+336,maverick,"rebel, nonconformist          ","bohemian, eccentric",n,Noun,He's always been a maverick in the world of literature.,,Y
 337,mawkish,sentimental in an exaggerated or false way,"lachrymose, maudlin",n,Adjective,The mawkish love story in the movie dampened our jubilant mood.,,
 338,mellifluous,pleasingly smooth and musical to hear,"dulcet, euphonious",p,Adjective,Ishita’s voice is resonating and soothingly mellifluous.,,
-339,mendacity,"dishonesty, untruthfulness","hoodwink, perfidy",n,Noun,The people learned of the army's mendacity just after the war began.,,
+339,mendacity,"dishonesty, untruthfulness","hoodwink, perfidy",n,Noun,The people learned of the army's mendacity just after the war began.,,Y
 340,mendicant,a beggar          ,"cadger, vagrant",n,Noun,I prefer to give food and clothes over money to wandering mendicants.,,
 341,mercurial,sudden changes in character or mood      ,"capricious, mercurial",z,Adjective,"While on drugs, Robert Downey Jr. was mercurial, now he is anything but that.",,
 342,meretricious,"attractive on the surface but of little value, gaudy","garish, tawdry",n,Adjective,Social medias are full of people with meretricious beauties.,,
@@ -347,11 +349,11 @@
 346,militate,"have force or influence, bring about a change","counter, discourage",z,Verb,Drugs is a major factor militating against success.,,
 347,minatory,expressing or conveying a threat,"intimidating, menacing",n,Adjective,The novel's antagonist is haunted by a minatory black spectre.,,
 348,mince,to walk or move with affected steps; hold back in communication,teeter,z,Verb,The comedian minced across the stage imitating his counterpart. ,,
-349,misanthrope,person who hates mankind        ,"cynic, skeptic",n,Noun,A former misanthrope who now professes a newly discovered love of mankind.,,
+349,misanthrope,person who hates mankind        ,"cynic, skeptic",n,Noun,A former misanthrope who now professes a newly discovered love of mankind.,,Y
 350,misdemeanour,"a minor wrongdoing, vice","peccadillo, transgression",n,Noun,He was charged for committing a misdemeanour.,,
 351,misogynist,"one who hates, despises women       ","chauvinist, supremacist",n,Noun,Misogynists haven’t felt as uncomfortable as with this new wave of feminism. ,,
-352,mitigate,"to make less severe or intense, relieve, assuage","alleviate, palliate",p,Verb,Medicines were used to mitigate the patient's suffering.,,
-353,mollify,"make calmer or quieter, assuage","appease, pacify",p,Verb,All attempts to mollify the extremists have failed.,,
+352,mitigate,"to make less severe or intense, relieve, assuage","alleviate, palliate",p,Verb,Medicines were used to mitigate the patient's suffering.,,Y
+353,mollify,"make calmer or quieter, assuage","appease, pacify",p,Verb,All attempts to mollify the extremists have failed.,,Y
 355,monolithic,characterized by massiveness and rigidity,"mammoth, monumental",p,Adjective,Apple Inc. is a monolithic organisation.,,
 356,morbid,"diseased, unhealthy (esp. ideas about death, etc.)       ","ghoulish, macabre",n,Adjective,The child has a morbid fear/horror of snakes.,,
 357,mordant,harshly ironic or sinister,"acerbic, caustic",n,Adjective,William Shakespeare is also famous for his mordant wit.,,
@@ -365,7 +367,7 @@
 364,nebulous,"cloud-like, vague and ill-defined        ","amorphous, hazy",n,Adjective,She gave a nebulous answer to the question.,,
 365,nefarious,wicked or criminal,"abominable, iniquitous",n,Adjective,Dawood Ibrahim is infamous for all his nefarious criminal activities. ,,
 366,neologism,a newly coined word or expression,coinage,z,Noun,"Every year, Oxford adds various neologisms to its dictionary.",,
-367,neophyte,"person who has just started doing something, novice","apprentice, fledgling, tyro",z,Noun,The freshmen are still neophytes when it comes to programming.,,
+367,neophyte,"person who has just started doing something, novice","apprentice, fledgling, tyro",z,Noun,The freshmen are still neophytes when it comes to programming.,,Y
 368,nepotism,favouritism to a relative (esp. for some job),"partisanship, prejudice",n,Noun,Nepotism has hurt the country’s international standing.,,
 369,nexus,a connection or link between two or more things,-NA-,z,Noun,"Nowadays, there seems to be a nexus of money and politics.",,
 370,nibble,(Secondary Meaning) Cautious interest in commercial opportunity     ,-NA-,p,Noun,"We've a couple of nibbles on our flat, but none seem to make up their mind.",,
@@ -379,27 +381,27 @@
 378,noxious,"harmful, poisonous or very unpleasant","pernicious, virulent",n,Adjective,Plastic waste is noxious to the balance in the ecosystem.,,
 379,nuance,a subtle difference in meaning or opinion,"gradation, subtlety",z,Noun,He was trained to understand subtle nuances in music.,,
 380,nugatory,"of no value or importance, useless","futile, trifling",n,Adjective,That is a nugatory and pointless observation.,,
-381,obdurate,stubbornly resistant to change one’s opinion,"obstinate, perverse",n,Adjective,"I argued this point with him, but he was obdurate.",,
+381,obdurate,stubbornly resistant to change one’s opinion,"obstinate, perverse",n,Adjective,"I argued this point with him, but he was obdurate.",,Y
 382,obeisance,"act of obeying, submissive behaviour to another person","deference, reverence, veneration",p,Noun,They paid obeisance to the Prince.,,
 383,obfuscate,to make unclear and confusing       ,"garble, obscure",n,Verb,The new rule is more likely to obfuscate people than enlighten them.,,
-384,obloquy,strong public criticism and condemnation,"aspersion, calumny",n,Noun,He endured years of contempt and obloquy for his infamy.,,
-385,obsequious,"too eager to obey or serve, sycophant    ","fawning, servile",n,Adjective,They were served by obsequious waiters.,,
+384,obloquy,strong public criticism and condemnation,"aspersion, calumny",n,Noun,He endured years of contempt and obloquy for his infamy.,,Y
+385,obsequious,"too eager to obey or serve, sycophant    ","fawning, servile",n,Adjective,They were served by obsequious waiters.,,Y
 386,obstreperous,"noisy and difficult to control, disorderly and unruly","recalcitrant, refractory",n,Adjective,Our new neighbours are very cocky and obstreperous.,,
 387,obtain,"(Secondary Meaning) To be established, accepted or customary","prevail, prevalent",z,Verb,These ideas no longer obtain for our generation.,,
 388,obtrusive,noticeable in an unpleasant or annoying way,"conspicuous, prominent",n,Adjective,We used less obtrusive colours in the bedrooms.,,
 389,obtuse,annoyingly insensitive and slow to understand,"imperceptive, inconsiderate",n,Adjective,He is too obtuse to take a hint.,,
-390,obviate,avoid or prevent (something undesirable),"avert, preclude",n,Verb,The new medical treatment obviates the need for surgery.,,
-391,occlude,close up or obstruct (an opening)          ,"clog, plug",n,Verb,Thick make-up can occlude the skin pores.,,
+390,obviate,avoid or prevent (something undesirable),"avert, preclude",n,Verb,The new medical treatment obviates the need for surgery.,,Y
+391,occlude,close up or obstruct (an opening)          ,"clog, plug",n,Verb,Thick make-up can occlude the skin pores.,,Y
 392,odium,widespread hatred for some actions,"abhorrence, repugnance, revulsion",n,Noun ,He incurred widespread odium for army failures and government corruption.,,
-393,officious,too eager or ready to help or offer advice    ,"intrusive, meddling",n,Adjective,The security people were very officious and it got on our nerves.,,
+393,officious,too eager or ready to help or offer advice    ,"intrusive, meddling",n,Adjective,The security people were very officious and it got on our nerves.,,Y
 394,ominous,"threatening, foreshadowing ill fortune       ","portentous, sinister",n,Adjective,There were ominous dark clouds gathering overhead.,,
 395,omnipotent,"having unlimited power, all-powerful","invincible, supreme",p,Adjective ,God is described as omnipotent and benevolent.,,
 396,omniscient,"having unlimited knowledge, knowing everything","pansophical, wise",p,Adjective,Poirot had an omniscient understanding of each character in the novel. ,,
-397,onerous,"needing effort, burdensome, highly exacting","arduous, strenuous",n,Adjective,The government imposed onerous taxes on exports.,,
-398,opprobrium,harsh criticism or censure,"castigation, denigration",n,Noun,They're going ahead with the project despite general opprobrium.,,
+397,onerous,"needing effort, burdensome, highly exacting","arduous, strenuous",n,Adjective,The government imposed onerous taxes on exports.,,Y
+398,opprobrium,harsh criticism or censure,"castigation, denigration",n,Noun,They're going ahead with the project despite general opprobrium.,,Y
 399,ossify,"to turn to bone, to settle rigidly","petrify, solidify",z,Verb,Her opinions have ossified.,,
 400,ostensible,"appearing to be true, professed or supposed      ","apparent, purported",p,Adjective,The ostensible reason for his visit was to see an old friend.,,
-401,ostentatious ,"vulgar display intended to attract others, gaudy","extravagant, ornate",n,Adjective,Ostentatious use of foreign phrases in conversation is not recommended.,,
+401,ostentatious ,"vulgar display intended to attract others, gaudy","extravagant, ornate",n,Adjective,Ostentatious use of foreign phrases in conversation is not recommended.,,Y
 402,ostracism,"exclusion from society, refuse to meet or talk    ","banishment, expulsion",n,Noun,She suffered years of ostracism from the literary community.,,
 403,overweening,"showing excessive confidence or pride, conceited, smug","haughty, disdainful",n,Adjective,Speeches by overweening politicians are mostly just the ego talking.,,
 404,paean,"song of praise or triumph, extolment, encomium","eulogy, panegyric",p,Noun,He has created a filmic paean to his hero.,,
@@ -411,25 +413,25 @@
 410,panegyric,formal praise,"encomium, eulogy, paean",p,Noun,The film is a panegyric to old-fashioned virtues.,,
 411,panorama,"360 degrees, comprehensive view","landscape, perspective",p,Noun,You can see a panorama of the entire bay from here.,,
 412,paradigm,"a typical example, pattern or model of something","archetype, criterion, yardstick",p,Noun,A new study has surfaced that challenges the current evolutionary paradigm.,,
-413,paragon,a perfect example of excellence,"epitome, nonpareil, quintessence",p,Noun,That company is a paragon of modern manufacturing techniques.,,
+413,paragon,a perfect example of excellence,"epitome, nonpareil, quintessence",p,Noun,That company is a paragon of modern manufacturing techniques.,,Y
 414,pariah,a social outcast  ,"leper, vagabond",n,Noun,He's a good player but his angry outbursts have made him a pariah in cricket.,,
 415,parochial,having limited or narrow outlook,"insular, provincial",n,Adjective,A small city with a parochial point of view in matters of politics.,,
 416,parsimonious,"too economical, unwilling to spend money ","miserly, stingy",n,Adjective,The organisation is parsimonious with employee benefits.,,
-417,partisan,"one-sided commitment to a cause, biased  ","bigoted, prejudiced",n,Noun,The cabinet is replete with partisans who only see one side of the problem.,,
-418,paucity,something present in inadequate quantities      ,"dearth, scantiness",n,Noun,There was a relative paucity of evidences in the sensational case.,,
+417,partisan,"one-sided commitment to a cause, biased  ","bigoted, prejudiced",n,Noun,The cabinet is replete with partisans who only see one side of the problem.,,Y
+418,paucity,something present in inadequate quantities      ,"dearth, scantiness",n,Noun,There was a relative paucity of evidences in the sensational case.,,Y
 419,peccadillo,relatively minor fault or sin,"misdemeanour, vice",n,Noun,Part time gambling was one of his many peccadillos.,,
 420,pecuniary,relating to or involving money,"fiscal, monetary",z,Adjective,The dot com bubble burst lead to major pecuniary losses to many.,,
 421,pedagogy,the art or science of teaching or education,"edification, erudition",p,Noun,The college boasts the most progressive pedagogy and a 100% placement rate.,,
-422,pedantic,excessively concerned with minor details or rules,"fastidious, punctilious",n,Adjective,He was disgusted at the pedantic teaching style in his new college.,,
+422,pedantic,excessively concerned with minor details or rules,"fastidious, punctilious",n,Adjective,He was disgusted at the pedantic teaching style in his new college.,,Y
 423,pediment,triangular part above columns in Greek buildings,-NA-,z,Noun,The pediment was the crowning feature of the Greek temple front.,,
 424,pellucid,"transparent, easy to understand        ","limpid, lucid",p,Adjective,One could see the bottom of the flowing river because of the pellucid water.,,
-425,penchant,"strong, habitual liking for something ","predilection, proclivity, propensity",p,Noun,Her penchant for physics helped her to become a mechanical engineer.,,
+425,penchant,"strong, habitual liking for something ","predilection, proclivity, propensity",p,Noun,Her penchant for physics helped her to become a mechanical engineer.,,Y
 426,penitent,"feeling or showing regret for something morally wrong, remorseful ","contrite, repentant",n,Adjective,"Post the bloodbath at Kalinga, Ashoka became a penitent sinner.",,
-427,penury,"extreme poverty, indigence","destitution, privation",n,Noun,People in the remote villages are living in absolute penury.,,
+427,penury,"extreme poverty, indigence","destitution, privation",n,Noun,People in the remote villages are living in absolute penury.,,Y
 428,peregrination,"a journey, esp. a long, meandering one","excursion, expedition",z,Noun,She tagged along with her aunt on all her peregrinations.,,
 429,peremptory,insisting immediate attention (often rudely),"brusque, imperious",n,Adjective,It was a peremptory order from the court.,,
-430,perfidious,deceitful and untrustworthy,"duplicitous, treacherous",n,Adjective,The local drug dealers were betrayed by a perfidious ally.,,
-431,perfunctory,done as a duty without care  ,"cursory, hastily   ",n,Adjective,He made a perfunctory statement supporting the chairman.,,
+430,perfidious,deceitful and untrustworthy,"duplicitous, treacherous",n,Adjective,The local drug dealers were betrayed by a perfidious ally.,,Y
+431,perfunctory,done as a duty without care  ,"cursory, hastily   ",n,Adjective,He made a perfunctory statement supporting the chairman.,,Y
 432,peripatetic,"going from place to place, usually as part of a job","ambulatory, itinerant, vagrant",z,Adjective,He worked as a peripatetic journalist for most of his life.,,
 433,perjury,wilfully giving false statement under oath,"deception, mendacity",n,Noun,He was found guilty of perjury and charged on three more infractions.,,
 434,pernicious,"harmful, injurious          ","deleterious, detrimental",n,Adjective,Televisions have a pernicious influence on our children.,,
@@ -439,12 +441,12 @@
 438,perspicuous,"transparently clear, easily understandable","lucid, limpid",p,Adjective,The lecture made the essay more perspicuous to the students.,,
 439,pertinent,relevant or pertinent to a subject under consideration  ,"apposite, germane",p,Adjective,The students asked the teacher many pertinent questions about politics.,,
 440,peruse,to examine with great care,"analyze, scrutinize",p,Verb,"As part of an assignment, he perused the Taj Mahal with sincerity.",,
-441,pervade,permeate or spread throughout,"imbue, suffuse",z,Verb,The ill effects of the Great Depression pervaded Europe.,,
+441,pervade,permeate or spread throughout,"imbue, suffuse",z,Verb,The ill effects of the Great Depression pervaded Europe.,,Y
 442,petrify,turn to stone infer and terror,"appall, stupefy",n,Verb,The thought of speaking with the principal petrified her.,,
 443,petulant,childishly sulky or bad tempered,"churlish, querulous",n,Adjective,"When the child was not given his gift, he became petulant and angry.",,
 444,philanthropy,"charity, desire to do good for mankind","altruism, munificence",p,Noun,The family's philanthropy made it possible to build the school for poor.,,
 445,philistine,"a smug, ignorant person who lacks knowledge    ","crass, uncouth",n,Noun ,A philistine public concerned only with celebrities from one sport.,,
-446,phlegmatic,"having an unemotional and calm disposition, imperturbable","apathetic, stoic",p,Adjective,She was phlegmatic even during the most difficult moments of the crisis.,,
+446,phlegmatic,"having an unemotional and calm disposition, imperturbable","apathetic, stoic",p,Adjective,She was phlegmatic even during the most difficult moments of the crisis.,,Y
 447,picaresque,"relating to a rogue and dishonest, but appealing hero",-NA-,n,Adjective,"Unlike his other works, the new book is a picaresque adventure novel.",,
 448,pied,of mixed colors ,"motley, variegated",p,Adjective,"Although the father’s coat was pure solid brown, the mother’s was pied.",,
 449,pillory,"to punish, hold up to public scorn","denigrate, lambaste, invective",n,Verb,The politician found himself pilloried by members of his own party.,,
@@ -456,9 +458,9 @@
 455,pivotal,of great importance to something    ,"crucial, decisive",p,Adjective,The coach played a pivotal role in the development of the player’s technique.,,
 456,plaintive,"sounding sad and mournful, melancholy        ","doleful, wistful",n,Adjective,We could hear the plaintive cries of the relatives when the patient died.,,
 457,plaque,flat metal awarded as a memorial; sticky deposit on teeth,-NA-,z,Noun,They gave him a plaque commemorating his lifetime service for the company.,,
-458,platitude,"a flat, dull statement, banal, trite     ","bromide, hackneyed",n,Noun,His speech was filled with familiar platitudes about the value of hard work.,,
+458,platitude,"a flat, dull statement, banal, trite     ","bromide, hackneyed",n,Noun,His speech was filled with familiar platitudes about the value of hard work.,,Y
 459,plebeian,"the common people, commoner","proletarian, rabble",n,Noun,He doesn't think the novel will appeal to their plebeian tastes.,,
-460,plethora,"more than required, extreme excess      ","glut, surfeit",n,Noun,A plethora of researches have been done on the subject.,,
+460,plethora,"more than required, extreme excess      ","glut, surfeit",n,Noun,A plethora of researches have been done on the subject.,,Y
 461,pliant,able to bend and move freely without breaking    ,"docile, tractable",z,Adjective,The dancer’s body was extremely pliant considering his body weight.,,
 462,plod,continue doing a dull task without resting       ,"drudge, toil",z,Verb,I suppose I will just have to plod through the whole book.,,
 463,plumb,measure the depth of,"fathom, investigate",z,Verb,I plumbed the depth and found the bottom of the tank to be ten metres down.,,
@@ -467,35 +469,35 @@
 466,ponderous,slow and clumsy because of great weight,"cumbersome, onerous, ungainly",n,Adjective,The students struggled to stay awake during a ponderous lecture.,,
 467,portent,"a sign that a calamitous event is likely to happen, omen","augury, harbinger, presage",n,Noun,Many birds are regarded as being portents of death.,,
 468,prattle,talk at length in a foolish or inconsequential way,"jabber, ramble",n,Verb,She began to prattle on about her visit to the dentist.,,
-469,preamble,"preliminary introduction to something, preface, prologue","foreward, overture",z,Noun,He told us the sad news without any preamble.,,
-470,precarious,dangerously likely to fall or collapse,"hazardous, perilous",n,Adjective,Driving through the mountains at night is precarious and deadly.,,
+469,preamble,"preliminary introduction to something, preface, prologue","foreward, overture",z,Noun,He told us the sad news without any preamble.,,Y
+470,precarious,dangerously likely to fall or collapse,"hazardous, perilous",n,Adjective,Driving through the mountains at night is precarious and deadly.,,Y
 471,precept,rules establishing standards of conduct       ,"doctrine, canon, tenet",z,Noun,The legal precept of being innocent until proven guilty.,,
-472,precipitous,hurl or throw violently or occurring abruptly,"abrupt, headlong",n,Adjective,It led to a precipitous slide in the government's popularity.,,
+472,precipitous,hurl or throw violently or occurring abruptly,"abrupt, headlong",n,Adjective,It led to a precipitous slide in the government's popularity.,,Y
 473,preclude,"prevent from happening, make impossible         ","inhibit, obviate",n,Verb,The secret nature of his work precluded official recognition.,,
 474,precocious,premature or advanced development of a child,"acute, ingenious",p,Adjective,She was a precocious child who could read before she went to school.,,
-475,precursor,something that happens before others,"antecedent, predecessor",z,Noun,Small tremors may be precursors to big earthquakes.,,
+475,precursor,something that happens before others,"antecedent, predecessor",z,Noun,Small tremors may be precursors to big earthquakes.,,Y
 476,predilection,"special liking, mental preference or predisposition     ","proclivity, propensity",p,Noun,They shared a predilection for adventurous hikes.,,
 477,preen,tidy oneself up        ,"primp, spruce",p,Verb,She stood preening herself in front of the mirror.,,
 478,preponderance,the quality or fact of being greater in number or importance,"predominance, prevalence",p,Noun,The preponderance of visitors to the aquarium are from outside the country.,,
 479,presage,warning sign for something ill-fated event in the future         ,"portend, prophesy",n,Verb,Investors are worried that the war could presage another recession.,,
 480,prescient,ability to predict what will happen in future,"clairvoyant, prognostic",z,Adjective,She was remarkably prescient about the outcome of the final match.,,
-481,presumption,"assumption of something as true, based on probability","conjecture, premise",n,Noun,"He lifted her off the ground, and she was enraged at his presumption.",,
+481,presumption,"assumption of something as true, based on probability","conjecture, premise",n,Noun,"He lifted her off the ground, and she was enraged at his presumption.",,Y
 482,preternatural,beyond what is normal or natural,"anomalous, paranormal",z,Adjective,She has a preternatural ability to charm people.,,
-483,prevaricate,"to speak falsely or misleadingly, conceal the truth","elude, equivocate, evade",n,Verb,Government officials prevaricated about the real costs of the project.,,
+483,prevaricate,"to speak falsely or misleadingly, conceal the truth","elude, equivocate, evade",n,Verb,Government officials prevaricated about the real costs of the project.,,Y
 484,prim,neat formal          ,"demure,spruce,stickling,uncluttered",p,Adjective,He wore prim suit with tie on it,,
-485,pristine,"unspoiled, pure, as in earlier times","immaculate,taintless",p,Adjective,The car seemed to be in pristine condition..,,
-486,probity,"uprightness, incorruptibility","equity,fidelity,rectitude",p,Noun,Her probity and integrity are beyond question.,,
-487,proclivity,inclination           ,"propensity,penchant,predilection,predisposition",p,Noun,His proclivity for cooking made him a big hit in the homeowner’s association.,,
-488,procrastination,"keeping on putting off, delaying","defer,adjourn,protract,stall,temporize",n,Noun,"If you procrastinate about making a purchase, you might not be able to buy the item later.",,
-489,prodigious,"enormous, wonderful          ","humongous,colossal,gigantic",p,Adjective,She is very proud of her son who has a prodigious talent for playing the guitar.,,
-490,profane,"worldly; having contempt for God, blasphemous, sacrilegious","desecrate,impious,infidel,unconsecrated,debauch,venal",n,Adjective,The seventy-year-old nun has probably never made a profane statement in her life.,,
-491,profligate ,"wasteful, extravagant","improvident,spendthrift,squander, prodigal, licentious",n,Adjective,His profligate lifestyle made him bankrupt.,,
-492,proliferate,"grow, reproduce by rapid multiplication       ","flourish,rampand,burgeon,engender,thrive",z,Verb,Weeds proliferate in the fields and reduce crop productivity,,
-493,prolific,bearing in abundance especially offspring; intellectually productive,"abound,copious,fecund,proliferate,teem",p,Adjective,Mary is a prolific writer as her work is published once every week.,,
-494,prolix,tiring because too long        ,"rambling,verbose",n,Adjective,The professors lecture was too prolix and discursive.,,
-495,propensity,"natural inclination, proclivity","penchant,predilection,predisposition",p,Noun,The engineering student had propensity towards logic and reasoning.,,
-496,propinquity,property of being near in time or place; affinity of nature,"affinity,kinship,proximity,vicinity",p,Noun,"Whenever Jimmy is in close propinquity to his dream girl, he gets very nervous.",,
-497,propitiate,"appease,conciliatory,mitigating         ","assuage,placate,mollify,pacify,reconcile",p,Verb,Phil tried to propitiate the injured boy by buying him an icecream.,,
-498,propitious,auspicious presenting favorable circumstances        ,"benign,opportune",p,Adjective,The wrestler waited for a propitious moment to attack his opponent.,,
-499,proscribe,denounce as dangerous         ,"denounce,embargo,expatriate,ostracize,outlaw,interdict",n,Verb,"In many countries, using cellphone while driving is proscribed.",,
-500,proselytize,"convert to another opinion or religion, evangelise","renegade,apostate,dissenter",n,Verb,The preacher tried to proselytize his group to pursue unity.,,
+485,pristine,"unspoiled, pure, as in earlier times","immaculate,taintless",p,Adjective,The car seemed to be in pristine condition..,,Y
+486,probity,"uprightness, incorruptibility","equity, fidelity, rectitude",p,Noun,Her probity and integrity are beyond question.,,Y
+487,proclivity,"strong, habitual liking for something; penchant","propensity, predilection, predisposition",p,Noun,His proclivity for cooking made him a big hit in the homeowner’s association.,,Y
+488,procrastination,"action of delaying or postponing something; defer, protract","adjourn, stall, temporize",n,Noun,"If you procrastinate about making a purchase, you might not be able to buy the item later.",,
+489,prodigious,"enormous, wonderful          ","colossal, gigantic, humongous",p,Adjective,She is very proud of her son who has a prodigious talent for playing the guitar.,,Y
+490,profane,"having contempt for God, blasphemous","desecrate, infidel, sacrilegious",n,Adjective,The seventy-year-old nun has probably never made a profane statement in her life.,,
+491,profligate ,"wasteful, extravagant, spendthrift","improvident, licentious",n,Adjective,His profligate lifestyle made him bankrupt.,,
+492,proliferate,"flourish, grow, reproduce by rapid multiplication    ","burgeon, teem",z,Verb,Weeds proliferate in the fields and reduce crop productivity,,Y
+493,prolific,bearing in abundance especially offspring; intellectually productive,"abound, copious, fecund",p,Adjective,Mary is a prolific writer as her work is published once every week.,,
+494,prolix,"containing too many words, voluble","garrulous, loquacious, verbose",n,Adjective,The professors lecture was too prolix and discursive.,,
+495,propensity,"natural inclination, proclivity","penchant, predilection",p,Noun,The engineering student had propensity towards logic and reasoning.,,Y
+496,propinquity,property of being near in time or place,"affinity, proximity",p,Noun,"Whenever Jimmy is in close propinquity to his dream girl, he gets very nervous.",,
+497,propitiate,"win or regain favour by pleasing, appease","assuage, mollify",p,Verb,Phil tried to propitiate the injured boy by buying him an icecream.,,Y
+498,propitious,favourable circumstances of succeeding    ,"conducive, opportune",p,Adjective,The wrestler waited for a propitious moment to attack his opponent.,,
+499,proscribe,"forbid, esp. by law","embargo, interdict",n,Verb,"In many countries, using cellphone while driving is proscribed.",,Y
+500,proselytize,"convert to another opinion or religion, evangelise","apostate, dissenter, renegade",n,Verb,The preacher tried to proselytize his group to pursue unity.,,

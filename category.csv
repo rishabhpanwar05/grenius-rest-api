@@ -1,15 +1,20 @@
-1,Anger,"antagonize,chafing,chagrin,enraged,exasperate,gall,incensed,indignant,infuriate,irascible,irate,irk,livid,outrage,peevish,petulant,pique,rile,seething,uptight,wrathful",
-2,Annoy,"badger,chafe,chagrin,exasperate,fester,gall,gnaw,harass,irk,nettle,perturb,rankle,rile,vex",
-3,Branches of Study,"anthropology,astronomy,cardiology,cosmology,geriatrics,gynaecology,neurology,pathology,pedagogy,psychiatry","Study of human societies and their development,Study of celestial bodies,Study of human heart,Science of origin and development of the Universe,Study that deals with care of old people,Study of female physiology,Study of nervous system,Branch of medicine that deals with laboratory examination,Method and practice of teaching,Study and treatment of abnormal mental behaviour"
-4,Enthusiasm,"alacrity,ardour,ecstasy,effervescence,elan,exhilaration,exuberance,fad,fervour,gaiety,mirth,vehemence,verve,vivacity",
-5,Flourish,"abound,burgeon,gorged,plentiful,replete,rife,satiate,surfeit,teem",
-6,Foul Smell,"acrid,fetid,malodorous,mephitic,noisome,noxious,pungent,putrid,rank,reeking",
-7,Generous,"altruistic,benevolent,eleemosynary,magnanimous,munificent,philanthropic",
-8,Greedy,"avaricious,covetous,gluttonous,gourmandizing,insatiable,rapacious,ravenous,voracious",
-9,Hate,"abhor,abominate,antipathy,aversion,antagonism,despise,detest,execrate,loathe,odium,rancor,repugnance,revile,",
-10,Innocent,"artless,callow,candor,guileless,gullible,ingenuous,innocuous,jejune,naive",
-11,Ordinary,"banal,bromide,cliché,hackneyed,humdrum,pedestrian,platitude,trite,vapid",
-12,Phobia,"aerophobia,agoraphobia,androphobia,arachnophobia,claustrophobia,elurophobia,gamophobia,gynophobia,nyctophobia,pedophobia,philophobia,pyrophobia,xenophobia,zoophobia","Fear of flying,Fear of open spaces,Fear of men,Fear of spiders,Fear of closed spaces,Fear of cats,Fear of marriage,Fear of women,Fear of darkness,Fear of children,Fear of love,Fear of fire,Fear of strangers or foreigners,Fear of animals"
-13,Predict,"augur,adumbrate,foretell,foretoken,harbinger,herald,portend,premonish,presage,prognosticate,prophesy,soothsay",
-14,Unusual,"aberrant,anomalous,bizarre,capricious,eccentric,idiosyncratic,outlandish,peculiar,quaint,queer,unorthodox",
-15,Villainous,"abominal,atrocious,degenerate,deplorable,depraved,detestable,execrable,flagrant,heinous,ignoble,infernal,iniquitous,miscreant,nefarious,odious,opprobrious",
+1,Abdicate,"abjure,abnegate,disavow,forsake,forswear,renunciate,relinquish",
+2,Anger,"antagonize,chafing,chagrin,enraged,exasperate,gall,incensed,indignant,infuriate,irascible,irate,irk,livid,outrage,peevish,petulant,pique,rile,seething,uptight,wrathful",
+3,Annoy,"badger,chafe,chagrin,exasperate,fester,gall,gnaw,harass,irk,nettle,perturb,rankle,rile,vex",
+4,Branches of Study,"anthropology,astronomy,cardiology,cosmology,geriatrics,gynaecology,neurology,pathology,pedagogy,psychiatry","Study of human societies and their development,Study of celestial bodies,Study of human heart,Science of origin and development of the Universe,Study that deals with care of old people,Study of female physiology,Study of nervous system,Branch of medicine that deals with laboratory examination,Method and practice of teaching,Study and treatment of abnormal mental behaviour"
+5,Diminish,"abate,allay,dwindle,ebb,recede,slacken,taper,wane",
+6,Enthusiasm,"alacrity,ardour,ecstasy,effervescence,elan,exhilaration,exuberance,fad,fervour,gaiety,mirth,vehemence,verve,vivacity",
+7,Flourish,"abound,burgeon,gorged,plentiful,replete,rife,satiate,surfeit,teem",
+8,Foul Smell,"acrid,fetid,malodorous,mephitic,noisome,noxious,pungent,putrid,rank,reeking",
+9,Generous,"altruistic,benevolent,eleemosynary,magnanimous,munificent,philanthropic",
+10,God: Theo,"apotheosis,atheist,monotheism,pantheism,pantheon,pantisocracy,polytheism,theist,theocracy,theology","Considering someone god,Not believing in god,Worshipping one god,God is everywhere,Temple dedicated to all gods,Rule by all,Worshipping many gods,One who believes in god,Rule by religion,Study of religion"
+11,Greedy,"avaricious,covetous,gluttonous,gourmandizing,insatiable,rapacious,ravenous,voracious",
+12,Hate,"abhor,abominate,antipathy,aversion,antagonism,despise,detest,execrate,loathe,odium,rancor,repugnance,revile,",
+13,Innocent,"artless,callow,candor,guileless,gullible,ingenuous,innocuous,jejune,naive",
+14,Medical Conditions,"dermatitis,epidermis,hypodermic,neuralgia,neuritis,neurosis,pachyderm,psychosis,taxidermy","Inflammation of the skin,Outer layer of the skin/ Integument,Under the skin,Nerve pain,Inflammation of nerves,Emotional disturbance,Thick skin,Mental disturbance,Stuffing of skins of teaching"
+15,Mock,"badinage,banter,derision,flout,jeer,quip,repartee,sally,scoff,snear,travesty,wry",
+16,Ordinary,"banal,bromide,cliché,hackneyed,humdrum,pedestrian,platitude,trite,vapid",
+17,Phobia,"aerophobia,agoraphobia,androphobia,arachnophobia,claustrophobia,elurophobia,gamophobia,gynophobia,haematophobia,nyctophobia,pedophobia,philophobia,pyrophobia,xenophobia,zoophobia","Fear of flying,Fear of open spaces,Fear of men,Fear of spiders,Fear of closed spaces,Fear of cats,Fear of marriage,Fear of women,Fear of blood,Fear of darkness,Fear of children,Fear of love,Fear of fire,Fear of strangers or foreigners,Fear of animals"
+18,Predict,"augur,adumbrate,foretell,foretoken,harbinger,herald,portend,premonish,presage,prognosticate,prophesy,soothsay",
+19,Unusual,"aberrant,anomalous,bizarre,capricious,eccentric,idiosyncratic,outlandish,peculiar,quaint,queer,unorthodox",
+20,Villainous,"abominal,atrocious,degenerate,deplorable,depraved,detestable,execrable,flagrant,heinous,ignoble,infernal,iniquitous,miscreant,nefarious,odious,opprobrious",
