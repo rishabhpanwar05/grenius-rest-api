@@ -900,6 +900,51 @@ server.post('/addWordOfDay',function(req, res, next) {
 	})
 })
 
+server.post('/addWordOfDayCsv',function(req, res, next) {
+	
+		var docs=[];
+		csv
+		 .fromPath('./wordofday.csv', {headers : ["date", "word", "meaning","synonym","pzn","pos","example","imagePath"]})
+		 .on("data", function(data){
+			 console.log(data);
+			 docs.push(data)
+			 //console.log("here",docs)
+		 })
+		 .on("end", function(){
+			 console.log("done-------------------------------------------------------------------------------------------",docs);
+			 var count = 0;
+			
+			docs.forEach(function(doc){
+				var  word= new WordOfDay()
+				
+				word.date=doc.date
+				word.word=doc.word
+				word.synonym=doc.synonym
+				word.meaning=doc.meaning
+				word.pzn=doc.pzn
+				word.pos=doc.pos
+				word.example=doc.example
+				word.imagePath=doc.imagePath		
+	
+				console.log("here",word)
+				word.save(function(err){
+					if (err!=null) {
+						log.error(err)
+						return next(new errors.InternalError(err.message))
+						next()
+					}
+					count++;
+					if( count == docs.length ){
+						sendResponse();
+					}
+				});
+			});
+			function sendResponse(){
+					res.send(200,"ADDED")
+			}
+			 
+		 });
+})
 server.post('/wordOfDay', function(req, res, next) {
 	console.log("Sending words");
 	
@@ -1005,6 +1050,8 @@ server.post('/category', function(req, res, next) {
 	        next()
 	    })
 })
+
+
 
 
 
