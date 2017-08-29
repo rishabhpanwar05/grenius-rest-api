@@ -12,7 +12,9 @@ const _      = require('lodash'),
 	  qs=require('qs'),
 	  googleTranslate = require('google-translate')(config.MY_GOOGLE_API_KEY),
 	  csv = require("fast-csv"),
-	  fs=require("fs")
+	  fs=require("fs"),
+	  time = require('time'),
+	  satelize = require('satelize')
 		
 const Article = require('../models/article')
 const ArticleDash = require('../models/articledash')
@@ -59,6 +61,10 @@ var authnjwt = function(req,res,next){
 });
 }
 
+var getClientAddress = function (req) {
+        return (req.headers['x-forwarded-for'] || '').split(',')[0] 
+        || req.connection.remoteAddress;
+};	
 
 var storageArticle	=	multer.diskStorage({
 	destination: function (req, file, callback) {
@@ -104,7 +110,7 @@ server.post('/register',function(req,res,next){
 	  user.save(function(err) {
 		if (err!=null) {
 			log.error(err)
-			res.send(400,{"message":err.message,"status":false})
+			res.send(400,{"message":err.message,"id":"none","status":false})
 			return
 		}
 	    var token;
@@ -115,12 +121,48 @@ server.post('/register',function(req,res,next){
 			res.status(200);
 			res.json({
 			  "message" : token,
+			  "id":user.emailId,
 			  "status": true
 			});	
 		}
 	  });
 	})
-
+server.post('/login',function(req,res,next){
+	console.log("logging in")
+	User.findOne({ emailId: req.body.emailId }, function (err, user) {
+      if (err) {
+			res.send(404,{"message":"error","id":"none","status":false});
+			next()
+		}
+      // Return if user not found in database
+      if (!user) {
+        	res.send(404,{"message":"NotFound","id":"none","status":false});
+			next()
+			return
+      }
+      // Return if password is wrong
+      if (!user.validPassword(req.body.password)) {
+        res.send(401,{"message":"incorrect","status":false});
+		next()
+		return;
+      }
+      // If credentials are correct, return the user object
+      // If a user is found
+		if(user){
+			var token = user.generateJwt();
+			var state = user.setLoggedIn(token);
+			if(state==true){
+				res.status(200);
+				res.session=token;
+				res.json({
+				  "message" : token,
+				  "id":user.email,
+				  "status":true
+				});	
+			}
+		}
+	});
+})
 
 /*------------------------------------Articles----------------------------------------------------------*/
 
@@ -517,7 +559,6 @@ server.post('/removeUser',function(req, res, next) {
 
 server.post('/addWord',function(req, res, next) {
 	
-	var stream = fs.createReadStream("test.csv");
 		var docs=[];
 		csv
 		 .fromPath('./word.csv', {headers : ["sno", "word", "meaning", "synonym", "pzn", "pos", "example","imagePath","hf"]})
@@ -598,7 +639,7 @@ server.post('/addWord',function(req, res, next) {
 
 
 server.post('/translate', function(req,res,next){
-	
+	console.log("translating")
 	let data = req.body || {}
 		let index = 0
 		if(data!=null)
@@ -620,11 +661,12 @@ server.post('/translate', function(req,res,next){
 	            return next(new errors.InvalidContentError(err.errors.name.message))
 	        }
 		docs.forEach(function(doc){
-			
+			//console.log(doc)
 			let word_tr=new WordHi()
 			word_tr.sno=doc.sno
 			word_tr.word=doc.word
 			googleTranslate.translate(doc.word, 'hi', function(err, translation) {
+				console.log(translation);
 				word_tr.translated=translation.translatedText
 				word_tr.save(function (err) {
 					if (err!=null) {
@@ -659,7 +701,7 @@ server.post('/translate', function(req,res,next){
 								}
 							})
 						}
-				     	next()  
+				     	//next()  
 				    })
 				
 				
@@ -671,9 +713,10 @@ server.post('/translate', function(req,res,next){
 		})
 		res.send(200,"TRANSLATED")
 	    
-		next()
+		//next()
 	})
 })
+
 server.post('/wordshi', function(req, res, next) {
 	console.log("Sending words hi");
 	let data = req.body || {}
@@ -703,6 +746,79 @@ server.post('/wordshi', function(req, res, next) {
 	    })
 
 })
+
+
+server.post('/updateHi',function(req, res, next) {
+		console.log("updating translations")
+		var docs=[];
+		csv
+		 .fromPath('./updatehi.csv', {headers : ["_id", "translated","word", "sno"]})
+		 .on("data", function(data){
+			 console.log(data);
+			 docs.push(data)
+			 //console.log("here",docs)
+		 })
+		 .on("end", function(){
+			 console.log("done-------------------------------------------------------------------------------------------",docs);
+			 var count = 0;
+			
+			docs.forEach(function(doc){
+				
+				
+				Word.findOne(
+					{word:doc.word},
+					[],
+					{},
+					function(err, word) {
+
+				        if (err!=null) {
+				            log.error(err)
+				            return next(new errors.InvalidContentError(err.errors.name.message))
+				        }
+						console.log("word is"+word);
+						if(word!=null){
+							word.translated=doc.translated
+							word.save(function(err) {
+
+								if (err!=null) {
+									log.error(err)
+									return next(new errors.InternalError(err.message))
+									next()
+								}
+							})
+						}
+						WordHi.findOne(
+							{word:doc.word},
+							[],
+							{},
+							function(err, word) {
+
+								if (err!=null) {
+									log.error(err)
+									return next(new errors.InvalidContentError(err.errors.name.message))
+								}
+								console.log("word is"+word);
+								if(word!=null){
+									word.translated=doc.translated
+									word.save(function(err) {
+
+										if (err!=null) {
+											log.error(err)
+											return next(new errors.InternalError(err.message))
+											next()
+										}
+									})
+								}
+								next()  
+							})
+				     	next()  
+				    })
+		 });
+		 res.send(200,"UPDATED")
+})
+})
+
+
 server.post('/words', function(req, res, next) {
 	console.log("Sending words");
 	let data = req.body || {}
@@ -870,7 +986,6 @@ server.post('/quizzes', function(req, res, next) {
 /*----------------------------------------Word Of The Day------------------------------------------------------*/
 
 server.post('/addWordOfDay',function(req, res, next) {
-	
 	let data = {}
 	console.log("adding word of day",data)
 	data={
@@ -947,10 +1062,18 @@ server.post('/addWordOfDayCsv',function(req, res, next) {
 })
 server.post('/wordOfDay', function(req, res, next) {
 	console.log("Sending words");
-	
+	//var user_ip=getClientAddress(req)
+	//console.log("ip is",ip)
+	//satelize.satelize({ip:user_ip}, function(err, payload) {
+		//console.log(payload)
+	//});
 	var datetime = new Date();
-	console.log(datetime);
+	
+	var now = new time.Date();
 
+	//now.setTimezone("America/Los_Angeles");
+	//console.log(now.getDate());
+	
 	let data = req.body || {}
 		WordOfDay.find(
 		{
@@ -962,7 +1085,7 @@ server.post('/wordOfDay', function(req, res, next) {
 			limit:0, // Ending Row
 			sort:{
 				date: -1 //Sort by Date Added DESC
-			}
+			}			
 		},
 		function(err, docs) {
 

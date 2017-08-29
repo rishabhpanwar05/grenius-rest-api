@@ -48,7 +48,7 @@ UserSchema.methods.validPassword = function(password) {
 
 UserSchema.methods.generateJwt = function() {
 	var expiry = new Date();
-	expiry.setDate(expiry.getDate() + 1);
+	expiry.setDate(expiry.getDate() + 365);
 	var secret = config.MY_SECRET ;
 	console.log('secret',secret)
 	var token = jwt.sign({
