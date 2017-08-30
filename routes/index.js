@@ -135,13 +135,16 @@ server.post('/register',function(req,res,next){
 	})
 server.post('/login',function(req,res,next){
 	console.log("logging in")
+	console.log(req.body)
 	User.findOne({ emailId: req.body.emailId }, function (err, user) {
       if (err) {
+			console.log(err)
 			res.send(404,{"message":"error","id":"none","status":false});
 			next()
 		}
       // Return if user not found in database
       if (!user) {
+			console.log("User not found")
         	res.send(404,{"message":"NotFound","id":"none","status":false});
 			next()
 			return
