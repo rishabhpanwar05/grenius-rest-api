@@ -1076,8 +1076,6 @@ server.post('/wordOfDay', function(req, res, next) {
 	//});
 	var datetime = new Date();
 	
-	var now = new time.Date();
-
 	//now.setTimezone("America/Los_Angeles");
 	//console.log(now.getDate());
 	
