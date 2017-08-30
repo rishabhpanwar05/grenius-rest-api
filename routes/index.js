@@ -93,7 +93,18 @@ server.post('/register',function(req,res,next){
 	//var body=JSON.parse(req.params)
 	//console.log(body)
 	user.emailId=req.body.emailId
-
+	User.findOne({ emailId: req.body.emailId }, function (err, user) {
+      if (err) {
+			res.send(404,{"message":"error","id":"none","status":false});
+			next()
+		}
+      // Return if user not found in database
+      if (user) {
+        	res.send(200,{"message":"Already Registered","id":"none","status":false});
+			next()
+			return
+		}
+		
 		if(req.body.mobile!=null){
 			user.name=req.body.name
 			user.setPassword(req.body.password);
@@ -126,6 +137,7 @@ server.post('/register',function(req,res,next){
 			});	
 		}
 	  });
+	})
 	})
 server.post('/login',function(req,res,next){
 	console.log("logging in")
