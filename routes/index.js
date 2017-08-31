@@ -97,7 +97,7 @@ server.post('/register',function(req,res,next){
 		  if(req.body.mobile==null){
 			  console.log("redirecting to login")
 		  }
-        	res.send(200,{"message":"Already Registered","id":"none","status":false});
+        	res.send(400,{"message":"Already Registered","id":"none","status":false});
 			next()
 			return
 		}
