@@ -96,7 +96,42 @@ server.post('/register',function(req,res,next){
         if(user) {
 		  if(req.body.mobile==null){
 			  console.log("redirecting to login")
-			   res.redirect('/login',next);
+			   User.findOne({ emailId: req.body.emailId }, function (err, user) {
+      if (err) {
+			console.log(err)
+			res.send(404,{"message":"error","id":"none","status":false});
+			next()
+		}
+      // Return if user not found in database
+      if (!user) {
+			console.log("User not found")
+        	res.send(404,{"message":"NotFound","id":"none","status":false});
+			next()
+			return
+      }
+      // Return if password is wrong
+      if (!user.validPassword(req.body.password)) {
+        res.send(401,{"message":"incorrect","status":false});
+		next()
+		return;
+      }
+      // If credentials are correct, return the user object
+      // If a user is found
+		if(user){
+			var token = user.generateJwt();
+			var state = user.setLoggedIn(token);
+			if(state==true){
+				res.status(200);
+				res.session=token;
+				res.json({
+				  "message" : token,
+				  "id":user.emailId,
+				  "name":user.name,
+				  "status":true
+				});	
+			}
+		}
+	});
 		  }
         	res.send(200,{"message":"Already Registered","id":"none","status":false});
 			next()
