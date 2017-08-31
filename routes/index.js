@@ -93,8 +93,10 @@ server.post('/register',function(req,res,next){
 			res.send(404,{"message":"error","id":"none","status":false});
 			next()
 		}
-      // Return if user not found in database
-      if (!user) {
+        if(user) {
+		  if(req.body.mobile==null){
+			   req.redirect('/login');
+		  }
         	res.send(200,{"message":"Already Registered","id":"none","status":false});
 			next()
 			return
