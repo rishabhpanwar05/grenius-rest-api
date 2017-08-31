@@ -83,12 +83,12 @@ server.post('/register',function(req,res,next){
 	  
 	
 	console.log("registering:")
-	req.body=qs.parse(req.body)
+	
 	console.log(req.body)
 	//var body=JSON.parse(req.params)
 	//console.log(body)
-	
-	User.findOne({ emailId: req.body.emailId }, function (err, user) {
+	var body=qs.parse(req.body)
+	User.findOne({ emailId:body.emailId  }, function (err, user) {
       if (err) {
 			res.send(404,{"message":"error","id":"none","status":false});
 			next()
