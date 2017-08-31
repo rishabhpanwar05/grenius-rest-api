@@ -96,10 +96,26 @@ server.post('/register',function(req,res,next){
         if(user) {
 		  if(req.body.mobile==null){
 			  console.log("redirecting to login")
-		  }
-        	res.send(400,{"message":"Already Registered","id":"none","status":false});
+			  var token = user.generateJwt();
+			var state = user.setLoggedIn(token);
+			if(state==true){
+				res.status(200);
+				res.session=token;
+				res.json({
+				  "message" : token,
+				  "id":user.emailId,
+				  "name":user.name,
+				  "status":true
+				});	
+			}
 			next()
-			return
+		  }
+		  else{
+			res.send(400,{"message":"Already Registered","id":"none","status":false});
+			next()
+			return  
+		  }
+        	
 		}
 		var user = new User();
 		user.emailId=req.body.emailId
