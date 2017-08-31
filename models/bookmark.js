@@ -8,33 +8,8 @@ const BookmarkSchema = new mongoose.Schema({
 	userId: {
 		type: String
 	},
-	word: {
-		type: String
-	},
-	meaning: {
-		type: String
-	},
-	synonym: {
-		type: String
-	},
-	pzn: {
-		type: String
-	},
-	pos: {
-		type: String
-	},
-	example: {
-		type: String
-	},
-	imagePath:{
-		type: String
-	},
-	hf:{
-		type:String
-	},
-	translated:{
-		type:String
-	}
+	words:{
+		type: []}
 });
 
 BookmarkSchema.plugin(mongooseApiQuery)

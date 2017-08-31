@@ -26,7 +26,8 @@ const Bookmark=require('../models/bookmark')
 
 var authnjwt = function(req,res,next){
 	//let token = req.headers.authorization.split(" ")[1];
-	req.body=qs.pasrse(req.body)
+	req.body=qs.parse(req.body)
+	console.log(req.body)
 	let token = req.body.sessionId || req.authorization.credentials 
 	nJwt.verify(token,config.MY_SECRET,function(err,verifiedJwt){
   if(err){
@@ -83,7 +84,7 @@ server.post('/register',function(req,res,next){
 	
 	console.log("registering:")
 	req.body=qs.parse(req.body)
-	console.log(qs.parse(req.body))
+	console.log(req.body)
 	//var body=JSON.parse(req.params)
 	//console.log(body)
 	
@@ -93,7 +94,7 @@ server.post('/register',function(req,res,next){
 			next()
 		}
       // Return if user not found in database
-      if (user) {
+      if (!user) {
         	res.send(200,{"message":"Already Registered","id":"none","status":false});
 			next()
 			return
@@ -166,7 +167,7 @@ server.post('/login',function(req,res,next){
 				res.session=token;
 				res.json({
 				  "message" : token,
-				  "id":user.email,
+				  "id":user.emailId,
 				  "name":user.name,
 				  "status":true
 				});	
@@ -1187,9 +1188,33 @@ server.post('/category', function(req, res, next) {
 server.post('/addBookmark',authnjwt,function(req,res,next){
 	console.log("Adding Bookmarks")
 	console.log(req.body)
+	var words = req.body.words
+	console.log(words)
+	var userId=req.body.userId;
+	Bookmark.findOneAndRemove({userId:userId},function(err,bookmark){
+			if (err) {
+				res.send(404,{"message":err,"status":false});
+				next()
+			}
+			bookmark = new Bookmark();
+			bookmark.userId=req.body.userId
+			
+			words.forEach(function(word){
+				bookmark.words.push(word)
+			})
+			bookmark.save(function(err) {
+				if (err!=null) {
+					log.error(err)
+					res.send(404,{"message":err,"status":false});
+					next()
+				}
+				else{
+					res.send(200,{"message":"ADDED","status":true})
+				}
+			})
+			
+		})
+	
+	
 })
-
-
-
-
 
