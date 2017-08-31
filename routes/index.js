@@ -1184,7 +1184,7 @@ server.post('/category', function(req, res, next) {
 	    })
 })
 
-/*------------------------------------------------------------------------------------------*/
+/*------------------------------------Bookmarks------------------------------------------------------*/
 server.post('/addBookmark',function(req,res,next){
 	console.log("Adding Bookmarks")
 	console.log(req.body)
@@ -1214,7 +1214,19 @@ server.post('/addBookmark',function(req,res,next){
 			})
 			
 		})
-	
-	
 })
 
+
+server.post('/bookmarks',function(req,res,next){
+	console.log("Sending Bookmarks")
+	console.log(req.body)
+	var userId=req.body.userId;
+	Bookmark.findOne({userId:userId},function(err,bookmark){
+			if (err) {
+				res.send(404,{"message":err,"status":false});
+				next()
+			}
+			res.send(200,{words:bookmark.words});
+			next()
+		})
+})
