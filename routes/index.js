@@ -22,11 +22,12 @@ const User= require('../models/user')
 const Quiz= require('../models/quiz')
 const WordOfDay=require('../models/word_of_day')
 const Category=require('../models/category')
-
+const Bookmark=require('../models/bookmark')
 
 var authnjwt = function(req,res,next){
 	//let token = req.headers.authorization.split(" ")[1];
-	let token = req.authorization.credentials
+	req.body=qs.pasrse(req.body)
+	let token = req.body.sessionId || req.authorization.credentials 
 	nJwt.verify(token,config.MY_SECRET,function(err,verifiedJwt){
   if(err){
     console.log(err); // Token has expired, has been tampered with, etc
@@ -1182,7 +1183,11 @@ server.post('/category', function(req, res, next) {
 	    })
 })
 
-
+/*------------------------------------------------------------------------------------------*/
+server.post('/addBookmark',authnjwt,function(req,res,next){
+	console.log("Adding Bookmarks")
+	console.log(req.body)
+})
 
 
 
