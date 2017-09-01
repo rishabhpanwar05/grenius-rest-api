@@ -12,8 +12,10 @@ const _      = require('lodash'),
 	  qs=require('qs'),
 	  googleTranslate = require('google-translate')(config.MY_GOOGLE_API_KEY),
 	  csv = require("fast-csv"),
-	  fs=require("fs")
-		
+	  fs=require("fs"),
+	  moment = require('moment')
+
+	  	
 const Article = require('../models/article')
 const ArticleDash = require('../models/articledash')
 const Word= require('../models/word')
@@ -90,10 +92,12 @@ server.post('/register',function(req,res,next){
 	req.body=qs.parse(req.body)
 	User.findOne({ emailId:req.body.emailId  }, function (err, user) {
       if (err) {
+			console.log(err)
 			res.send(404,{"message":"error","id":"none","status":false});
 			next()
 		}
         if(user) {
+			console.log("Already registered")
 		  if(req.body.mobile==null){
 			  console.log("redirecting to login")
 			  var token = user.generateJwt();
@@ -1091,7 +1095,7 @@ server.post('/addWordOfDayCsv',function(req, res, next) {
 		 });
 })
 server.post('/wordOfDay', function(req, res, next) {
-	console.log("Sending words");
+	console.log("Sending word of day");
 	//var user_ip=getClientAddress(req)
 	//console.log("ip is",ip)
 	//satelize.satelize({ip:user_ip}, function(err, payload) {
@@ -1129,6 +1133,47 @@ server.post('/wordOfDay', function(req, res, next) {
 	    })
 })
 
+server.post('/monthlyWordOfDay', function(req, res, next) {
+	console.log("Sending monthly word of day");
+	//var user_ip=getClientAddress(req)
+	//console.log("ip is",ip)
+	//satelize.satelize({ip:user_ip}, function(err, payload) {
+		//console.log(payload)
+	//});
+	//var datetime = new Date();
+	
+	//now.setTimezone("America/Los_Angeles");
+	//console.log(datetime)
+	//console.log(datetime-30);
+	var now=moment().utc().format();
+	console.log(now)
+	var monthold=moment().subtract(1, 'months')
+	let data = req.body || {}
+		WordOfDay.find(
+		{
+			date:{$lte:now,$gte:monthold} 
+		},
+		[],
+		{
+			//skip:0, // Starting Row
+			limit:0, // Ending Row
+			sort:{
+				date: -1 //Sort by Date Added DESC
+			}			
+		},
+		function(err, docs) {
+
+	        if (err) {
+	            log.error(err)
+	            return next(new errors.InvalidContentError(err.errors.name.message))
+	        }
+	
+	        res.send(docs)
+			console.log("done")
+	        next()
+
+	    })
+})
 
 /*----------------------------------------Category------------------------------------------------------*/
 
