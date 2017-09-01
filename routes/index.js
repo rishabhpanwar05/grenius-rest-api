@@ -199,6 +199,28 @@ server.post('/login',function(req,res,next){
 	});
 })
 
+server.post('/logout',function(req, res,next){
+	req.body=qs.parse(req.body)
+    User.findOne(emailId:req.body.emailId,
+		function(err, user) {
+
+			if (err!=null) {
+				log.error(err)
+				return next(new errors.InvalidContentError(err.errors.name.message))
+			}
+			console.log("user is"+user);
+			user.token=''
+			user.loggedIn=false
+			user.save(function(err){
+				if (err!=null) {
+				log.error(err)
+				return next(new errors.InvalidContentError(err.errors.name.message))
+				}
+				res.send(200)
+			})
+	})
+  })
+
 /*------------------------------------Articles----------------------------------------------------------*/
 
 server.post('/addArticle',function(req, res, next){
@@ -1262,10 +1284,11 @@ server.post('/addBookmark',function(req,res,next){
 			}
 			bookmark = new Bookmark();
 			bookmark.userId=req.body.userId
-			
-			words.forEach(function(word){
+			if(words!=null){
+				words.forEach(function(word){
 				bookmark.words.push(word)
 			})
+			}
 			bookmark.save(function(err) {
 				if (err!=null) {
 					log.error(err)
@@ -1294,3 +1317,5 @@ server.post('/bookmarks',function(req,res,next){
 			next()
 		})
 })
+
+/*-------------------------------------------------------------------------------------*/
