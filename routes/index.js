@@ -12,9 +12,7 @@ const _      = require('lodash'),
 	  qs=require('qs'),
 	  googleTranslate = require('google-translate')(config.MY_GOOGLE_API_KEY),
 	  csv = require("fast-csv"),
-	  fs=require("fs"),
-	  time = require('time'),
-	  satelize = require('satelize')
+	  fs=require("fs")
 		
 const Article = require('../models/article')
 const ArticleDash = require('../models/articledash')
@@ -60,11 +58,7 @@ var authnjwt = function(req,res,next){
   }
 });
 }
-
-var getClientAddress = function (req) {
-        return (req.headers['x-forwarded-for'] || '').split(',')[0] 
-        || req.connection.remoteAddress;
-};	
+	
 
 var storageArticle	=	multer.diskStorage({
 	destination: function (req, file, callback) {
@@ -1081,7 +1075,6 @@ server.post('/wordOfDay', function(req, res, next) {
 	//});
 	var datetime = new Date();
 	
-	var now = new time.Date();
 
 	//now.setTimezone("America/Los_Angeles");
 	//console.log(now.getDate());
