@@ -147,8 +147,7 @@ server.post('/register',function(req,res,next){
 		var state = user.setLoggedIn(token);
 		if(state==true){
 			console.log("sending token:",token)
-			res.status(200);
-			res.json({
+			res.send(200,{
 			  "message" : token,
 			  "id":user.emailId,
 			  "name":user.name,
@@ -161,6 +160,7 @@ server.post('/register',function(req,res,next){
 server.post('/login',function(req,res,next){
 	console.log("logging in")
 	console.log(req.body)
+	req.body=qs.parse(req.body)
 	User.findOne({ emailId: req.body.emailId }, function (err, user) {
       if (err) {
 			console.log(err)
