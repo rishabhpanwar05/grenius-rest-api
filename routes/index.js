@@ -201,7 +201,7 @@ server.post('/login',function(req,res,next){
 
 server.post('/logout',function(req, res,next){
 	req.body=qs.parse(req.body)
-    User.findOne(emailId:req.body.emailId,
+    User.findOne({emailId:req.body.emailId},
 		function(err, user) {
 
 			if (err!=null) {
