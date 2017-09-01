@@ -93,7 +93,7 @@ server.post('/register',function(req,res,next){
 	User.findOne({ emailId:req.body.emailId  }, function (err, user) {
       if (err) {
 			console.log(err)
-			res.send(404,{"message":"error","id":"none","status":false});
+			res.send(200,{"message":"error","id":"none","status":false});
 			next()
 		}
         if(user) {
@@ -115,7 +115,7 @@ server.post('/register',function(req,res,next){
 			next()
 		  }
 		  else{
-			res.send(400,{"message":"Already Registered","id":"none","status":false});
+			res.send(200,{"message":"Already Registered","id":"none","status":false});
 			next()
 			return  
 		  }
@@ -139,7 +139,7 @@ server.post('/register',function(req,res,next){
 	  user.save(function(err) {
 		if (err!=null) {
 			log.error(err)
-			res.send(400,{"message":err.message,"id":"none","status":false})
+			res.send(200,{"message":err.message,"id":"none","status":false})
 			return
 		}
 	    var token;
@@ -163,19 +163,19 @@ server.post('/login',function(req,res,next){
 	User.findOne({ emailId: req.body.emailId }, function (err, user) {
       if (err) {
 			console.log(err)
-			res.send(404,{"message":"error","id":"none","status":false});
+			res.send(200,{"message":"error","id":"none","status":false});
 			next()
 		}
       // Return if user not found in database
       if (!user) {
 			console.log("User not found")
-        	res.send(404,{"message":"NotFound","id":"none","status":false});
+        	res.send(200,{"message":"NotFound","id":"none","status":false});
 			next()
 			return
       }
       // Return if password is wrong
       if (!user.validPassword(req.body.password)) {
-        res.send(401,{"message":"incorrect","status":false});
+        res.send(200,{"message":"incorrect","status":false});
 		next()
 		return;
       }
