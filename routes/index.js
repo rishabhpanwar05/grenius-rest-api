@@ -169,6 +169,7 @@ server.post('/register',function(req,res,next){
 		if(state==true){
 			console.log("sending token:",token)
 			res.send(200,{"message" : token,"id":user.emailId,"name":user.name,"status": true})
+			next()
 		}
 	  });
 	})
