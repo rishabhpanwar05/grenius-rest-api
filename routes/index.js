@@ -1369,8 +1369,9 @@ server.post('/generatePasscode',function(req,res,next){
 				from: ''+config.mailUser+'', // sender address
 				to: req.body.emailId, // list of receivers
 				subject: "Wordly Account Password Reset", // Subject line
-				text: "Your passcode is: "+passcode // plaintext body
-				// html: '<b>Hello world 🐴</b>' // html body
+				text: "", // plaintext body
+				html: "Hi <b>"+ user.name +"</b>,<br>You recently requested to reset your password for your Wordly account. In your app, key in the passkey below to reset your password. This password reset is only valid for the next hour.<br><b>"+
+						passcode+"</b><br>If you did not request a password reset, please ignore this email or contact support if you have questions.<br>Thanks,<br><b>Team Wordly</b>" // html body
 			}; 
 			transport.sendMail(mailOptions, function(error, info){
 				if(error){
