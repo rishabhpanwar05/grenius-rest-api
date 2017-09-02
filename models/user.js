@@ -71,11 +71,13 @@ UserSchema.methods.generatePasscode=function(){
 	var pass;
 	if(this.passcodeExpiry<Date.now()){
 		pass=crypto.randomBytes(5).toString('hex');
+		this.passcode=pass
+		console.log("pass is:",pass)
 	}
-	this.passcode=pass
+	console.log("passcode is:",this.passcode)
 	this.passcodeExpiry=Date.now()+3600000; // 1 hour
 	this.save()
-	return pass
+	return this.passcode
 }
 UserSchema.methods.verifyPasscode=function(pass){
 	if(this.passcode==pass){
