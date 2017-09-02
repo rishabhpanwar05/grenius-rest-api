@@ -72,7 +72,7 @@ UserSchema.methods.generatePasscode=function(){
 	if(this.passcodeExpiry<Date.now()){
 		pass=crypto.randomBytes(3).toString('hex');
 		this.passcode=pass
-		//console.log("pass is:",pass)
+		console.log("pass is:",pass)
 	}
 	console.log("passcode is:",this.passcode)
 	this.passcodeExpiry=Date.now()+3600000; // 1 hour
