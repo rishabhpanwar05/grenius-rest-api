@@ -1361,22 +1361,27 @@ server.post('/generatePasscode',function(req,res,next){
       }
       // If a user is found
 		if(user){
-			var passcode = user.generatePasscode();
-			console.log("User is "+user)
-			var mailOptions = {
-				from: ''+config.mailUser+'', // sender address
-				to: req.body.emailId, // list of receivers
-				subject: "Wordly Account Password Reset", // Subject line
-				text: "", // plaintext body
-				html: "Hi <b>"+ user.name +",</b><br><br>You recently requested to reset your password for your Wordly account. In your app, key in the passkey below to reset your password. This password reset is only valid for the next hour.<br><b>"+
-						passcode+"</b><br>If you did not request a password reset, please ignore this email or contact support if you have questions.<br><br>Thanks,<br><b>Team Wordly</b>" // html body
-			}; 
-			transport.sendMail(mailOptions, function(error, info){
-				if(error){
-					return res.send(error);
-				}
-				return res.send(200,{"message":"Mail sent successfully","status":true});
-			}); 
+			if(!user.fbId){
+				var passcode = user.generatePasscode();
+				console.log("User is "+user)
+				var mailOptions = {
+					from: ''+config.mailUser+'', // sender address
+					to: req.body.emailId, // list of receivers
+					subject: "Wordly Account Password Reset", // Subject line
+					text: "", // plaintext body
+					html: "Hi <b>"+ user.name +",</b><br><br>You recently requested to reset your password for your Wordly account. In your app, key in the passkey below to reset your password. This password reset is only valid for the next hour.<br><b>"+
+							passcode+"</b><br>If you did not request a password reset, please ignore this email or contact support if you have questions.<br><br>Thanks,<br><b>Team Wordly</b>" // html body
+				}; 
+				transport.sendMail(mailOptions, function(error, info){
+					if(error){
+						return res.send(error);
+					}
+					return res.send(200,{"message":"Mail sent successfully","status":true});
+				}); 
+			}
+			else{
+				res.send(200,{"message":"User Registered using Fb","status":false});
+			}
 			
 			next()
 		}
