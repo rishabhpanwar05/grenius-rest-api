@@ -126,7 +126,9 @@ server.post('/register',function(req,res,next){
 			  var token = user.generateJwt();
 			var state = user.setLoggedIn(token);
 			if(state==true){
-				res.send(200,{
+				res.status(200);
+				res.session=token;
+				res.json({
 				  "message" : token,
 				  "id":user.fbId,
 				  "name":user.name,
@@ -134,6 +136,7 @@ server.post('/register',function(req,res,next){
 				});	
 			}
 			next()
+			return
 		  }
 		  else{
 			res.send(200,{"message":"Already Registered","id":"none","name":"null","status":false});
@@ -161,7 +164,7 @@ server.post('/register',function(req,res,next){
 		if (err!=null) {
 			log.error(err)
 			res.send(200,{"message":err.message,"id":"none","name":"null","status":false})
-			next()
+			return
 		}
 	    var token;
 	    token = user.generateJwt();
@@ -173,7 +176,9 @@ server.post('/register',function(req,res,next){
 			  "id":user.emailId,
 			  "name":user.name,
 			  "status": true
-			});	
+			});
+			next()
+			return
 		}
 	  });
 	})
