@@ -1343,9 +1343,9 @@ server.post('/bookmarks',function(req,res,next){
 
 server.post('/generatePasscode',function(req,res,next){
 	console.log("generating passcode")
-	console.log(req.body)
+	
 	req.body=qs.parse(req.body)
-
+	console.log(req.body)
 	User.findOne({ emailId: req.body.emailId }, function (err, user) {
       if (err) {
 			console.log(err)
@@ -1368,7 +1368,7 @@ server.post('/generatePasscode',function(req,res,next){
 				to: req.body.emailId, // list of receivers
 				subject: "Wordly Account Password Reset", // Subject line
 				text: "", // plaintext body
-				html: "Hi <b>"+ user.name +",</b><br>You recently requested to reset your password for your Wordly account. In your app, key in the passkey below to reset your password. This password reset is only valid for the next hour.<br><b>"+
+				html: "Hi <b>"+ user.name +",</b><br><br>You recently requested to reset your password for your Wordly account. In your app, key in the passkey below to reset your password. This password reset is only valid for the next hour.<br><b>"+
 						passcode+"</b><br>If you did not request a password reset, please ignore this email or contact support if you have questions.<br><br>Thanks,<br><b>Team Wordly</b>" // html body
 			}; 
 			transport.sendMail(mailOptions, function(error, info){
@@ -1385,8 +1385,9 @@ server.post('/generatePasscode',function(req,res,next){
 
 server.post('/verifyPasscode',function(req,res,next){
 	console.log("verifying passcode")
-	console.log(req.body)
+	
 	req.body=qs.parse(req.body)
+	console.log(req.body)
 	User.findOne({ emailId: req.body.emailId }, function (err, user) {
       if (err) {
 			console.log(err)
@@ -1415,8 +1416,9 @@ server.post('/verifyPasscode',function(req,res,next){
 })
 server.post('/updatePassword',function(req,res,next){
 	console.log("updating passcode")
-	console.log(req.body)
+	
 	req.body=qs.parse(req.body)
+	console.log(req.body)
 	User.findOne({ emailId: req.body.emailId }, function (err, user) {
       if (err) {
 			console.log(err)
