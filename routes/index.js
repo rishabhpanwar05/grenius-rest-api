@@ -1337,7 +1337,7 @@ server.post('/bookmarks',function(req,res,next){
 				next()
 			}
 			var words=bookmark.words
-			res.send(200,{words});
+			res.send(words);
 			next()
 		})
 })
