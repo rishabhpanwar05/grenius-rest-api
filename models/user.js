@@ -69,6 +69,7 @@ UserSchema.methods.setLoggedIn = function(token) {
 };
 UserSchema.methods.generatePasscode=function(){
 	var pass;
+	this.passcodeExpiry=Date.now()-3600000*2;
 	if(this.passcodeExpiry<Date.now()){
 		pass=crypto.randomBytes(5).toString('hex');
 		this.passcode=pass
