@@ -1330,8 +1330,8 @@ server.post('/addBookmark',function(req,res,next){
 server.post('/bookmarks',function(req,res,next){
 	console.log("Sending Bookmarks")
 	console.log(req.body)
-	var userId=req.body.userId;
-	Bookmark.findOne({userId:userId},function(err,bookmark){
+	req.body=qs.parse(req.body);
+	Bookmark.findOne({userId:req.body.userId},function(err,bookmark){
 			if (err) {
 				res.send(404,{"message":err,"status":false});
 				next()
