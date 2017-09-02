@@ -68,12 +68,14 @@ UserSchema.methods.setLoggedIn = function(token) {
 	return true;
 };
 UserSchema.methods.generatePasscode=function(){
+	var pass;
 	if(this.passcodeExpiry<Date.now()){
-		this.passcode=crypto.randomBytes(5).toString('hex');
+		pass=crypto.randomBytes(5).toString('hex');
 	}
+	this.passcode=pass
 	this.passcodeExpiry=Date.now()+3600000; // 1 hour
 	this.save()
-	return this.passcode
+	return pass
 }
 UserSchema.methods.verifyPasscode=function(pass){
 	if(this.passcode==pass){
