@@ -126,9 +126,7 @@ server.post('/register',function(req,res,next){
 			  var token = user.generateJwt();
 			var state = user.setLoggedIn(token);
 			if(state==true){
-				res.status(200);
-				res.session=token;
-				res.json({
+				res.send(200,{
 				  "message" : token,
 				  "id":user.fbId,
 				  "name":user.name,
@@ -1370,8 +1368,8 @@ server.post('/generatePasscode',function(req,res,next){
 				to: req.body.emailId, // list of receivers
 				subject: "Wordly Account Password Reset", // Subject line
 				text: "", // plaintext body
-				html: "Hi <b><h3>"+ user.name +"</h3></b>,<br>You recently requested to reset your password for your Wordly account. In your app, key in the passkey below to reset your password. This password reset is only valid for the next hour.<br><b>"+
-						passcode+"</b><br>If you did not request a password reset, please ignore this email or contact support if you have questions.<br>Thanks,<br><b><h4>Team Wordly</h4></b>" // html body
+				html: "Hi <b>"+ user.name +",</b><br>You recently requested to reset your password for your Wordly account. In your app, key in the passkey below to reset your password. This password reset is only valid for the next hour.<br><b>"+
+						passcode+"</b><br>If you did not request a password reset, please ignore this email or contact support if you have questions.<br><br>Thanks,<br><b>Team Wordly</b>" // html body
 			}; 
 			transport.sendMail(mailOptions, function(error, info){
 				if(error){
