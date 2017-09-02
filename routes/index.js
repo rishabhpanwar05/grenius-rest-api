@@ -13,8 +13,31 @@ const _      = require('lodash'),
 	  googleTranslate = require('google-translate')(config.MY_GOOGLE_API_KEY),
 	  csv = require("fast-csv"),
 	  fs=require("fs"),
-	  moment = require('moment')
+	  moment = require('moment'),
+	  nodemailer = require('nodemailer')
 
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'gre.tensai@gmail.com',
+    pass: 'yourpassword'
+  }
+});
+
+var mailOptions = {
+  from: 'youremail@gmail.com',
+  to: 'myfriend@yahoo.com',
+  subject: 'Sending Email using Node.js',
+  text: 'That was easy!'
+};
+
+transporter.sendMail(mailOptions, function(error, info){
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+});
 	  	
 const Article = require('../models/article')
 const ArticleDash = require('../models/articledash')
@@ -1313,9 +1336,14 @@ server.post('/bookmarks',function(req,res,next){
 				res.send(404,{"message":err,"status":false});
 				next()
 			}
-			res.send(200,{words:bookmark.words});
+			words=bookmark.words
+			res.send(200,{words});
 			next()
 		})
 })
 
 /*-------------------------------------------------------------------------------------*/
+
+server.post('/generatePasscode',function(req,res,next){
+	
+})
