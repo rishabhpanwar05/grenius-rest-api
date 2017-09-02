@@ -15,30 +15,23 @@ const _      = require('lodash'),
 	  fs=require("fs"),
 	  moment = require('moment'),
 	  nodemailer = require('nodemailer')
-
-var transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'gre.tensai@gmail.com',
-    pass: 'suryarish'
-  }
+	  
+var transport = nodemailer.createTransport({
+        host:"smtp.gmail.com",
+		port: 465,
+		secure: true,
+        auth:{
+			type: 'OAuth2',
+			user: config.mailUser,
+			clientId: config.clientId,
+			clientSecret: config.clientSecret,
+			refreshToken: config.refreshToken
+	   
+        }
 });
 
-var mailOptions = {
-  from: 'youremail@gmail.com',
-  to: 'myfriend@yahoo.com',
-  subject: 'Sending Email using Node.js',
-  text: 'That was easy!'
-};
 
-transporter.sendMail(mailOptions, function(error, info){
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('Email sent: ' + info.response);
-  }
-});
-	  	
+  	
 const Article = require('../models/article')
 const ArticleDash = require('../models/articledash')
 const Word= require('../models/word')
@@ -130,7 +123,7 @@ server.post('/register',function(req,res,next){
 				res.session=token;
 				res.json({
 				  "message" : token,
-				  "id":user.emailId,
+				  "id":user.fbId,
 				  "name":user.name,
 				  "status":true
 				});	
@@ -209,9 +202,7 @@ server.post('/login',function(req,res,next){
 			var token = user.generateJwt();
 			var state = user.setLoggedIn(token);
 			if(state==true){
-				res.status(200);
-				res.session=token;
-				res.json({
+				res.send(200,{
 				  "message" : token,
 				  "id":user.emailId,
 				  "name":user.name,
@@ -1343,8 +1334,99 @@ server.post('/bookmarks',function(req,res,next){
 		})
 })
 
-/*-------------------------------------------------------------------------------------*/
+/*-----------------------------------Forgot password--------------------------------------------------*/
 
 server.post('/generatePasscode',function(req,res,next){
-	
+	console.log("generating passcode")
+	console.log(req.body)
+	req.body=qs.parse(req.body)
+	User.findOne({ emailId: req.body.emailId }, function (err, user) {
+      if (err) {
+			console.log(err)
+			res.send(200,{"message":"error","status":false});
+			next()
+		}
+      // Return if user not found in database
+      if (!user) {
+			console.log("User not found")
+        	res.send(200,{"message":"User Not Found","status":false});
+			next()
+			return
+      }
+      // If a user is found
+		if(user){
+			var passcode = user.generatePasscode();
+			var mailOptions = {
+				from: ''+config.mailUser+'', // sender address
+				to: req.body.emailId, // list of receivers
+				subject: "Wordly Account Password Reset", // Subject line
+				text: "Your passcode is: "+passcode // plaintext body
+				// html: '<b>Hello world 🐴</b>' // html body
+			}; 
+			transport.sendMail(mailOptions, function(error, info){
+				if(error){
+					return res.send(error);
+				}
+				return res.send(200,{"message":"Mail sent successfully","status":false});
+			}); 
+			
+			next()
+		}
+	});	 
+})
+
+server.post('/verifyPasscode',function(req,res,next){
+	console.log("verifying passcode")
+	console.log(req.body)
+	req.body=qs.parse(req.body)
+	User.findOne({ emailId: req.body.emailId }, function (err, user) {
+      if (err) {
+			console.log(err)
+			res.send(200,{"message":err,"status":false});
+			next()
+		}
+      // Return if user not found in database
+      if (!user) {
+			console.log("User not found")
+        	res.send(200,{"message":"User Not Found","status":false});
+			next()
+			return
+      }
+      // If a user is found
+		if(user){
+			var status = user.verifyPasscode();
+			if(status==true){
+				res.send(200,{"message":"Passcode Verified successfully","status":true});
+			}
+			else{
+				res.send(200,{"message":"Wrong Passcode","status":false});
+			}
+			next()
+		}
+	});	 
+})
+server.post('/updatePassword',function(req,res,next){
+	console.log("updating passcode")
+	console.log(req.body)
+	req.body=qs.parse(req.body)
+	User.findOne({ emailId: req.body.emailId }, function (err, user) {
+      if (err) {
+			console.log(err)
+			res.send(200,{"message":err,"status":false});
+			next()
+		}
+      // Return if user not found in database
+      if (!user) {
+			console.log("User not found")
+        	res.send(200,{"message":"User Not Found","status":false});
+			next()
+			return
+      }
+      // If a user is found
+		if(user){
+			user.setPassword(req.body.password);
+			res.send(200,{"message":"Passcode Updated successfully","status":true});
+			next()
+		}
+	});	 
 })

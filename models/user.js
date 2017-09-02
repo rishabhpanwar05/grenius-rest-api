@@ -32,8 +32,9 @@ const UserSchema = new mongoose.Schema({
 	hash: String,
 	salt: String,
 	loggedIn: Boolean,
-	token:String
-
+	token:String,
+	passcode:String,
+	passcodeExpiry:Date
 });
 
 UserSchema.methods.setPassword = function(password){
@@ -66,7 +67,20 @@ UserSchema.methods.setLoggedIn = function(token) {
 	this.save()
 	return true;
 };
-
+UserSchema.methods.generatePasscode=function(){
+	if(this.passcodeExpiry<Date.now()){
+		this.passcode=crypto.randomBytes(5).toString('hex');
+	}
+	this.passcodeExpiry=Date.now()+3600000; // 1 hour
+	this.save()
+	return this.passcode
+}
+UserSchema.methods.verifyPasscode=function(pass){
+	if(this.passcode==pass){
+		return true;
+	}
+	return false
+}
 
 UserSchema.plugin(mongooseApiQuery)
 UserSchema.plugin(createdModified, { index: true })

@@ -25,6 +25,7 @@
     "njwt": "^0.4.0",
     "node-datetime": "^1.0.1",
     "nodemailer": "^4.1.0",
+    "nodemailer-smtp-transport": "^2.7.4",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "passport-restify": "^1.0.1",
@@ -36,6 +37,7 @@
     "satelize": "^0.2.0",
     "time": "^0.12.0",
     "update-mongo": "0.0.4",
-    "winston": "^2.3.1"
+    "winston": "^2.3.1",
+    "xoauth2": "^1.2.0"
   }
 }
