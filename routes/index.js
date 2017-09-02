@@ -1336,7 +1336,7 @@ server.post('/bookmarks',function(req,res,next){
 				res.send(404,{"message":err,"status":false});
 				next()
 			}
-			words=bookmark.words
+			var words=bookmark.words
 			res.send(200,{words});
 			next()
 		})
