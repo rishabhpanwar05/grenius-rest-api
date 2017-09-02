@@ -1433,8 +1433,13 @@ server.post('/updatePassword',function(req,res,next){
       }
       // If a user is found
 		if(user){
-			user.setPassword(req.body.password);
-			res.send(200,{"message":"Passcode Updated successfully","status":true});
+			var status = user.verifyPasscode(req.body.passcode);
+			if(status==true){
+				user.setPassword(req.body.password);
+				res.send(200,{"message":"Passcode Updated successfully","status":true});
+			}else{
+				res.send(200,{"message":"Wrong Passcode","status":false});
+			}
 			next()
 		}
 	});	 
