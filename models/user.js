@@ -70,7 +70,7 @@ UserSchema.methods.setLoggedIn = function(token) {
 UserSchema.methods.generatePasscode=function(){
 	var pass;
 	if(this.passcodeExpiry<Date.now()){
-		pass=crypto.randomBytes(3).toString('hex');
+		pass=crypto.randomBytes(2).toString('hex');
 		this.passcode=pass
 		//console.log("pass is:",pass)
 	}
