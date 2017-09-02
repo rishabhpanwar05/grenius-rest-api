@@ -161,15 +161,19 @@ server.post('/register',function(req,res,next){
 		if (err!=null) {
 			log.error(err)
 			res.send(200,{"message":err.message,"id":"none","name":"null","status":false})
-			return
+			next()
 		}
 	    var token;
 	    token = user.generateJwt();
 		var state = user.setLoggedIn(token);
 		if(state==true){
 			console.log("sending token:",token)
-			res.send(200,{"message" : token,"id":user.emailId,"name":user.name,"status": true})
-			next()
+			res.send(200,{
+			  "message" : token,
+			  "id":user.emailId,
+			  "name":user.name,
+			  "status": true
+			});	
 		}
 	  });
 	})
