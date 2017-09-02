@@ -29,8 +29,15 @@ var transport = nodemailer.createTransport({
 	   
         }
 });
-
-
+/*
+var transport = nodemailer.createTransport({
+        service: 'gmail',
+		auth: {
+			user: config.mailUser,
+			pass: config.mailPass
+		}
+});
+*/
   	
 const Article = require('../models/article')
 const ArticleDash = require('../models/articledash')
@@ -1340,6 +1347,7 @@ server.post('/generatePasscode',function(req,res,next){
 	console.log("generating passcode")
 	console.log(req.body)
 	req.body=qs.parse(req.body)
+
 	User.findOne({ emailId: req.body.emailId }, function (err, user) {
       if (err) {
 			console.log(err)
@@ -1367,7 +1375,7 @@ server.post('/generatePasscode',function(req,res,next){
 				if(error){
 					return res.send(error);
 				}
-				return res.send(200,{"message":"Mail sent successfully","status":false});
+				return res.send(200,{"message":"Mail sent successfully","status":true});
 			}); 
 			
 			next()
@@ -1394,7 +1402,7 @@ server.post('/verifyPasscode',function(req,res,next){
       }
       // If a user is found
 		if(user){
-			var status = user.verifyPasscode();
+			var status = user.verifyPasscode(req.body.passcode);
 			if(status==true){
 				res.send(200,{"message":"Passcode Verified successfully","status":true});
 			}
