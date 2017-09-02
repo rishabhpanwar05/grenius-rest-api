@@ -1364,6 +1364,7 @@ server.post('/generatePasscode',function(req,res,next){
       // If a user is found
 		if(user){
 			var passcode = user.generatePasscode();
+			console.log("User is "+user)
 			var mailOptions = {
 				from: ''+config.mailUser+'', // sender address
 				to: req.body.emailId, // list of receivers
