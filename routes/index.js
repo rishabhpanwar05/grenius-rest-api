@@ -1329,29 +1329,7 @@ server.post('/addBookmark',function(req,res,next){
 
 
 server.post('/bookmarks',function(req,res,next){
-	/*console.log("Sending Bookmarks")
-	req.body=qs.parse(req.body);
-	console.log(req.body)
-	Bookmark.findOne({userId:req.body.userId},function(err,bookmark){
-			if (err) {
-				res.send(404,{"message":err,"status":false});
-				next()
-			}
-			console.log(bookmark)
-			var words;
-			if(bookmark!=null){
-				words=bookmark.words
-				console.log(words)
-				res.send(words);
-			}
-			else{
-				words=[];
-				res.send(200,words);
-			}
-			next()
-		})
-		
-		*/
+	/*
 		
 		console.log("Sending Bookmarks")
 	console.log(req.body)
@@ -1374,6 +1352,20 @@ server.post('/bookmarks',function(req,res,next){
 				next()
 			}
 			
+		})*/
+		console.log("Sending Bookmarks")
+	console.log(req.body)
+	req.body=qs.parse(req.body);
+	Bookmark.findOne({userId:req.body.userId},function(err,bookmark){
+			if (err) {
+				res.send(404,{"message":err,"status":false});
+				next()
+			}
+			console.log(bookmark)
+			var words=bookmark.words
+			console.log(words)
+			res.send(words);
+			next()
 		})
 })
 
