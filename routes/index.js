@@ -1341,7 +1341,7 @@ server.post('/bookmarks',authnjwt,function(req,res,next){
 				res.send(404,{"message":err,"status":false});
 				next()
 			}
-			var words;
+			/*var words;
 			console.log("Bookmark is:",bookmark)
 			if(bookmark){
 				console.log(bookmark)
@@ -1354,7 +1354,12 @@ server.post('/bookmarks',authnjwt,function(req,res,next){
 			}
 			res.send(200,words);
 			next()
-			
+			*/
+			console.log(bookmark)
+			var words=bookmark.words
+			console.log(words)
+			res.send(words);
+			next()
 		})
 })
 
