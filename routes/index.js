@@ -1338,9 +1338,14 @@ server.post('/bookmarks',function(req,res,next){
 				next()
 			}
 			console.log(bookmark)
-			var words=bookmark.words
-			console.log(words)
-			res.send(words);
+			if(bookmarks!=null){
+				var words=bookmark.words
+				console.log(words)
+				res.send(words);
+			}
+			else{
+				res.send(200);
+			}
 			next()
 		})
 })
