@@ -1328,7 +1328,7 @@ server.post('/addBookmark',authnjwt,function(req,res,next){
 })
 
 
-server.post('/bookmarks',function(req,res,next){
+server.post('/bookmarks',authjnwt,function(req,res,next){
 	
 		
 		console.log("Sending Bookmarks")
@@ -1336,7 +1336,7 @@ server.post('/bookmarks',function(req,res,next){
 	req.body=qs.parse(req.body);
 	console.log(req.body)
 	
-	Bookmark.find({},function(err,bookmark){
+	Bookmark.find({'userId':req.body.userId},function(err,bookmark){
 			if (err) {
 				res.send(404,{"message":err,"status":false});
 				next()
@@ -1355,21 +1355,7 @@ server.post('/bookmarks',function(req,res,next){
 				next()
 			}
 			
-		})/*
-		console.log("Sending Bookmarks")
-	console.log(req.body)
-	req.body=qs.parse(req.body);
-	Bookmark.findOne({userId:req.body.userId},function(err,bookmark){
-			if (err) {
-				res.send(404,{"message":err,"status":false});
-				next()
-			}
-			console.log(bookmark)
-			var words=bookmark.words
-			console.log(words)
-			res.send(words);
-			next()
-		})*/
+		})
 })
 
 /*-----------------------------------Forgot password--------------------------------------------------*/
