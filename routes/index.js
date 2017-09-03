@@ -1361,11 +1361,19 @@ server.post('/bookmarks',function(req,res,next){
 				res.send(404,{"message":err,"status":false});
 				next()
 			}
-			console.log(bookmark)
-			var words=bookmark.words
-			console.log(words)
-			res.send(words);
-			next()
+			if(bookmark){
+				console.log(bookmark)
+				var words=bookmark.words
+				console.log(words)
+				res.send(words);
+				next()
+			}
+			else{
+				var words=[]
+				res.send(200,words);
+				next()
+			}
+			
 		})
 })
 
