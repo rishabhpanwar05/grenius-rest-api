@@ -1337,7 +1337,7 @@ server.post('/bookmarks',function(req,res,next){
 				res.send(404,{"message":err,"status":false});
 				next()
 			}
-			console.log(bookmark.words)
+			console.log(bookmark)
 			var words;
 			if(bookmark!=null){
 				words=bookmark.words
