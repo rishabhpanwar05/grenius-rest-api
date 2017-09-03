@@ -1332,13 +1332,16 @@ server.post('/bookmarks',function(req,res,next){
 	
 		
 		console.log("Sending Bookmarks")
-	console.log(req.body)
+	
 	req.body=qs.parse(req.body);
-	Bookmark.findOne({"userId":req.body.userId},function(err,bookmark){
+	console.log(req.body)
+	
+	Bookmark.find({'userId':req.body.userId},function(err,bookmark){
 			if (err) {
 				res.send(404,{"message":err,"status":false});
 				next()
 			}
+			console.log("Bokkmark is:",bookmark)
 			if(bookmark){
 				console.log(bookmark)
 				var words=bookmark.words
