@@ -1328,7 +1328,7 @@ server.post('/addBookmark',authnjwt,function(req,res,next){
 })
 
 
-server.post('/bookmarks',authjnwt,function(req,res,next){
+server.post('/bookmarks',authnjwt,function(req,res,next){
 	
 		
 		console.log("Sending Bookmarks")
