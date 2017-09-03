@@ -1295,7 +1295,7 @@ server.post('/category', function(req, res, next) {
 })
 
 /*------------------------------------Bookmarks------------------------------------------------------*/
-server.post('/addBookmark',function(req,res,next){
+server.post('/addBookmark',authnjwt,function(req,res,next){
 	console.log("Adding Bookmarks")
 	console.log(req.body)
 	var words = req.body.words
