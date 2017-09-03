@@ -1338,13 +1338,15 @@ server.post('/bookmarks',function(req,res,next){
 				next()
 			}
 			console.log(bookmark)
+			var words;
 			if(bookmark!=null){
-				var words=bookmark.words
+				words=bookmark.words
 				console.log(words)
 				res.send(words);
 			}
 			else{
-				res.send(200);
+				words=[];
+				res.send(200,words);
 			}
 			next()
 		})
