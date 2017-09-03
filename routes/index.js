@@ -1336,7 +1336,7 @@ server.post('/bookmarks',authnjwt,function(req,res,next){
 	req.body=qs.parse(req.body);
 	console.log(req.body)
 	
-	Bookmark.find({'userId':req.body.userId},function(err,bookmark){
+	Bookmark.findOne({'userId':req.body.userId},function(err,bookmark){
 			if (err) {
 				res.send(404,{"message":err,"status":false});
 				next()
