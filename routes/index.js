@@ -1329,7 +1329,7 @@ server.post('/addBookmark',function(req,res,next){
 
 
 server.post('/bookmarks',function(req,res,next){
-	/*
+	
 		
 		console.log("Sending Bookmarks")
 	console.log(req.body)
@@ -1352,7 +1352,7 @@ server.post('/bookmarks',function(req,res,next){
 				next()
 			}
 			
-		})*/
+		})/*
 		console.log("Sending Bookmarks")
 	console.log(req.body)
 	req.body=qs.parse(req.body);
@@ -1366,7 +1366,7 @@ server.post('/bookmarks',function(req,res,next){
 			console.log(words)
 			res.send(words);
 			next()
-		})
+		})*/
 })
 
 /*-----------------------------------Forgot password--------------------------------------------------*/
