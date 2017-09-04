@@ -79,14 +79,14 @@ var uploadArticle = multer({ storage : storageArticle}).single('file')
 /*----------------------------------Registering User------------------------------------------------------------*/
 
 server.post('/register',function(req,res,next){
-	  var user = new User();
+	  
 	
 	console.log("registering:")
 	req.body=qs.parse(req.body)
 	console.log(qs.parse(req.body))
 	//var body=JSON.parse(req.params)
 	//console.log(body)
-	user.emailId=req.body.emailId
+	
 	User.findOne({ emailId: req.body.emailId }, function (err, user) {
       if (err) {
 			res.send(404,{"message":"error","id":"none","status":false});
@@ -98,7 +98,8 @@ server.post('/register',function(req,res,next){
 			next()
 			return
 		}
-		
+		user = new User();
+		user.emailId=req.body.emailId
 		if(req.body.mobile!=null){
 			user.name=req.body.name
 			user.setPassword(req.body.password);
