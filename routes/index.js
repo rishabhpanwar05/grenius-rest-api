@@ -1461,7 +1461,19 @@ server.post('/updatePassword',function(req,res,next){
 			var status = user.verifyPasscode(req.body.passcode);
 			if(status==true){
 				user.setPassword(req.body.password);
+				user.save(function(err) {
+
+				if (err!=null) {
+					log.error(err)
+					return next(new errors.InternalError(err.message))
+					next()
+				}
+
 				res.send(200,{"message":"Password Updated successfully","status":true});
+				next()
+
+			})
+				
 			}else{
 				res.send(200,{"message":"Wrong Passcode","status":false});
 			}
