@@ -73,6 +73,14 @@ server.get(/\/uploads\/?.*/, restify.serveStatic({
 server.get(/\/res\/?.*/, restify.serveStatic({
    directory: __dirname
  }));
+ server.get('/TnC.html', restify.serveStatic({
+    directory: __dirname,
+	file : 'TnC.html'
+}));
+server.get('/priv_policy.html', restify.serveStatic({
+    directory: __dirname,
+	file : 'priv_policy.html'
+}));
  require('./routes')
 server.listen(config.port, function() {
 
