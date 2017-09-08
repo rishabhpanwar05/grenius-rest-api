@@ -147,7 +147,8 @@ server.post('/register',function(req,res,next){
 		}
 		var user = new User();
 		user.emailId=req.body.emailId
-		user.city=req.body.city
+		if(req.body.city!=null)
+			user.city=req.body.city
 		if(req.body.mobile!=null){
 			user.name=req.body.name
 			user.setPassword(req.body.password);
