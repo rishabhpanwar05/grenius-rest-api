@@ -186,8 +186,8 @@ server.post('/register',function(req,res,next){
 	})
 server.post('/login',function(req,res,next){
 	console.log("logging in")
-	console.log(req.body)
 	req.body=qs.parse(req.body)
+	console.log(req.body)
 	User.findOne({ emailId: req.body.emailId }, function (err, user) {
       if (err) {
 			console.log(err)
