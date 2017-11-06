@@ -48,6 +48,8 @@ const Quiz= require('../models/quiz')
 const WordOfDay=require('../models/word_of_day')
 const Category=require('../models/category')
 const Bookmark=require('../models/bookmark')
+const Institute=require('../models/institute')
+const TitleInstitute=require('../models/titleinstitute')
 
 var authnjwt = function(req,res,next){
 	//let token = req.headers.authorization.split(" ")[1];
@@ -1482,4 +1484,113 @@ server.post('/updatePassword',function(req,res,next){
 			next()
 		}
 	});	 
+})
+
+
+
+/*-----------------------------------Institutions--------------------------------------------------*/
+
+server.post('/addInstitute',function(req, res, next) {
+	let data = {}
+	console.log("adding institute",data)
+	data={
+		"name":req.body.name,
+		"type":req.body.type,
+		"sno":req.body.sno,
+		"short_desc":req.body.short_desc,
+		"long_desc":req.body.long_desc,
+		"url":req.body.url,
+		"imagePath":req.body.imagePath,
+		"location":req.body.location
+	}
+	let institute= new Institute(data)
+	console.log(institute)
+	
+	 institute.save(function(err) {
+
+		if (err!=null) {
+			log.error(err)
+			return next(new errors.InternalError(err.message))
+			next()
+		}
+
+		res.send(201,"ADDED")
+		next()
+
+	})
+})
+
+
+server.post('/institutes', function(req, res, next) {
+	console.log("Sending institutes");
+	let data = req.body || {}
+		Institute.find(
+		{},
+		[],
+		{
+		},
+		function(err, doc) {
+
+	        if (err) {
+	            log.error(err)
+	            return next(new errors.InvalidContentError(err.errors.name.message))
+	        }
+	
+	        res.send(doc)
+			console.log("done")
+	        next()
+	    })
+
+})
+
+
+/*-----------------------------------Title Institutions--------------------------------------------------*/
+
+server.post('/addTitleInstitute',function(req, res, next) {
+	let data = {}
+	console.log("adding title institute",data)
+	data={
+		"name":req.body.name,
+		"url":req.body.url,
+		"imagePath":req.body.imagePath,
+		"location":req.body.location
+	}
+	let titleinstitute= new TitleInstitute(data)
+	console.log(titleinstitute)
+	
+	 titleinstitute.save(function(err) {
+
+		if (err!=null) {
+			log.error(err)
+			return next(new errors.InternalError(err.message))
+			next()
+		}
+
+		res.send(201,"ADDED")
+		next()
+
+	})
+})
+
+
+server.post('/titleinstitute', function(req, res, next) {
+	console.log("Sending title institute");
+	let data = req.body || {}
+		TitleInstitute.find(
+		{},
+		[],
+		{
+		},
+		function(err, doc) {
+
+	        if (err) {
+	            log.error(err)
+	            return next(new errors.InvalidContentError(err.errors.name.message))
+	        }
+	
+	        res.send(doc)
+			console.log("done")
+	        next()
+	    })
+
 })
