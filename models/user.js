@@ -29,6 +29,12 @@ const UserSchema = new mongoose.Schema({
 	city: {
 		type: String
 	},
+	gender:{
+		type: String
+	},
+	motive:{
+		type: String
+	},
 	hash: String,
 	salt: String,
 	loggedIn: Boolean,

@@ -248,6 +248,30 @@ server.post('/logout',function(req, res,next){
 			})
 	})
   })
+server.post('/updateProfile',function(req, res,next){
+	console.log("updating profile")
+	req.body=qs.parse(req.body)
+    User.findOne({emailId:req.body.emailId},
+		function(err, user) {
+
+			if (err!=null) {
+				log.error(err)
+				return next(new errors.InvalidContentError(err.errors.name.message))
+			}
+			console.log("user is"+user);
+			user.city=req.body.city
+			user.gender=req.body.gender
+			user.motive=req.body.motive
+			user.mobile=req.body.mobile
+			user.save(function(err){
+				if (err!=null) {
+				log.error(err)
+				return next(new errors.InvalidContentError(err.errors.name.message))
+				}
+				res.send(200)
+			})
+	})
+  })
 
 /*------------------------------------Articles----------------------------------------------------------*/
 
