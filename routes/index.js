@@ -50,6 +50,7 @@ const Category=require('../models/category')
 const Bookmark=require('../models/bookmark')
 const Institute=require('../models/institute')
 const TitleInstitute=require('../models/titleinstitute')
+const UnverifiedUser=require('../models/unverifieduser')
 
 var authnjwt = function(req,res,next){
 	//let token = req.headers.authorization.split(" ")[1];
@@ -123,8 +124,8 @@ server.post('/register',function(req,res,next){
 		}
         if(user) {
 			console.log("Already registered")
-		  if(req.body.mobile==null){
-			  console.log("redirecting to login")
+		  if(req.body.password==null){
+			  console.log("Already reg using facebook")
 			  var token = user.generateJwt();
 			var state = user.setLoggedIn(token);
 			if(state==true){
@@ -141,7 +142,7 @@ server.post('/register',function(req,res,next){
 			return
 		  }
 		  else{
-			res.send(200,{"message":"Already Registered","id":"none","name":"null","status":false});
+			res.send(200,{"message":"Already Registered using reg form","id":"none","name":"null","status":false});
 			next()
 			return  
 		  }
@@ -151,11 +152,12 @@ server.post('/register',function(req,res,next){
 		user.emailId=req.body.emailId
 		if(req.body.city!=null)
 			user.city=req.body.city
-		if(req.body.mobile!=null){
+		if(req.body.password!=null){
 			user.name=req.body.name
 			user.setPassword(req.body.password);
-			user.mobile=req.body.mobile
-			
+			if(req.body.mobile!=null){
+				user.mobile=req.body.mobile
+			}
 		}
 		else{
 			user.name=req.body.username
@@ -251,6 +253,7 @@ server.post('/logout',function(req, res,next){
 server.post('/updateProfile',function(req, res,next){
 	console.log("updating profile")
 	req.body=qs.parse(req.body)
+	console.log("user in body is:"+req.body);
     User.findOne({emailId:req.body.emailId},
 		function(err, user) {
 
@@ -258,18 +261,31 @@ server.post('/updateProfile',function(req, res,next){
 				log.error(err)
 				return next(new errors.InvalidContentError(err.errors.name.message))
 			}
-			console.log("user is"+user);
-			user.city=req.body.city
-			user.gender=req.body.gender
-			user.motive=req.body.motive
-			user.mobile=req.body.mobile
-			user.save(function(err){
-				if (err!=null) {
-				log.error(err)
-				return next(new errors.InvalidContentError(err.errors.name.message))
-				}
-				res.send(200)
-			})
+			if(user){
+				user.city=req.body.city
+				user.gender=req.body.gender
+				user.motive=req.body.motive
+				user.mobile=req.body.mobile
+				console.log("user is"+user);
+				user.save(function(err){
+					if (err!=null) {
+					log.error(err)
+					return next(new errors.InvalidContentError(err.errors.name.message))
+					}
+					console.log("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+					res.send(200, {
+						  "message" : "updated",
+						  "status":true
+						})
+					next()
+				})	
+			}
+			else{
+				res.send(400, {
+					  "message" : "user not found",
+					  "status":false
+					})
+				}	
 	})
   })
 
@@ -1510,7 +1526,136 @@ server.post('/updatePassword',function(req,res,next){
 	});	 
 })
 
+/*-------------------------------Email Verification------------------------------------------------*/
+server.post('/generatePasslink',function(req,res,next){
+	console.log("generating passlink")
+	
+	req.body=qs.parse(req.body)
+	console.log(req.body)
+	User.findOne({ emailId:req.body.emailId  }, function (err, user) {
+		      if (err) {
+					console.log(err)
+					res.send(200,{"message":err,"id":"none","name":"null","status":false});
+					next()
+				}
+		        if(user) {
+					console.log("Already registered")
+				  
+				  res.send(200,{"message":"Already Registered","id":"none","name":"null","status":false});
+					next()
+					return  
+				  }
+				UnverifiedUser.findOne({ emailId:req.body.emailId  }, function (err, user) {
+					      if (err) {
+								console.log(err)
+								res.send(200,{"message":err,"id":"none","name":"null","status":false});
+								next()
+							}
+							if(!user){
+								user = new UnverifiedUser()
+								user.name=req.body.name
+								user.emailId=req.body.emailId
+								user.password=req.body.password
+								user.city=req.body.city
+							}
+							user.save(function(err) {
 
+								if (err!=null) {
+									log.error(err)
+									return next(new errors.InternalError(err.message))
+									next()
+								}
+								var passlink = user.generatePasslink();
+								user.save(function(err) {
+
+									if (err!=null) {
+										log.error(err)
+										return next(new errors.InternalError(err.message))
+										next()
+									}
+									console.log("User is "+user)
+									var mailOptions = {
+										from: ''+config.mailUser+'', // sender address
+										to: req.body.emailId, // list of receivers
+										subject: "Wordly Email Verification", // Subject line
+										text: "", // plaintext body
+										html: "Hi <b>"+ user.name +",</b><br><br>You recently requested to reset your password for your Wordly account. In your app, key in the passkey below to reset your password. This password reset is only valid for the next hour.<br><br><b>"+
+												passlink+"</b><br><br>If you did not request a password reset, please ignore this email or contact support if you have questions.<br><br>Thanks,<br><b>Team Wordly</b>" // html body
+									}; 
+									transport.sendMail(mailOptions, function(error, info){
+										if(error){
+											return res.send(error);
+										}
+										return res.send(200,{"message":"Mail sent successfully","status":true});
+									}); 
+									next()
+
+								})
+
+							})
+				
+				})
+				
+					
+				
+				
+			})
+		 
+})
+
+server.post('/verifyPasslink',function(req,res,next){
+	console.log("verifying passlink")
+	
+	req.body=qs.parse(req.body)
+	console.log(req.body)
+	UnverifiedUser.findOne({ emailId: req.body.emailId },
+	[],
+	{
+		//skip:0, // Starting Row
+		limit:0, // Ending Row
+		sort:{
+			created: -1 //Sort by Date Added DESC
+		}			
+	}, function (err, user) {
+      if (err) {
+			console.log(err)
+			res.send(200,{"message":err,"status":false});
+			next()
+		}
+      // Return if user not found in database
+      if (!user) {
+			console.log("User not found")
+        	res.send(200,{"message":"User Not Found","status":false});
+			next()
+			return
+      }
+      // If a user is found
+		if(user){
+			var status = user.verifyPasslink(req.body.passlink);
+			console.log("user is: ",user)
+			if(status==true){
+				var vuser = new User();
+				vuser.emailId=user.emailId
+				vuser.city=user.city
+				vuser.name=user.name
+				vuser.setPassword(user.password);
+				vuser.save(function(err) {
+					if (err!=null) {
+						log.error(err)
+						return next(new errors.InternalError(err.message))
+						next()
+					}
+				res.send(200,{"message":"Passlink Verified successfully","status":true});
+					next()
+				})
+			}
+			else{
+				res.send(200,{"message":"Wrong Passlink","status":false});
+			}
+			next()
+		}
+	});	 
+})
 
 /*-----------------------------------Institutions--------------------------------------------------*/
 
