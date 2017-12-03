@@ -35,6 +35,8 @@ const UserSchema = new mongoose.Schema({
 	motive:{
 		type: String
 	},
+	dob:Date,
+	work:String,
 	hash: String,
 	salt: String,
 	loggedIn: Boolean,

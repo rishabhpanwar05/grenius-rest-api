@@ -266,6 +266,8 @@ server.post('/updateProfile',function(req, res,next){
 				user.gender=req.body.gender
 				user.motive=req.body.motive
 				user.mobile=req.body.mobile
+				user.dob=req.body.dob
+				user.work=req.body.work
 				console.log("user is"+user);
 				user.save(function(err){
 					if (err!=null) {
@@ -284,6 +286,48 @@ server.post('/updateProfile',function(req, res,next){
 				res.send(400, {
 					  "message" : "user not found",
 					  "status":false
+					})
+				}	
+	})
+  })
+server.post('/getProfile',function(req, res,next){
+	console.log("updating profile")
+	req.body=qs.parse(req.body)
+	console.log("user in body is:"+req.body);
+    User.findOne({emailId:req.body.emailId},
+		function(err, user) {
+
+			if (err!=null) {
+				log.error(err)
+				return next(new errors.InvalidContentError(err.errors.name.message))
+			}
+			if(user){
+				user.city=req.body.city
+				user.gender=req.body.gender
+				user.motive=req.body.motive
+				user.mobile=req.body.mobile
+				user.dob=req.body.dob
+				user.work=req.body.work
+				console.log("user is"+user);
+					res.send(200, {
+						  "message" : "user data",
+						  "status":true,
+						  "gender":user.gender,
+						  "motive":user.motive,
+						  "dob":user.dob,
+						  "work":user.work
+						})
+					next()
+					
+			}
+			else{
+				res.send(200, {
+					  "message" : "user not found",
+					  "status":false,
+					  "gender":"",
+						"motive":"",
+						  "dob":"",
+						  "work":""
 					})
 				}	
 	})
