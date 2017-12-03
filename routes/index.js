@@ -1579,8 +1579,8 @@ server.post('/generatePasslink',function(req,res,next){
 										to: req.body.emailId, // list of receivers
 										subject: "Wordly Email Verification", // Subject line
 										text: "", // plaintext body
-										html: "Hi <b>"+ user.name +",</b><br><br>You recently requested to reset your password for your Wordly account. In your app, key in the passkey below to reset your password. This password reset is only valid for the next hour.<br><br><b>"+
-												passlink+"</b><br><br>If you did not request a password reset, please ignore this email or contact support if you have questions.<br><br>Thanks,<br><b>Team Wordly</b>" // html body
+										html: "Greetings from Wordly, <b>"+ user.name +",</b><br><br>You recently requested to create your Wordly account. To verify your email address, key in the passkey on the registration page. This passkey is only valid for the next hour.<br><br><b>"+
+												passlink+"</b><br><br>If you did not request an account creation, please ignore this email or contact support if you have questions.<br><br>Thanks,<br><b>Team Wordly</b>" // html body
 									}; 
 									transport.sendMail(mailOptions, function(error, info){
 										if(error){
