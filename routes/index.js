@@ -1682,15 +1682,21 @@ server.post('/verifyPasslink',function(req,res,next){
 				vuser.city=user.city
 				vuser.name=user.name
 				vuser.setPassword(user.password);
-				vuser.save(function(err) {
-					if (err!=null) {
-						log.error(err)
-						return next(new errors.InternalError(err.message))
+				var token = user.generateJwt();
+				var state = user.setLoggedIn(token);
+				if(state==true){
+					
+					vuser.save(function(err) {
+						if (err!=null) {
+							log.error(err)
+							return next(new errors.InternalError(err.message))
+							next()
+						}
+					res.send(200,{"message":user.token,"status":true});
 						next()
-					}
-				res.send(200,{"message":"Passlink Verified successfully","status":true});
-					next()
-				})
+					})
+				}
+
 			}
 			else{
 				res.send(200,{"message":"Wrong Passlink","status":false});
