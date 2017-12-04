@@ -291,7 +291,7 @@ server.post('/updateProfile',function(req, res,next){
 	})
   })
 server.post('/getProfile',function(req, res,next){
-	console.log("updating profile")
+	console.log("sending profile")
 	req.body=qs.parse(req.body)
 	console.log("user in body is:"+req.body);
     User.findOne({emailId:req.body.emailId},
@@ -311,8 +311,8 @@ server.post('/getProfile',function(req, res,next){
 						  "motive":user.motive,
 						  "dob":user.dob,
 						  "work":user.work,
-						  “mobile”:user.mobile,
-						  “city”:user.city
+						  "mobile":user.mobile,
+						  "city":user.city
 						})
 					next()
 					
@@ -324,9 +324,9 @@ server.post('/getProfile',function(req, res,next){
 					  "gender":"",
 						"motive":"",
 						  "dob":"",
-						  "work”:””,
-						  “mobile”:””,
-						  “city”:””
+						  "work":"",
+						  "mobile":"",
+						  "city":""
 					})
 				}	
 	})
