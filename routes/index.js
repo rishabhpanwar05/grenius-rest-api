@@ -302,12 +302,7 @@ server.post('/getProfile',function(req, res,next){
 				return next(new errors.InvalidContentError(err.errors.name.message))
 			}
 			if(user){
-				user.city=req.body.city
-				user.gender=req.body.gender
-				user.motive=req.body.motive
-				user.mobile=req.body.mobile
-				user.dob=req.body.dob
-				user.work=req.body.work
+				
 				console.log("user is"+user);
 					res.send(200, {
 						  "message" : "user data",
@@ -315,7 +310,9 @@ server.post('/getProfile',function(req, res,next){
 						  "gender":user.gender,
 						  "motive":user.motive,
 						  "dob":user.dob,
-						  "work":user.work
+						  "work":user.work,
+						  “mobile”:user.mobile,
+						  “city”:user.city
 						})
 					next()
 					
@@ -327,7 +324,9 @@ server.post('/getProfile',function(req, res,next){
 					  "gender":"",
 						"motive":"",
 						  "dob":"",
-						  "work":""
+						  "work”:””,
+						  “mobile”:””,
+						  “city”:””
 					})
 				}	
 	})

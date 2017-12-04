@@ -35,7 +35,7 @@ const UserSchema = new mongoose.Schema({
 	motive:{
 		type: String
 	},
-	dob:Date,
+	dob:String,
 	work:String,
 	hash: String,
 	salt: String,
